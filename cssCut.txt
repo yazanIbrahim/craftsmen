@@ -1,0 +1,41 @@
+	#search {
+		margin: 0 15px 0 0;
+	}
+
+	#searchbox {
+		overflow: hidden;
+		width: 0;
+	}
+
+		#searchbox .form-group {
+			margin: 0;
+		}
+
+	#searchfield {
+		background: none;
+		border: 0;
+		border-bottom: 1px solid #fff;
+		border-radius: 0;
+		box-shadow: none;
+		color: #fff;
+		font-weight: bold;
+		padding-left: 0;
+		padding-right: 0;
+		width: 270px;
+	}
+
+		#searchfield::-webkit-input-placeholder {
+			color: #fff;
+		}
+
+		#searchfield:-moz-placeholder { /* Firefox 18- */
+			color: #fff;  
+		}
+
+		#searchfield::-moz-placeholder {  /* Firefox 19+ */
+			color: #fff;  
+		}
+
+		#searchfield:-ms-input-placeholder {  
+			color: #fff;  
+		}

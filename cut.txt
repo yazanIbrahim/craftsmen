@@ -1,0 +1,199 @@
+<div id="searchbox" class="pull-right">
+					<form>
+						<div class="form-group">
+							<label class="sr-only" for="searchfield">Searchbox</label>
+							<input type="text" class="form-control" id="searchfield" placeholder="Type keywords and press enter">
+						</div>
+					</form>
+				</div>
+				<div id="search" class="pull-right">
+					<a><i class="fa fa-search fa-lg"></i></a>
+				</div>
+
+
+
+<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+					<div class="sl-slide-inner">
+						<div class="bg-img bg-img-2"></div>
+						<div class="tint"></div>
+						<div class="slide-content">
+							<h2>Need an employee?</h2>
+							<h3>We've got perfect candidates</h3>
+							<form class="form-inline">
+                                                            <div class="form-group">
+								<input type="email" class="form-control searchInput" id="newsletter-email" placeholder="Search">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary">Search</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			
+				<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+					<div class="sl-slide-inner">
+						<div class="bg-img bg-img-3"></div>
+						<div class="tint"></div>
+						<div class="slide-content">
+							<h2>Evolving your career?</h2>
+							<h3>Find new opportunities here</h3>
+							<form class="form-inline ">
+                                                            <div class="form-group">
+								<input type="email" class="form-control" id="newsletter-email" placeholder="Search">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary">Search</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			
+				<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+					<div class="sl-slide-inner">
+						<div class="bg-img bg-img-4"></div>
+						<div class="tint"></div>
+						<div class="slide-content">
+							<h2>Extending your team?</h2>
+							<h3>Find a perfect match</h3>
+							<p><a href="candidates.html" class="btn btn-lg btn-default">Find a cadidate</a></p>
+                                                        <form class="form-inline ">
+                                                            <div class="form-group">
+								<input type="email" class="form-control searchInput" id="newsletter-email" placeholder="Search">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary">Search</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+
+
+		<!-- ============ COMPANIES START ============ -->
+
+		<section id="companies" class="color1">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2>Featured Companies</h2>
+						<ul id="featured-companies" class="row">
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">12</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">4</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">8</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">9</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">13</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">6</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">7</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">15</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">6</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">11</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">14</span>
+								</a>
+							</li>
+							<li class="col-sm-4 col-md-3">
+								<a href="company.html">
+									<img src="http://placehold.it/220x100.jpg" alt="" />
+									<span class="badge">3</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ COMPANIES END ============ -->
+
+		<!-- ============ STATS START ============ -->
+
+		<section id="stats" class="parallax text-center">
+			<div class="tint"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1>Jobseek Stats</h1>
+						<h4>How many people we’ve helped</h4>
+					</div>
+				</div>
+				<div class="row" id="counter">
+					
+					<div class="counter">
+						<div class="number">4,329</div>
+						<div class="description">Members</div>
+					</div>
+				
+					<div class="counter">
+						<div class="number">894</div>
+						<div class="description">Jobs</div>
+					</div>
+				
+					<div class="counter">
+						<div class="number">1,482</div>
+						<div class="description">Resumes</div>
+					</div>
+				
+					<div class="counter">
+						<div class="number">83</div>
+						<div class="description">Companies</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p><a class="link-register btn btn-primary">Join Us</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ STATS END ============ -->

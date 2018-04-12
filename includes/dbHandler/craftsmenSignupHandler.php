@@ -1,0 +1,133 @@
+<?php
+require_once "../classes/Dbc.php";
+require "../classes/Validator.php";
+require "../classes/Sanitizer.php";
+require "../classes/User.php";
+require "../classes/craftsmen.php";
+require "../classes/Helper.php";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require '../../phpmailer/PHPMailer.php';
+require '../../phpmailer/SMTP.php';
+require '../../phpmailer/Exception.php';
+
+
+
+$data = json_decode(file_get_contents("php://input"),true);
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $clientMsg = null;
+        //validate form data
+        $validator = new Validator();
+        $validator->check($data, array(
+            'firstName' => array(
+                'name' => 'firstNameError',//name of the angular model which will be used to display error msgs
+                'required' => true,
+                'min' => 2,
+                'max' => 20
+            ),
+            'surName' => array(
+                'name' => 'surNameError',
+                'required' => true,
+                'min' => 2,
+                'max' => 20
+            ),
+            'email' => array(
+                'name' => 'emailError',
+                'required' => true,
+                'email' => true,
+                'unique' => 'masteruser', // name of the table to check in
+
+            ),
+            'userName' => array(
+                'name' => 'userNameError',
+                'required' => true,
+                'min' => 2,
+                'max' => 20,
+                'unique' => 'masteruser'
+            ),
+            'password1' => array(
+                'name' => 'password1Error',
+                'required' => true,
+                'min' => 2,
+                'max' => 20,
+                'password' => true,
+
+            ),
+            'password2' => array(
+                'name' => 'password2Error',
+                'required' => true,
+                'min' => 2,
+                'max' => 20,
+                'password' => true,
+                'match'    => 'password1'
+            ),
+            'mobile' => array(
+                'name'     => 'mobileError',
+                'required' => true,
+                'min'      => 10,
+                'max'      => 10,
+                'mobile'   => true
+            )
+        ));
+
+        //check if data is valid; if yes proceed to sanitizing else display errors to the user
+        if (!$validator->isPassed()){
+            $clientMsg ['errors'] = $validator->getErrors();
+            $clientMsg ['type'] = "validationError";
+            echo json_encode($clientMsg);
+        }
+
+        else {
+            //sanitize input and insert to database
+
+            $sanitizer = new Sanitizer($data);
+            $dbData = $sanitizer->sanitize(array(
+                'firstName' => 'string',
+                'surName'   => 'string',
+                'email'     => 'email',
+                'userName'  => 'string',
+                'password1' => 'string',
+                'password2' => 'string',
+
+            ));
+
+            $db = new Dbc();
+            $db = $db->getConn();
+
+            $craftsmen =  new craftsmen($db);
+            if($craftsmen->signup($dbData)){
+                $clientMsg ['type']       = "success";
+                $clientMsg ['successMsg'] = "Successfully registered";
+
+                echo json_encode($clientMsg);
+            }else{
+                Helper::redirect('../../index.php',5,"somth went wrong");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+}
+
+?>
