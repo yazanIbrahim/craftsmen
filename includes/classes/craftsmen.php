@@ -212,8 +212,8 @@ left join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsme
 
 
 
-        Helper::sendEmail("yazan_9526@hotmail.com","<a href=\"http://localhost/craft/includes/dbHandler/verifyAccount.php?hash=$hash\">
-               Verify Account</a>","Verify your account");
+        /*Helper::sendEmail("yazan_9526@hotmail.com","<a href=\"http://localhost/craft/includes/dbHandler/verifyAccount.php?hash=$hash\">
+               Verify Account</a>","Verify your account");*/
 
 
     }

@@ -18,10 +18,7 @@
             $query = $db->prepare($stmt);
             $query -> execute(array($_SESSION['user_id']));
             
-           //$stmt2 = "SELECT craft=?, city=? FROM craftsmen WHERE craftsmen_id = ?";
-           //$query2 = $this->getDbConnection()->prepare($stmt2);
-           //$query2->execute(array($craft,$city,$id));
-           
+
            $result = $query->fetch(PDO::FETCH_ASSOC);
            
            echo json_encode($result);

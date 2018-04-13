@@ -114,15 +114,18 @@
 
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group" id="craft">
                                             <label >المهنة</label>
                                             <select ng-model="craftsmen.craft" class="form-control">
                                                 <option selected>كهربجي</option>
-                                                <option>yazan </option>
+
                                                 <option>حداد</option>
+                                                <option>اخرى</option>
                                             </select>
 
                                         </div>
+
+                                        {{craftsmen.craft}}
 
                                         <div class="form-group">
                                             <label >المدينة</label>

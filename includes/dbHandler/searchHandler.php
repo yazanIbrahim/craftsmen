@@ -9,7 +9,7 @@ if(isset($_GET['search'])){
         $db = new Dbc();
         $db = $db->getConn();
 
-        $stmt  = "SELECT craft,first_name,last_name FROM craftsmen JOIN masteruser on craftsmen_id = user_id WHERE craft LIKE '%$searchValue%'";
+        $stmt  = "SELECT craft,first_name,last_name FROM craftsmen JOIN masteruser on craftsmen_id = user_id WHERE craft LIKE '%$searchValue%' OR first_name LIKE '%$searchValue%'";
         $query = $db->prepare($stmt);
         $query->execute();
 

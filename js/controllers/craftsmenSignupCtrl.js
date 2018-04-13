@@ -23,6 +23,19 @@ app.controller('craftsmenSignupCtrl', function($scope,regexService,$http) {
     $scope.regex=regexService.regexValidation();
     $scope.craftsmenError     = {};
     $scope.craftsmenErrorFlag = {};
+
+   /* $scope.othersOption = function(){
+        console.log($scope.craftsmen.craft);
+        if($scope.craftsmen.craft === "اخرى"){
+            //console.log("hi");
+            $("#craft").after("<input type='text' class='form-control' ng-model=\"craftsmen.otherCraft\">");
+
+            $scope.craftsmen.craft = $scope.craftsmen.otherCraft;
+        }
+
+        console.log($scope.craftsmen.craft);
+    }*/
+
     $scope.craftsmenSignup = function(){
         $http.post("includes/dbHandler/craftsmenSignupHandler.php",$scope.craftsmen).then(function(response){
 

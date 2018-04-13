@@ -17,7 +17,7 @@
 
         $craftsmen->setUserId($_SESSION['user_id']);
 
-        $data = $craftsmen->retrieveData();
+        $data = $craftsmen->retrieveData($_SESSION['user_id']);
 
     }
 

@@ -8,10 +8,8 @@
 
 require "../classes/Dbc.php";
 require "../classes/User.php";
-
 require "../classes/Helper.php";
 require "../classes/Validator.php";
-
 require "../classes/Sanitizer.php";
 
 $data = json_decode(file_get_contents("php://input"),true);

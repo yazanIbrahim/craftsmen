@@ -254,22 +254,7 @@ if(isset($_GET['user'])){
                 </div>
                 <!-- /.row -->
                 <!--row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="white-box">
-                            <h3 class="box-title">Sales Difference</h3>
-                            <ul class="list-inline text-right">
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5" style="color: #dadada;"></i>Site A View</h5>
-                                </li>
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5" style="color: #aec9cb;"></i>Site B View</h5>
-                                </li>
-                            </ul>
-                            <div id="morris-area-chart2" style="height: 370px;"></div>
-                        </div>
-                    </div>
-                </div>
+
                
                  <!-- row -->
                 <div class="row">
