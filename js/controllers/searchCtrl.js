@@ -11,11 +11,14 @@ $scope.searchCraftsmen = function(){
 
     $http.get("includes/dbHandler/searchHandler.php?search="+$scope.searchValue).then(function(response){
 
+        console.log(response.data);
+        if(!response.data['result'].isEmpty()){
 
-        if(!angular.equals(response.data, {})){
             var searcResultClass = angular.element(document.querySelector(".search-result"));
             searcResultClass.addClass('search')
-            $scope.searchresults = response.data;
+            $scope.searchresults = response.data.result;
+
+            //console.log("search results is "+$scope.searchresults[0].craft);
 
         }
 

@@ -50,7 +50,7 @@ session_start();
 							<h3>ليس هناك مكان افضل للبحث</h3>
 							<form class="form-inline myFormInline">
                                 <div class="form-group myFormGroup">
-								    <input type="search" class="form-control myFormControl" id="newsletter-email" placeholder="Search" ng-model="searchValue" ng-keyup="searchCraftsmen()">
+								    <input type="search" class="form-control myFormControl" id="newsletter-email" placeholder="ابحث بالاسم او المهنة" ng-model="searchValue" ng-keyup="searchCraftsmen()">
 
                                 </div>
                                                                 
@@ -59,7 +59,7 @@ session_start();
 							</form>
                             <div class="mySearchDiv">
                                 <ul class="search-result">
-                                    <li class="search-result-item " ng-repeat="result in searchresults">{{result.craft}}</li>
+                                    <li class="search-result-item " ng-repeat="(key,value) in searchresults"><a href="search.php?q="> {{searchresults[key].craft}}</a></li>
                                 </ul>
                             </div>
 
@@ -92,16 +92,6 @@ session_start();
 
       <div class="banner_jobs">
         <div class="container" >
-
-
-
-
-
-
-
-
-
-
 
         </div> <!-- End Of Container -->
       </div>  <!-- End Of banner jobs -->

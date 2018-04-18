@@ -26,7 +26,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -160,11 +160,11 @@
                                     <div class="user-content">
                                         <form>
                                             <div class="input-group">
-                                                <input type="file" id="imageFile" class="form-control" name="image" />
-                                                <button ng-click="uploadImage()">upload</button>
+                                                <input type="file" id="imageInput" class="form-control" name="image" />
+                                                <button id="upload">upload</button>
                                             </div>
                                         </form>
-                                        <a href=""><img src="plugins/images/users/genu.jpg" class="thumb-lg img-circle" alt="img"></a>
+                                        <a href=""><img src="plugins/images/users/genu.jpg" class="thumb-lg img-circle" alt="img" id="imagePreview"></a>
                                         <h4 class="text-white">User Name</h4>
                                         </div>
                                 </div>
@@ -310,6 +310,7 @@
     <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controllers/updateCtrl.js"></script>
+<script src="js/controllers/imageUploadCtrl.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $.toast({

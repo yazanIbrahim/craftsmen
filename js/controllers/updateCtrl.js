@@ -36,11 +36,7 @@ app.controller('updateCtrl', function($scope,$http) {
         });
     }
 
-    $scope.image = null;
-    $scope.uploadImage = function(){
-        var image = $("#imageFile").files[0];
-        console.log(image);
-    }
+
 });
 
 
