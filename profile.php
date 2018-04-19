@@ -164,7 +164,10 @@
                                                 <button id="upload">upload</button>
                                             </div>
                                         </form>
-                                        <a href=""><img src="plugins/images/users/genu.jpg" class="thumb-lg img-circle" alt="img" id="imagePreview"></a>
+
+
+
+                                        <a href=""><img src="" class="thumb-lg img-circle" alt="img" id="imagePreview"></a>
                                         <h4 class="text-white">User Name</h4>
                                         </div>
                                 </div>

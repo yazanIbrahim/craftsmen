@@ -1,24 +1,16 @@
+var fileInput = $("[type=file]");
+var previewElement = $("#imagePreview");
 
-$("#upload").click(function(){
+fileInput.change(function(){
+    console.log("yazan");
 
-    var image = $("[type=file]").val();
-    //console.log(image);
-});
+    //check if there is selected fiels in the filelist object
+     selectedFiles = fileInput.files;
+    console.log(selectedFiles[0]);
 
-function readImage(inputField){
 
-    console.log(inputField.files);
-    if(inputField.files[0]){
-        var reader = new FileReader();
+        var image = selectedFiles[0];
+        console.log("image = "+image.name);
 
-        reader.onload = function(event){
-            $("#imagePreview").attr('src',event.target.)
-        }
-    }
 
-}
-
-$("#imageInput").change(function(){
-    //preview image before upload
-    readImage(this);
 });
