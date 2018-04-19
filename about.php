@@ -3,8 +3,7 @@
  <?php
  include "includes/head.php";
  ?>
-	<body>
-
+	<body ng-app="index" ng-controller="indexCtrl" ng-init="getPageNumbers()">
 		<!-- ============ PAGE LOADER START ============ -->
 
 		<div id="loader">
@@ -62,6 +61,15 @@
 
 		<!-- ============ STORY END ============ -->
 
+		<!-- ============ LOGIN START ============ -->
+
+        <?php
+
+        include "includes/login.php";
+        ?>
+
+		<!-- ============ LOGIN END ============ -->
+
 
 		<!-- ============ FOOTER START ============ -->
 
@@ -99,15 +107,7 @@
 
 		<!-- ============ FOOTER END ============ -->
 
-		<!-- ============ LOGIN START ============ -->
-
-        <?php
-
-        include "includes/login.php";
-        ?>
-
-		<!-- ============ LOGIN END ============ -->
-
+		
 		<!-- ============ REGISTER START ============ -->
 
 		<div class="popup" id="register">
@@ -206,6 +206,10 @@
 
 		<!-- jQuery Settings -->
 		<script src="js/settings.js"></script>
+
+
+        <script src="js/dropdownMenu.js"></script>
+        <script src="profile-js/stars-rating.js"></script>
 
 
 	</body>

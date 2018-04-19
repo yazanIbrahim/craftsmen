@@ -45,7 +45,7 @@ var __slice = [].slice;
       for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
         _results.push(this.$el.append("<span class='glyphicon .glyphicon-star-empty'></span>"));
       }
-      return _results;
+      //return _results;
     };
 
     Starrr.prototype.setRating = function(rating) {
@@ -76,7 +76,7 @@ var __slice = [].slice;
       }
     };
 
-    return Starrr;
+    //return Starrr;
 
   })();
   return $.fn.extend({
@@ -89,10 +89,10 @@ var __slice = [].slice;
 
         data = $(this).data('star-rating');
         if (!data) {
-          $(this).data('star-rating', (data = new Starrr($(this), option)));
+          //$(this).data('star-rating', (data = new Starrr($(this), option)));
         }
         if (typeof option === 'string') {
-          return data[option].apply(data, args);
+          //return data[option].apply(data, args);
         }
       });
     }
@@ -100,20 +100,20 @@ var __slice = [].slice;
 })(window.jQuery, window);
 
 $(function() {
-  return $(".starrr").starrr();
+  //return $(".starrr").starrr();
 });
 
 $( document ).ready(function() {
       
-  $('#stars').on('starrr:change', function(e, value){
-    $('#count').html(value);
+  //$('#stars').on('starrr:change', function(e, value){
+    //$('#count').html(value);
 
     $.post("includes/dbHandler/rateHandler.php",{rate:value,username:user},function(response){
       console.log(response);
     },"json");
   });
   
-  $('#stars-existing').on('starrr:change', function(e, value){
-    $('#count-existing').html(value);
-  });
+  //$('#stars-existing').on('starrr:change', function(e, value){
+    //$('#count-existing').html(value);
+  //});
 });

@@ -96,7 +96,7 @@ app.controller('craftsmenProfileCtrl', function($scope,$http,chart) {
     $scope.rate;
     //get craftsmen rate
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=getRate").then(function(response){
-    $scope.rate = response.data.rate;
+    $scope.rate = response.data.rate * 20;
     console.log($scope.rate);
     $("#rate").css('width',$scope.rate+"%");
 

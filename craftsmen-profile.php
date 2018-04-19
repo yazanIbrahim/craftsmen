@@ -106,7 +106,7 @@
                         <a href="profile.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">تعديل</span></a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض الطلبات</span></a>
+                        <a href="comments-view.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض التعليقات</span></a>
                     </li>
                     
                 </ul>
@@ -124,10 +124,11 @@
                             <a class="profile-pic" href="#"> <img src="images/pp.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="5"
-                                     aria-valuemin="0" aria-valuemax="5" id="rate" >
+                                     aria-valuemin="0" aria-valuemax="100" id="rate">
                                     <span class="sr-only">70% Complete</span>
                                 </div>
                             </div>
+                            <p>100%</p>
                         </h4> 
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 f-r">
