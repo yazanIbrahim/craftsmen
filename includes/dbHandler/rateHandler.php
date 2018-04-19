@@ -5,7 +5,7 @@
  * Date: 4/6/2018
  * Time: 2:57 AM
  */
-
+session_start();
 require_once "../classes/Dbc.php";
 include "../classes/Validator.php";
 include "../classes/Sanitizer.php";
@@ -16,7 +16,9 @@ include "../classes/EndUser.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $response = array();
+
     if(isset($_SESSION['userType']) && $_SESSION['userType'] == 0){ // end user and logged in
+
         $db = new Dbc();
         $db = $db->getConn();
 

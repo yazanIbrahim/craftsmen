@@ -449,48 +449,7 @@ session_start();
 
 		<!-- ============ REGISTER START ============ -->
 
-		<div class="popup" id="register">
-			<div class="popup-form">
-				<div class="popup-header">
-					<a class="close"><i class="fa fa-remove fa-lg"></i></a>
-					<h2>Register</h2>
-				</div>
-				<form>
-					<ul class="social-login">
-						<li><a class="btn btn-facebook"><i class="fa fa-facebook"></i>Register with Facebook</a></li>
-						<li><a class="btn btn-google"><i class="fa fa-google-plus"></i>Register with Google</a></li>
-						<li><a class="btn btn-linkedin"><i class="fa fa-linkedin"></i>Register with LinkedIn</a></li>
-					</ul>
-					<hr>
-					<div class="form-group">
-						<label for="register-name">Name</label>
-						<input type="text" class="form-control" id="register-name">
-					</div>
-					<div class="form-group">
-						<label for="register-surname">Surname</label>
-						<input type="text" class="form-control" id="register-surname">
-					</div>
-					<div class="form-group">
-						<label for="register-email">Email</label>
-						<input type="email" class="form-control" id="register-email">
-					</div>
-					<hr>
-					<div class="form-group">
-						<label for="register-username">Username</label>
-						<input type="text" class="form-control" id="register-username">
-					</div>
-					<div class="form-group">
-						<label for="register-password1">Password</label>
-						<input type="password" class="form-control" id="register-password1">
-					</div>
-					<div class="form-group">
-						<label for="register-password2">Repeat Password</label>
-						<input type="password" class="form-control" id="register-password2">
-					</div>
-					<button type="submit" class="btn btn-primary">Register</button>
-				</form>
-			</div>
-		</div>
+
 
 
 

@@ -27,6 +27,15 @@
 <html dir="rtl" lang="ar">
 
 <head>
+    <!-- Resources am charts -->
+    <style>
+        #chartdiv {
+            width	: 100%;
+            height	: 500px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,10 +62,19 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+
+
+
+
+
+
+
 <![endif]-->
 </head>
 
-<body>
+<body ng-app="craftsmenProfile" ng-controller="craftsmenProfileCtrl">
     <!-- Preloader -->
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
@@ -104,13 +122,12 @@
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 f-r">
                         <h4 class="page-title">
                             <a class="profile-pic" href="#"> <img src="images/pp.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
-                             <div class="row lead stars">
-                                <div id="stars" class="starrr">
-                                
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="5"
+                                     aria-valuemin="0" aria-valuemax="5" id="rate" >
+                                    <span class="sr-only">70% Complete</span>
                                 </div>
-                                <span id="count">0</span> 
-                        </div>
-
+                            </div>
                         </h4> 
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 f-r">
@@ -185,16 +202,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
-                            <h3 class="box-title">Sales Difference</h3>
-                            <ul class="list-inline text-right">
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5" style="color: #dadada;"></i>Site A View</h5>
-                                </li>
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5" style="color: #aec9cb;"></i>Site B View</h5>
-                                </li>
-                            </ul>
-                            <div id="morris-area-chart2" style="height: 370px;"></div>
+                            <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+                            <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+                            <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+                            <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+                            <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+                            <div id="chartdiv"></div>
+                            <script src="profile-js/chart.js"></script>
                         </div>
                     </div>
                 </div>
@@ -253,6 +267,9 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
+
+
+    <script src="js/controllers/craftsmenProfieCtrl.js"></script>
     <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
@@ -272,20 +289,13 @@
     <script src="profile-js/custom.min.js"></script>
     <script src="profile-js/dashboard1.js"></script>
     <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-    <script src="profile-js/stars-rating.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $.toast({
-            heading: 'Welcome to Pixel admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg: '#ff6849',
-            icon: 'info',
-            hideAfter: 3500,
-            stack: 6
-        })
-    });
-    </script>
+
+
+
+
+
+
+
 </body>
 
 </html>

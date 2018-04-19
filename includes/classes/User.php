@@ -189,6 +189,7 @@ class User{
                     $this->setType($fetchedData['user_type']);
                     $_SESSION['user_id'] = $this->getUserId();
                     $_SESSION['userType'] = $this->getType();
+
                     return true;
                 }else{// password is not matchecd MACTHED
 

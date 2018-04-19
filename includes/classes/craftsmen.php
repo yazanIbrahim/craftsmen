@@ -6,6 +6,8 @@
  * Time: 5:28 PM
  */
 
+
+
 class craftsmen extends User{
 
     Private $craft;
@@ -92,12 +94,12 @@ class craftsmen extends User{
 
         $stmt = "SELECT COUNT(rate_id) as numofrates ,SUM(rate) as rate FROM rate WHERE craftsmen_id = ?";
         $query = $this->getDbConnection()->prepare($stmt);
-        $query->execute(array(array($craftsmenId)));
+        $query->execute(array($craftsmenId));
 
         $res = $query->fetch(PDO::FETCH_ASSOC);
 
-        $rate = (float)$res['numofrates'] / $res['rate'];
-        $rate = $rate*100;
+        $rate = $res['rate']/(float)$res['numofrates'];
+        $rate = $rate;
 
         return $rate;
 
