@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c0b59cd-b4b0-4f27-9406-ed0776c8fafa" name="Default" comment="fixing rate and fetching top craftsmen">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
-      <change beforePath="$PROJECT_DIR$/basic-table.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/craftsmen-profile.php" afterPath="$PROJECT_DIR$/craftsmen-profile.php" />
-      <change beforePath="$PROJECT_DIR$/includes/classes/User.php" afterPath="$PROJECT_DIR$/includes/classes/User.php" />
-      <change beforePath="$PROJECT_DIR$/includes/classes/craftsmen.php" afterPath="$PROJECT_DIR$/includes/classes/craftsmen.php" />
-      <change beforePath="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileHandler.php" afterPath="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileHandler.php" />
-      <change beforePath="$PROJECT_DIR$/includes/dbHandler/rateHandler.php" afterPath="$PROJECT_DIR$/includes/dbHandler/rateHandler.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/js/controllers/craftsmenProfieCtrl.js" afterPath="$PROJECT_DIR$/js/controllers/craftsmenProfieCtrl.js" />
-      <change beforePath="$PROJECT_DIR$/profile-js/chart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comments-view.php" afterPath="$PROJECT_DIR$/comments-view.php" />
+      <change beforePath="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php" afterPath="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php" />
+      <change beforePath="$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js" afterPath="$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,90 +31,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="444" column="41" lean-forward="true" selection-start-line="444" selection-start-column="41" selection-end-line="444" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/indexCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/searchCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="comments-view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comments-view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="412">
+              <caret line="115" column="98" lean-forward="false" selection-start-line="115" selection-start-column="98" selection-end-line="115" selection-end-column="98" />
               <folding>
-                <marker date="1524160197234" expanded="true" signature="1242:1438" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="1456:6748" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="1507:1569" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="1592:6741" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="1688:3015" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="1728:2881" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="2218:2534" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="2243:2512" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="2317:2486" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="2608:2862" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="2633:2840" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3130:5141" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3202:5126" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3250:4833" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3302:3509" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3534:3719" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3744:3941" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="3966:4156" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="4181:4376" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="4401:4593" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="4618:4811" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="4875:5107" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="5243:5950" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="5285:5907" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="5328:5739" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="5511:5689" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="5555:5666" ph="..." />
-                <marker date="1524160197234" expanded="true" signature="5603:5637" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="1253:1449" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="1467:7229" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="1518:1580" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="1603:7222" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="1699:3026" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="1739:2892" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="2229:2545" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="2254:2523" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="2328:2497" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="2619:2873" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="2644:2851" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3141:5152" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3213:5137" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3261:4844" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3313:3520" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3545:3730" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3755:3952" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="3977:4167" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="4192:4387" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="4412:4604" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="4629:4822" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="4886:5118" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="5254:6431" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="5296:6388" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="5339:6220" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="5522:6170" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="5566:6147" ph="..." />
+                <marker date="1524168322950" expanded="true" signature="5614:5921" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
+      <file leaf-file-name="craftsmenProfileCommentsFetcherCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2074">
-              <caret line="1841" column="0" lean-forward="false" selection-start-line="1841" selection-start-column="0" selection-end-line="1841" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="craftsmenProfileCommentsFetcherCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js">
+      <file leaf-file-name="commentCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/commentCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state relative-caret-position="383">
+              <caret line="66" column="31" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -132,8 +94,10 @@
         <entry file="file://$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-              <folding />
+              <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+              <folding>
+                <marker date="1524167628503" expanded="true" signature="591:662" ph="SELECT COUNT... rate" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -276,11 +240,11 @@
         <option value="$PROJECT_DIR$/profile-js/chart.js" />
         <option value="$PROJECT_DIR$/js/controllers/craftsmenProfieCtrl.js" />
         <option value="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileHandler.php" />
-        <option value="$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js" />
-        <option value="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php" />
         <option value="$PROJECT_DIR$/includes/classes/User.php" />
         <option value="$PROJECT_DIR$/includes/dbHandler/rateHandler.php" />
+        <option value="$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php" />
         <option value="$PROJECT_DIR$/comments-view.php" />
+        <option value="$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js" />
       </list>
     </option>
   </component>
@@ -411,7 +375,7 @@
       <workItem from="1523630101980" duration="14408000" />
       <workItem from="1523805344377" duration="565000" />
       <workItem from="1523890558391" duration="21397000" />
-      <workItem from="1524142952016" duration="15939000" />
+      <workItem from="1524142952016" duration="18972000" />
     </task>
     <task id="LOCAL-00001" summary="fixing pagination in index page">
       <created>1523012859281</created>
@@ -424,7 +388,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136611000" />
+    <option name="totallyTimeSpent" value="139644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -701,14 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/commentCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/dbHandler/indexHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -803,7 +759,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,59 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments-view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding>
-            <marker date="1524160197234" expanded="true" signature="1242:1438" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="1456:6748" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="1507:1569" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="1592:6741" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="1688:3015" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="1728:2881" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="2218:2534" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="2243:2512" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="2317:2486" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="2608:2862" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="2633:2840" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3130:5141" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3202:5126" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3250:4833" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3302:3509" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3534:3719" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3744:3941" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="3966:4156" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="4181:4376" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="4401:4593" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="4618:4811" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="4875:5107" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="5243:5950" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="5285:5907" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="5328:5739" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="5511:5689" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="5555:5666" ph="..." />
-            <marker date="1524160197234" expanded="true" signature="5603:5637" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2074">
@@ -945,8 +848,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="444" column="41" lean-forward="true" selection-start-line="444" selection-start-column="41" selection-end-line="444" selection-end-column="41" />
+        <state relative-caret-position="263">
+          <caret line="449" column="57" lean-forward="true" selection-start-line="449" selection-start-column="57" selection-end-line="449" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbHandler/craftsmenProfileCommentsFetcherHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <marker date="1524167628503" expanded="true" signature="591:662" ph="SELECT COUNT... rate" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/commentCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="66" column="31" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments-view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="115" column="98" lean-forward="false" selection-start-line="115" selection-start-column="98" selection-end-line="115" selection-end-column="98" />
+          <folding>
+            <marker date="1524168322950" expanded="true" signature="1253:1449" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="1467:7229" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="1518:1580" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="1603:7222" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="1699:3026" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="1739:2892" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="2229:2545" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="2254:2523" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="2328:2497" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="2619:2873" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="2644:2851" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3141:5152" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3213:5137" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3261:4844" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3313:3520" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3545:3730" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3755:3952" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="3977:4167" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="4192:4387" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="4412:4604" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="4629:4822" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="4886:5118" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="5254:6431" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="5296:6388" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="5339:6220" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="5522:6170" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="5566:6147" ph="..." />
+            <marker date="1524168322950" expanded="true" signature="5614:5921" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/craftsmenProfileCommentsFetcherCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>

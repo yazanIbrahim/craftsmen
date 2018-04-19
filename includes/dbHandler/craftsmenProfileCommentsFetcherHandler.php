@@ -17,8 +17,16 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         switch ($action){
             case "getcomments":{
                 $offset = filter_input(INPUT_GET, 'offset', FILTER_SANITIZE_SPECIAL_CHARS);
+                //get how many comments f\or this craftsmen
+
+                $stmt = "SELECT COUNT(rate_id) as numofcomments from rate WHERE craftsmen_id = ?";
+                $query = $db->prepare($stmt);
+                $query->execute(array($_SESSION['user_id']));
+                $response['numofcomments'] = $query->fetch(PDO::FETCH_ASSOC)['numofcomments'];
+
+
                 $craftsmen = new craftsmen($db);
-                $response = $craftsmen->getCraftsmenComments($_SESSION['user_id'],$offset);
+                $response['comments'] = $craftsmen->getCraftsmenComments($_SESSION['user_id'],$offset);
 
                 echo json_encode($response);
 

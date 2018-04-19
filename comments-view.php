@@ -7,7 +7,7 @@ if(!isset($_SESSION['user_id'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="en" >
 
 <head>
     <meta charset="utf-8">
@@ -104,9 +104,19 @@ if(!isset($_SESSION['user_id'])){
                     <div class="col-sm-12">
                         <div class="white-box">
 
-
+                            <div class="row" ng-repeat="x in comments">
+                                <div class="col-sm-12">
+                                    {{x.comment + " " + x.first_name }}
+                                </div>
+                            </div>
 
                         </div>
+
+                        <ul class="pagination">
+                            <li><a href="#" ng-repeat="x in numOfComments" ng-click="getComments(x)">{{x}}</a></li>
+
+
+                        </ul>
 
 
                     </div>
