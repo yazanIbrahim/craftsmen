@@ -129,7 +129,7 @@ session_start();
                         <p class="craftsmen-info">المدينة : {{topCraftsmen.topCraftsmen[key].city}}</p>
                         <p class="craftsmen-info">المهنة : {{topCraftsmen.topCraftsmen[key].craft +" " }}</p>
                         <p class="craftsmen-info">رقم الهاتف : {{topCraftsmen.topCraftsmen[key].mobile +" " }}</p>
-
+                        <p class="craftsmen-info">التقيم : {{topCraftsmen.topCraftsmen[key].rate +"%" }}</p>
                         <div class="form-group">
                             <a class="btn btn-primary" href="profile-view.php?user={{topCraftsmen.topCraftsmen[key].username}}">عرض الصفحة الشخصية </a>
                         </div>
