@@ -54,12 +54,12 @@ session_start();
 
                                 </div>
                                                                 
-                                <button type="submit" class="btn btn-primary mySearchBtn">Search</button>
+                                <button type="submit" class="btn btn-primary mySearchBtn" ng-click="search()">Search</button>
                                                                
 							</form>
                             <div class="mySearchDiv">
                                 <ul class="search-result">
-                                    <li class="search-result-item " ng-repeat="(key,value) in searchresults"><a href="search.php?q="> {{searchresults[key].craft}}</a></li>
+                                    <li class="search-result-item " ng-repeat="x in searchresults"><a href="profile-view.php?user={{x.username}}"> {{x.first_name}}</a></li>
                                 </ul>
                             </div>
 
@@ -514,7 +514,7 @@ session_start();
 		<script src="js/settings.js"></script>
         
         <script src="js/dropdownMenu.js"></script>
-        <script src="profile-js/stars-rating.js"></script>
+
 
 
 	</body>

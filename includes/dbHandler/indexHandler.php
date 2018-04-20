@@ -15,26 +15,18 @@ if(isset($_GET['action'])){
             $stmt = "SELECT first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser 
 inner JOIN craftsmen on craftsmen_id = user_id 
 inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id
-inner join rate on craftsmen.craftsmen_id=rate.craftsmen_id order by rate DESC limit 8  
+inner join rate on craftsmen.craftsmen_id=rate.craftsmen_id GROUP BY rate order by rate DESC limit 8  
                     ";
 
             $query = $db->prepare($stmt);
             $query->execute();
             $response['topCraftsmen'] = $query->fetchAll(PDO::FETCH_ASSOC);
 
+
             foreach($response['topCraftsmen'] as $craftsmen=>$attributes){
-
-
                     $rate = $attributes['rate'];
                     $numOfRating = $attributes['numofrates'];// how man rates for this craftsmen
-
-//echo $rate  . "  " .$numOfRating;
                     $attributes['rate']= ((float)$rate/$numOfRating*100)/100;
-
-
-
-
-
             }
 
 

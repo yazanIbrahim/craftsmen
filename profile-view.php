@@ -31,7 +31,7 @@ if(isset($_GET['user'])){
            //check if the craftsmen trying to view his profile as enduser if so prevent him and 
            //send him to his official profile page
            //redirect him to his profile
-           Helper::redirect("craftsmen-profile.php",3);
+           Helper::redirect("craftsmen-profile.php",3,"craftmen cant view this page");
        }else{
            //if the craftsmen logeed in is trying vuew another crafsmen profile prevent him as well :)
                       Helper::redirect("index.php",3,"not allowed to view this page since u r craftsmen ");
@@ -40,7 +40,7 @@ if(isset($_GET['user'])){
       
    }else{
 
-
+echo "loop";
        //if the logged in user is an enduser allow him and fethch the requested crasftsmne profile info
 
 
@@ -175,16 +175,16 @@ if(isset($_GET['user'])){
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 f-r">
                         <h4 class="page-title">
-                            <a class="profile-pic" href="#"> <img src="images/pp.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{craftsmenInfo.craftsmenInfo.firstName+" "+craftsmenInfo.craftsmenInfo.lastName}}</b> </a>
-                              <div class="row lead stars">
+                            <a class="profile-pic" href="#"> <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{craftsmenInfo.craftsmenInfo.firstName}}</b> </a>
+                            <div class="row lead stars">
                                 <div id="stars" class="starrr">
-                                
-                                </div>
-                                <span id="count">0</span> 
-                                </div>
 
-                        </h4> 
-                        
+                                </div>
+                                <span id="count">0</span>
+                            </div>
+
+                        </h4>
+
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 f-r">
                         <ol class="breadcrumb">
@@ -316,7 +316,7 @@ if(isset($_GET['user'])){
     <script src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
     <!--Morris JavaScript -->
     <script src="plugins/bower_components/raphael/raphael-min.js"></script>
-    <script src="plugins/bower_components/morrisjs/morris.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="profile-js/custom.min.js"></script>
     <script src="profile-js/dashboard1.js"></script>
