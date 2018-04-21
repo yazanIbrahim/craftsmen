@@ -2,15 +2,12 @@ var fileInput = $("[type=file]");
 var previewElement = $("#imagePreview");
 
 fileInput.change(function(){
-    console.log("yazan");
-
     //check if there is selected fiels in the filelist object
-     selectedFiles = fileInput.files;
-    console.log(selectedFiles[0]);
-
-
-        var image = selectedFiles[0];
-        console.log("image = "+image.name);
-
-
+    file = fileInput.files[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+         dataURL = reader.result;
+    }
+    reader.readAsDataURL(file);
+    console.log(dataURL);
 });

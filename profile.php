@@ -68,6 +68,13 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <style>
+        .image-upload > input
+        {
+            display: none;
+        }
+    </style>
 <![endif]-->
 </head>
 
@@ -157,19 +164,15 @@
                         <div class="white-box">
                             <div class="user-bg"> <img width="100%" alt="user" src="plugins/images/large/img1.jpg">
                                 <div class="overlay-box">
-                                    <div class="user-content">
-                                        <form>
-                                            <div class="input-group">
-                                                <input type="file" id="imageInput" class="form-control" name="image" />
-                                                <button id="upload">upload</button>
-                                            </div>
-                                        </form>
 
+                                    <div class="image-upload">
+                                        <label for="file-input">
+                                            <img src="images/pp.png" width="50"/>
+                                        </label>
 
+                                        <input id="file-input" type="file"/>
+                                    </div>
 
-                                        <a href=""><img src="" class="thumb-lg img-circle" alt="img" id="imagePreview"></a>
-                                        <h4 class="text-white">User Name</h4>
-                                        </div>
                                 </div>
                             </div>
                             <div class="user-btm-box">
