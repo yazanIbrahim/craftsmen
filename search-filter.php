@@ -1,9 +1,13 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <?php
  include "includes/head.php";
  ?>
- <body ng-app="index" ng-controller="indexCtrl" ng-init="getPageNumbers()">
+ <body ng-app="index" ng-controller="indexCtrl">
  		<!-- ============ NAVBAR START ============ -->
 
         <?php
@@ -22,7 +26,7 @@
 
 		<!-- ============ HEADER END ============ -->
 		<!-- ============ FILTER START ========== -->
-			<section class="filter-section">
+			<section class="filter-section" ng-controller="searchFilterCtrl">
 				<div class="container">
 					<div class="row">
 					<div class="col-sm-12 filter-bar">
@@ -155,7 +159,8 @@
 
         <script src="js/controllers/loginCtrl.js"></script>
 
-        <script src="js/controllers/searchCtrl.js"></script>
+        <script src="js/controllers/searchFilterCtrl.js"></script>
+
 
 
 		<!-- Modernizr Plugin -->
@@ -209,7 +214,7 @@
 		<script src="js/settings.js"></script>
         
         <script src="js/dropdownMenu.js"></script>
-        <script src="profile-js/stars-rating.js"></script>
+
         <script src="js/search-filter.js"></script>
 
  </body>

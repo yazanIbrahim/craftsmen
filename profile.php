@@ -167,10 +167,10 @@
 
                                     <div class="image-upload">
                                         <label for="file-input">
-                                            <img src="images/pp.png" width="50"/>
+                                            <img src="images/pp.png" width="50" id="previewImg"/>
                                         </label>
 
-                                        <input id="file-input" type="file"/>
+                                        <input id="file-input" type="file" onchange="previewFile()" style="display:none"/>
                                     </div>
 
                                 </div>

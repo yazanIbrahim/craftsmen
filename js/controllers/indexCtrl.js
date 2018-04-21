@@ -12,12 +12,12 @@ app.controller('indexCtrl', function($scope,$http) {
 
 
   //get top 6 crafts
-  $http.get("includes/dbHandler/indexHandler.php?action=topcrafts").then(function(response){
+  /*$http.get("includes/dbHandler/indexHandler.php?action=topcrafts").then(function(response){
     console.log(response.data[0]);
     $scope.selectedCraft = response.data[0];//the first element of the crafts returned array
     $scope.topCrafts = response.data;
 
-  });
+  });*/
 
   $http.get("includes/dbHandler/indexHandler.php?action=topCraftsmen").then(function(response){
       console.log(response.data);
