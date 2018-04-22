@@ -162,30 +162,35 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-12">
                         <div class="white-box">
-                            <div class="user-bg"> <img width="100%" alt="user" src="plugins/images/large/img1.jpg">
+                            <div class="user-bg">
+                                <label for="file-input">
                                 <div class="overlay-box">
 
-                                    <div class="image-upload">
-                                        <label for="file-input">
-                                            <img src="images/pp.png" width="50" id="previewImg"/>
-                                        </label>
+                                    <img width="100%" alt="" src="images/pp.png" id="previewImg">
 
-                                        <input id="file-input" type="file" onchange="previewFile()" style="display:none"/>
-                                    </div>
+
+
+
+
+
+
+
+                                    <input id="file-input" type="file" onchange="previewFile()" style="display:none"/>
 
                                 </div>
+                                </label>
                             </div>
                             <div class="user-btm-box">
                                 <div class="col-md-4 col-sm-4 text-center">
-                                    <p class="text-purple"><i class="ti-facebook"></i></p>
-                                    <h1>258</h1> </div>
+                                    <button onclick="upload()">upload</button>
+                                </div>
                                 <div class="col-md-4 col-sm-4 text-center">
-                                    <p class="text-blue"><i class="ti-twitter"></i></p>
-                                    <h1>125</h1> </div>
-                                <div class="col-md-4 col-sm-4 text-center">
-                                    <p class="text-danger"><i class="ti-dribbble"></i></p>
-                                    <h1>556</h1> </div>
-                            </div>
+                                <p class="text-blue"><i class="ti-twitter"></i></p>
+                                <h1>125</h1> </div>
+                            <div class="col-md-4 col-sm-4 text-center">
+                                <p class="text-danger"><i class="ti-dribbble"></i></p>
+                                <h1>556</h1> </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-12">

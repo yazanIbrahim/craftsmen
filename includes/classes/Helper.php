@@ -9,6 +9,15 @@
 
 class Helper{
 
+    public static function uploadFile($file,$dir){
+        $dir = $dir."/";
+        $fileName = $dir . basename($file["name"]);
+        //echo $fileName;
+        move_uploaded_file($file['tmp_name'],"../../".$fileName);
+
+
+    }
+
     public static function sendEmail($to, $content, $subject){
         date_default_timezone_set('Etc/UTC');
 

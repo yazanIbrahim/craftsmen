@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0b59cd-b4b0-4f27-9406-ed0776c8fafa" name="Default" comment="fixing rate and fetching top craftsmen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/includes/classes/Helper.php" afterPath="$PROJECT_DIR$/includes/classes/Helper.php" />
       <change beforePath="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" afterPath="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" />
-      <change beforePath="$PROJECT_DIR$/js/controllers/indexCtrl.js" afterPath="$PROJECT_DIR$/js/controllers/indexCtrl.js" />
       <change beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
-      <change beforePath="$PROJECT_DIR$/search-result.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,15 +31,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="172" column="120" lean-forward="false" selection-start-line="172" selection-start-column="120" selection-end-line="172" selection-end-column="120" />
+            <state relative-caret-position="340">
+              <caret line="184" column="61" lean-forward="false" selection-start-line="184" selection-start-column="61" selection-end-line="184" selection-end-column="61" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1524339166396" expanded="true" signature="2670:2760" ph="..." />
-                <marker date="1524339166396" expanded="true" signature="2710:2748" ph="{...}" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1524376402533" expanded="true" signature="2670:2760" ph="..." />
+                <marker date="1524376402533" expanded="true" signature="2710:2748" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -49,9 +48,39 @@
       <file leaf-file-name="imageUploadCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controllers/imageUploadCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uploadImageHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/dbHandler/uploadImageHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+              <folding>
+                <marker date="1524396083684" expanded="true" signature="275:329" ph="INSERT INTO masteruser... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/classes/Helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+              <folding>
+                <element signature="n#sendEmail#0;n#Helper#0;n#!!top" expanded="false" />
+                <element signature="n#checkBruteForce#0;n#Helper#0;n#!!top" expanded="false" />
+                <element signature="n#redirect#0;n#Helper#0;n#!!top" expanded="false" />
+                <element signature="n#generateCaptcha#0;n#Helper#0;n#!!top" expanded="false" />
+                <element signature="n#uniqueCaptcha#0;n#Helper#0;n#!!top" expanded="false" />
+                <marker date="1524393004712" expanded="true" signature="1917:2004" ph="SELECT login... login_attempts" />
+                <marker date="1524393004712" expanded="true" signature="3344:3375" ph="SELECT code trust_contacts" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,7 +155,6 @@
         <option value="$PROJECT_DIR$/js/controllers/craftsmenSignupCtrl.js" />
         <option value="$PROJECT_DIR$/signup.php" />
         <option value="$PROJECT_DIR$/js/controllers/updateCtrl.js" />
-        <option value="$PROJECT_DIR$/includes/classes/Helper.php" />
         <option value="$PROJECT_DIR$/about.php" />
         <option value="$PROJECT_DIR$/includes/classes/craftsmen.php" />
         <option value="$PROJECT_DIR$/craftsmen-profile.php" />
@@ -150,8 +178,10 @@
         <option value="$PROJECT_DIR$/search-filter.php" />
         <option value="$PROJECT_DIR$/includes/dbHandler/searchFilterHandler.php" />
         <option value="$PROJECT_DIR$/js/controllers/searchFilterCtrl.js" />
-        <option value="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" />
         <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" />
+        <option value="$PROJECT_DIR$/includes/classes/Helper.php" />
+        <option value="$PROJECT_DIR$/includes/dbHandler/uploadImageHandler.php" />
       </list>
     </option>
   </component>
@@ -196,17 +226,6 @@
               <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
               <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dbHandler" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
@@ -290,7 +309,7 @@
       <workItem from="1524142952016" duration="32797000" />
       <workItem from="1524247945688" duration="3019000" />
       <workItem from="1524305342036" duration="8607000" />
-      <workItem from="1524338709365" duration="452000" />
+      <workItem from="1524338709365" duration="10905000" />
     </task>
     <task id="LOCAL-00001" summary="fixing pagination in index page">
       <created>1523012859281</created>
@@ -303,7 +322,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165547000" />
+    <option name="totallyTimeSpent" value="176000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -342,18 +361,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/classes/Helper.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/classes/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/classes/Sanitizer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -422,17 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/classes/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <marker date="1524121885995" expanded="true" signature="1688:1775" ph="SELECT login... login_attempts" />
-            <marker date="1524121885995" expanded="true" signature="3115:3146" ph="SELECT code trust_contacts" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,6 +620,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="187" column="26" lean-forward="false" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
+          <folding>
+            <marker date="1524226707094" expanded="true" signature="460:509" ph="SELECT user_... masteruser" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -676,6 +687,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1524318890120" expanded="true" signature="315:511" ph="SELECT first... masteruser" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,6 +704,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-478">
           <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+          <folding>
+            <marker date="1524231475278" expanded="true" signature="303:656" ph="SELECT first... masteruser" />
+            <marker date="1524231475278" expanded="true" signature="1488:1590" ph="SELECT * fro... masteruser" />
+            <marker date="1524231475278" expanded="true" signature="2193:2277" ph="SELECT craft... craftsmen" />
+            <marker date="1524231475278" expanded="true" signature="2663:2711" ph="SELECT count... craftsmen" />
+            <marker date="1524231475278" expanded="true" signature="2859:2932" ph="SELECT * FRO... craftsmen" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -697,6 +718,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1524247153769" expanded="true" signature="407:617" ph="SELECT first... masteruser" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,22 +731,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="184" column="61" lean-forward="false" selection-start-line="184" selection-start-column="61" selection-end-line="184" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1524376402533" expanded="true" signature="2670:2760" ph="..." />
+            <marker date="1524376402533" expanded="true" signature="2710:2748" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/imageUploadCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
+    <entry file="file://$PROJECT_DIR$/includes/classes/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="172" column="120" lean-forward="false" selection-start-line="172" selection-start-column="120" selection-end-line="172" selection-end-column="120" />
+        <state relative-caret-position="170">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1524339166396" expanded="true" signature="2670:2760" ph="..." />
-            <marker date="1524339166396" expanded="true" signature="2710:2748" ph="{...}" />
+            <element signature="n#sendEmail#0;n#Helper#0;n#!!top" expanded="false" />
+            <element signature="n#checkBruteForce#0;n#Helper#0;n#!!top" expanded="false" />
+            <element signature="n#redirect#0;n#Helper#0;n#!!top" expanded="false" />
+            <element signature="n#generateCaptcha#0;n#Helper#0;n#!!top" expanded="false" />
+            <element signature="n#uniqueCaptcha#0;n#Helper#0;n#!!top" expanded="false" />
+            <marker date="1524393004712" expanded="true" signature="1917:2004" ph="SELECT login... login_attempts" />
+            <marker date="1524393004712" expanded="true" signature="3344:3375" ph="SELECT code trust_contacts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbHandler/uploadImageHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <marker date="1524396083684" expanded="true" signature="275:329" ph="INSERT INTO masteruser... " />
           </folding>
         </state>
       </provider>
