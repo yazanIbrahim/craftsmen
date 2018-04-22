@@ -102,12 +102,7 @@ session_start();
           <div class="col-sm-8">
             <h2>اكثر المهنين طلبا</h2>
             <div class="jobs">
-            	<div class="row lead stars">
-			                                <div id="stars" class="starrr">
-			                                
-			                                </div>
-			                                <span id="count">0</span> 
-			                        </div>
+
 
 
                 <div class="offer" ng-repeat="(key,value) in topCraftsmen.topCraftsmen">

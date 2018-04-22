@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c0b59cd-b4b0-4f27-9406-ed0776c8fafa" name="Default" comment="fixing rate and fetching top craftsmen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/includes/classes/Helper.php" afterPath="$PROJECT_DIR$/includes/classes/Helper.php" />
-      <change beforePath="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" afterPath="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" />
-      <change beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
+      <change beforePath="$PROJECT_DIR$/includes/dbHandler/indexHandler.php" afterPath="$PROJECT_DIR$/includes/dbHandler/indexHandler.php" />
+      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,13 +53,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uploadImageHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uploadImageHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/dbHandler/uploadImageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
                 <marker date="1524396083684" expanded="true" signature="275:329" ph="INSERT INTO masteruser... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/dbHandler/indexHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="32" column="98" lean-forward="false" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
+              <folding>
+                <marker date="1524398189406" expanded="true" signature="305:658" ph="SELECT first... masteruser" />
+                <marker date="1524398189406" expanded="true" signature="1647:1749" ph="SELECT * fro... masteruser" />
+                <marker date="1524398189406" expanded="true" signature="2352:2436" ph="SELECT craft... craftsmen" />
+                <marker date="1524398189406" expanded="true" signature="2822:2870" ph="SELECT count... craftsmen" />
+                <marker date="1524398189406" expanded="true" signature="3018:3091" ph="SELECT * FRO... craftsmen" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="craftsmen.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/classes/craftsmen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding>
+                <marker date="1524165067437" expanded="true" signature="1335:1422" ph="SELECT COUNT... rate" />
+                <marker date="1524165067437" expanded="true" signature="1783:1964" ph="select comme... craftsmen_comments" />
+                <marker date="1524165067437" expanded="true" signature="2330:2578" ph="SELECT first... masteruser" />
+                <marker date="1524165067437" expanded="true" signature="3807:3925" ph="INSERT INTO masteruser... " />
+                <marker date="1524165067437" expanded="true" signature="4433:4494" ph="INSERT INTO craftsmen... " />
+                <marker date="1524165067437" expanded="true" signature="4718:4781" ph="INSERT INTO craftsmen_mobile... " />
+                <marker date="1524165067437" expanded="true" signature="5079:5113" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,7 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>recent com</find>
       <find>comment</find>
       <find>custo</find>
       <find>المهني</find>
@@ -126,6 +167,7 @@
       <find>login</find>
       <find>start</find>
       <find>star</find>
+      <find>calra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,8 +211,6 @@
         <option value="$PROJECT_DIR$/profile-js/dashboard1.js" />
         <option value="$PROJECT_DIR$/profile-view.php" />
         <option value="$PROJECT_DIR$/profile-js/stars-rating.js" />
-        <option value="$PROJECT_DIR$/includes/dbHandler/indexHandler.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/dbHandler/searchHandler.php" />
         <option value="$PROJECT_DIR$/js/controllers/searchCtrl.js" />
         <option value="$PROJECT_DIR$/search-result.php" />
@@ -182,6 +222,8 @@
         <option value="$PROJECT_DIR$/js/controllers/imageUploadCtrl.js" />
         <option value="$PROJECT_DIR$/includes/classes/Helper.php" />
         <option value="$PROJECT_DIR$/includes/dbHandler/uploadImageHandler.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/dbHandler/indexHandler.php" />
       </list>
     </option>
   </component>
@@ -192,7 +234,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="432" />
     <option name="y" value="30" />
     <option name="width" value="697" />
@@ -226,6 +268,23 @@
               <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
               <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="craftsmen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dbHandler" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="craftsmen" type="b2602c69:ProjectViewProjectNode" />
@@ -309,7 +368,7 @@
       <workItem from="1524142952016" duration="32797000" />
       <workItem from="1524247945688" duration="3019000" />
       <workItem from="1524305342036" duration="8607000" />
-      <workItem from="1524338709365" duration="10905000" />
+      <workItem from="1524338709365" duration="13488000" />
     </task>
     <task id="LOCAL-00001" summary="fixing pagination in index page">
       <created>1523012859281</created>
@@ -322,10 +381,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176000000" />
+    <option name="totallyTimeSpent" value="178583000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20166163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -491,22 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="32" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/classes/craftsmen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="196" column="83" lean-forward="false" selection-start-line="196" selection-start-column="83" selection-end-line="196" selection-end-column="83" />
-          <folding>
-            <marker date="1524165067437" expanded="true" signature="1335:1422" ph="SELECT COUNT... rate" />
-            <marker date="1524165067437" expanded="true" signature="1783:1964" ph="select comme... craftsmen_comments" />
-            <marker date="1524165067437" expanded="true" signature="2330:2578" ph="SELECT first... masteruser" />
-            <marker date="1524165067437" expanded="true" signature="3807:3925" ph="INSERT INTO masteruser... " />
-            <marker date="1524165067437" expanded="true" signature="4433:4494" ph="INSERT INTO craftsmen... " />
-            <marker date="1524165067437" expanded="true" signature="4718:4781" ph="INSERT INTO craftsmen_mobile... " />
-            <marker date="1524165067437" expanded="true" signature="5079:5113" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,20 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/dbHandler/indexHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-478">
-          <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-          <folding>
-            <marker date="1524231475278" expanded="true" signature="303:656" ph="SELECT first... masteruser" />
-            <marker date="1524231475278" expanded="true" signature="1488:1590" ph="SELECT * fro... masteruser" />
-            <marker date="1524231475278" expanded="true" signature="2193:2277" ph="SELECT craft... craftsmen" />
-            <marker date="1524231475278" expanded="true" signature="2663:2711" ph="SELECT count... craftsmen" />
-            <marker date="1524231475278" expanded="true" signature="2859:2932" ph="SELECT * FRO... craftsmen" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/dbHandler/searchHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -721,13 +750,6 @@
           <folding>
             <marker date="1524247153769" expanded="true" signature="407:617" ph="SELECT first... masteruser" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="56" column="108" lean-forward="false" selection-start-line="56" selection-start-column="108" selection-end-line="56" selection-end-column="108" />
         </state>
       </provider>
     </entry>
@@ -773,6 +795,44 @@
           <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
             <marker date="1524396083684" expanded="true" signature="275:329" ph="INSERT INTO masteruser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/classes/craftsmen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <marker date="1524165067437" expanded="true" signature="1335:1422" ph="SELECT COUNT... rate" />
+            <marker date="1524165067437" expanded="true" signature="1783:1964" ph="select comme... craftsmen_comments" />
+            <marker date="1524165067437" expanded="true" signature="2330:2578" ph="SELECT first... masteruser" />
+            <marker date="1524165067437" expanded="true" signature="3807:3925" ph="INSERT INTO masteruser... " />
+            <marker date="1524165067437" expanded="true" signature="4433:4494" ph="INSERT INTO craftsmen... " />
+            <marker date="1524165067437" expanded="true" signature="4718:4781" ph="INSERT INTO craftsmen_mobile... " />
+            <marker date="1524165067437" expanded="true" signature="5079:5113" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbHandler/indexHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="98" lean-forward="false" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
+          <folding>
+            <marker date="1524398189406" expanded="true" signature="305:658" ph="SELECT first... masteruser" />
+            <marker date="1524398189406" expanded="true" signature="1647:1749" ph="SELECT * fro... masteruser" />
+            <marker date="1524398189406" expanded="true" signature="2352:2436" ph="SELECT craft... craftsmen" />
+            <marker date="1524398189406" expanded="true" signature="2822:2870" ph="SELECT count... craftsmen" />
+            <marker date="1524398189406" expanded="true" signature="3018:3091" ph="SELECT * FRO... craftsmen" />
           </folding>
         </state>
       </provider>

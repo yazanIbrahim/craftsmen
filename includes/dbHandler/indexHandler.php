@@ -3,6 +3,8 @@
 
 require_once "../classes/Helper.php";
 require_once "../classes/Dbc.php";
+
+
 if(isset($_GET['action'])){
 
     $action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
@@ -22,12 +24,17 @@ inner join rate on craftsmen.craftsmen_id=rate.craftsmen_id GROUP BY rate order 
             $query->execute();
             $response['topCraftsmen'] = $query->fetchAll(PDO::FETCH_ASSOC);
 
-
+            $i = 0;
             foreach($response['topCraftsmen'] as $craftsmen=>$attributes){
                     $rate = $attributes['rate'];
+
                     $numOfRating = $attributes['numofrates'];// how man rates for this craftsmen
-                    $attributes['rate']= ((float)$rate/$numOfRating*100)/100;
+                   // $attributes['rate']= ceil((($rate/(float)$numOfRating)*5)/100);
+                    $response['topCraftsmen'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5);
+                    $i++;
+
             }
+
 
 
 
