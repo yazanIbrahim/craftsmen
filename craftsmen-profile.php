@@ -128,7 +128,7 @@
                                     <span class="sr-only">70% Complete</span>
                                 </div>
                             </div>
-                            <p>100%</p>
+                            <p>{{rate/20}}</p>
                         </h4> 
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 f-r">
@@ -203,6 +203,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
+                            <!-- Resources -->
                             <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
                             <script src="https://www.amcharts.com/lib/3/serial.js"></script>
                             <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
@@ -215,50 +216,7 @@
                 </div>
                 
                 <!-- row -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                        <div class="white-box">
-                            <h3 class="box-title">اخر التعليقات</h3>
-                            <div class="comment-center">       
-                                <?php 
-                                    $x = $craftsmen->getComments();
-                                    //print_r($x);
-                                    foreach( $x as $key=>$value) {
-                                        ?>
-                                        <div class="comment-body">
-                                            <div class="user-img"> <img src="images/pp.png" alt="user" class="img-circle"></div>
-                                            <div class="mail-contnet">
-                                                <h5>
-                                                   <?php echo $value['first_name'] . " " . $value['last_name']; ?>
-                                                </h5> 
-                                                <span class="mail-desc"> <?php echo $value['comment']; ?></span>
-                                                <a href="javacript:void(0)" class="action">
-                                                    <i class="ti-close text-danger">
-                                                
-                                                    </i>
-                                                </a> 
-                                                <a href="javacript:void(0)" class="action">
-                                                    <i class="ti-check text-success">
-                                                        
-                                                    </i>
-                                                </a>
-                                                <span class="time pull-right"><?php echo $value['comment_date']; ?></span>
-                                            </div>         
-                                        </div>
-                                        <?php 
-                                    }     
-                                ?>
-                            </div>
-                            <div class="comment-num-page">
-                                <ul class="num-of-pages" ng-repeat="x in pages">
-                                    <li ng-click="getComments(x)"><a class="page" href="" >{{x}}</a></li>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
                 <!-- /.row -->
             </div>
             <!-- /.container-fluid -->

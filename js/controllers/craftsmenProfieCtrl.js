@@ -2,91 +2,84 @@ var app = angular.module('craftsmenProfile', []);
 
 app.service('chart', function() {
     this.displayChart = function (chartData) {
+        var chartData = generatechartData();
+
+        function generatechartData() {
+            var chartData = [];
+            var firstDate = new Date();
+            firstDate.setDate(firstDate.getDate() - 150);
+            var visits = 500;
+
+            for (var i = 0; i < 150; i++) {
+                // we create date objects here. In your data, you can have date strings
+                // and then set format of your dates using chart.dataDateFormat property,
+                // however when possible, use date objects, as this will speed up chart rendering.
+                var newDate = new Date(firstDate);
+                newDate.setDate(newDate.getDate() + i);
+
+                visits += Math.round((Math.random()<0.5?1:-1)*Math.random()*10);
+
+                chartData.push({
+                    date: newDate,
+                    visits: visits
+                });
+            }
+            return chartData;
+        }
+
 
         var chart = AmCharts.makeChart("chartdiv", {
+            "theme": "light",
             "type": "serial",
-            "theme": "chalk",
-            "marginRight": 40,
-            "marginLeft": 40,
+            "marginRight": 80,
             "autoMarginOffset": 20,
-            "mouseWheelZoomEnabled":true,
-            "dataDateFormat": "YYYY-MM-DD",
+            "marginTop":20,
+            "dataProvider": chartData,
             "valueAxes": [{
                 "id": "v1",
-                "axisAlpha": 0,
-                "position": "left",
-                "ignoreAxisWidth":true
+                "axisAlpha": 0.1
             }],
-            "balloon": {
-                "borderThickness": 1,
-                "shadowAlpha": 0
-            },
             "graphs": [{
-                "id": "g1",
-                "balloon":{
-                    "drop":true,
-                    "adjustBorderColor":false,
-                    "color":"#ffffff"
-                },
+                "useNegativeColorIfDown": true,
+                "balloonText": "[[category]]<br><b>value: [[value]]</b>",
                 "bullet": "round",
                 "bulletBorderAlpha": 1,
-                "bulletColor": "#FFFFFF",
-                "bulletSize": 5,
+                "bulletBorderColor": "#FFFFFF",
                 "hideBulletsCount": 50,
                 "lineThickness": 2,
-                "title": "red line",
-                "useLineColorForBulletBorder": true,
-                "valueField": "value",
-                "balloonText": "<span style='font-size:18px;'>[[value]]</span>"
+                "lineColor": "#fdd400",
+                "negativeLineColor": "#67b7dc",
+                "valueField": "visits"
             }],
             "chartScrollbar": {
-                "graph": "g1",
-                "oppositeAxis":false,
-                "offset":30,
-                "scrollbarHeight": 80,
-                "backgroundAlpha": 0,
-                "selectedBackgroundAlpha": 0.1,
-                "selectedBackgroundColor": "#888888",
-                "graphFillAlpha": 0,
-                "graphLineAlpha": 0.5,
-                "selectedGraphFillAlpha": 0,
-                "selectedGraphLineAlpha": 1,
-                "autoGridCount":true,
-                "color":"#AAAAAA"
+                "scrollbarHeight": 5,
+                "backgroundAlpha": 0.1,
+                "backgroundColor": "#868686",
+                "selectedBackgroundColor": "#67b7dc",
+                "selectedBackgroundAlpha": 1
             },
             "chartCursor": {
-                "pan": true,
                 "valueLineEnabled": true,
-                "valueLineBalloonEnabled": true,
-                "cursorAlpha":1,
-                "cursorColor":"#258cbb",
-                "limitToGraph":"g1",
-                "valueLineAlpha":0.2,
-                "valueZoomable":true
-            },
-            "valueScrollbar":{
-                "oppositeAxis":false,
-                "offset":50,
-                "scrollbarHeight":10
+                "valueLineBalloonEnabled": true
             },
             "categoryField": "date",
             "categoryAxis": {
                 "parseDates": true,
-                "dashLength": 1,
-                "minorGridEnabled": true
+                "axisAlpha": 0,
+                "minHorizontalGap": 60
             },
             "export": {
                 "enabled": true
-            },
-            "dataProvider":chartData
+            }
         });
 
-        chart.addListener("rendered", zoomChart);
-
-        zoomChart();
+        chart.addListener("dataUpdated", zoomChart);
+//zoomChart();
 
         function zoomChart() {
-            chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
+            if (chart.zoomToIndexes) {
+                chart.zoomToIndexes(130, chartData.length - 1);
+            }
         }
     }
 });
@@ -97,7 +90,7 @@ app.controller('craftsmenProfileCtrl', function($scope,$http,chart) {
     //get craftsmen rate
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=getRate").then(function(response){
     $scope.rate = response.data.rate * 20;
-    console.log($scope.rate);
+    console.log("rate is "+$scope.rate);
     $("#rate").css('width',$scope.rate+"%");
 
     });

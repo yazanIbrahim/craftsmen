@@ -147,7 +147,7 @@ class User{
             return false;
     }
 
-    public function sendPasswordRecoveryLink($userId){
+    public function sendPasswordRecoveryLink($email,$userId){
 
         $token = Helper::generateCaptcha();
         $token = md5($token);

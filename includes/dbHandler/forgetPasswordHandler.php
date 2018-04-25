@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $db = new Dbc();
         $db = $db->getConn();
 
-        $stmt  = "SELECT username FROM masteruser WHERE email = ? LIMIT 1";
+        $stmt  = "SELECT user_id,username FROM masteruser WHERE email = ? LIMIT 1";
         $query = $db->prepare($stmt);
         $query->execute(array($sanitizedData['recoveryEmail']));
 
@@ -67,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         if($query->rowCount($res) > 0){
             $user = new User();
-            $user->sendPasswordRecoveryLink($sanitizedData['recoveryEmail'],$res['username']);
+            $user->sendPasswordRecoveryLink($sanitizedData['recoveryEmail'],$res['user_id']);
         }
         else{
             //display error
