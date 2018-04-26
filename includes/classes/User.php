@@ -98,14 +98,14 @@ class User{
     }
     
     public function update($arrayData){
-        print_r($arrayData);
+        //print_r($arrayData);
         extract($arrayData);
         
-        $password1 = password_hash($password1, PASSWORD_DEFAULT);
-        $stmt = "UPDATE masteruser SET first_name=?, last_name=?, email=?, username=?, password=? WHERE user_id=?";
+       // $password1 = password_hash($password1, PASSWORD_DEFAULT);
+        $stmt = "UPDATE masteruser SET first_name=?, last_name=?, email=?, username=? WHERE user_id=?";
         $query = $this->getDbConnection()->prepare($stmt);
-        echo("pass=".$password1);
-        $query -> execute(array($firstName,$surName,$email,$userName,$password1,$_SESSION['user_id']));
+
+        $query -> execute(array($firstName,$surName,$email,$userName,$_SESSION['user_id']));
         
         $id = $this->getDbConnection()->lastInsertId();
         $stmt2 = "UPDATE craftsmen SET craft=?, city=? WHERE craftsmen_id = ?";

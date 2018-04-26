@@ -55,11 +55,14 @@ class Validator{
                                     $db = $db->getConn();
                                     $dbColName = strtolower($fieldName);//actual column name in the database
 
-                                    $stmt = "SELECT {$fieldName} FROM {$ruleValue} WHERE {$dbColName} = ?";
+                                    $stmt = "SELECT {$fieldName} ,user_id FROM {$ruleValue[0]} WHERE {$dbColName} = ?";
                                     $query = $db->prepare($stmt);
                                     $query->execute(array($formData[$fieldName]));
-                                    if ($query->rowCount() > 0)
-                                        $this->addError($errorMsgFieldName, "{$fieldName} exist pick another one");
+                                    if ($query->rowCount() > 0){
+                                        if($query->fetch(PDO::FETCH_ASSOC)['user_id'] !== $ruleValue[1])
+                                            $this->addError($errorMsgFieldName, "{$fieldName} exist pick another one");
+                                    }
+
 
                                 }
                                 break;

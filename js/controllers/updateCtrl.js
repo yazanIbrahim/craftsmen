@@ -22,12 +22,25 @@ app.service('regexService', function() {
 
 app.controller('updateCtrl', function($scope,$http) {
     $scope.craftsmenPlaceHolder = {};
-     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=craftsmenPlaceHolder").then(function(response){
-             console.log(response.data);
-        $scope.craftsmenPlaceHolder = response.data;
+    $scope.updateInfo = {};
+    $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=craftsmenPlaceHolder").then(function(response){
+             //console.log(response.data);
+            $scope.craftsmenPlaceHolder = response.data;
+
+             $scope.updateInfo = response.data;
+
+            /* for (var key in $scope.craftsmenPlaceHolder){
+                $scope.updateInfo[key] =  $scope.craftsmenPlaceHolder[key];
+             }*/
+
+             //console.log($scope.updateInfo);
      });
+
+
     $scope.update = function(){
         console.log($scope.updateInfo);
+
+
         $http.post("includes/dbHandler/updateHandler.php",$scope.updateInfo).then(function(response){
             console.log(response.data);
             $scope.error = response.data;

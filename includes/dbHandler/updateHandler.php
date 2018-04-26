@@ -7,8 +7,9 @@ include "../classes/User.php";
 include "../classes/craftsmen.php";
 
 $data = json_decode(file_get_contents("php://input"));
+//print_r($data);
 $data = (array)$data;
-print_r($data);
+
 //echo "xss attack" . $data['firstName'];
 
 
@@ -21,54 +22,50 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $validator->check($data, array(
             'firstName' => array(
                 'name' => 'firstNameError',//name of the angular model which will be used to display error msgs
-                'required' => true,
+                'required' => false,
                 'min' => 2,
                 'max' => 20
             ),
-            'surName' => array(
+            'lastName' => array(
                 'name' => 'surNameError',
-                'required' => true,
+                'required' => false,
                 'min' => 2,
                 'max' => 20
             ),
             'email' => array(
                 'name' => 'emailError',
-                'required' => true,
+                'required' => false,
                 'email' => true,
-                'unique' => 'masteruser', // name of the table to check in
+                'unique' => array('masteruser',$_SESSION['user_id']), // name of the table to check in
 
             ),
-            'userName' => array(
+            'surName' => array(
+                'name' => 'surNameError',
+                'required' => false,
+                'min' => 2,
+                'max' => 20,
+
+            ),
+            'userName'=>array(
                 'name' => 'userNameError',
-                'required' => true,
-                'min' => 2,
-                'max' => 20,
-                'unique' => 'masteruser'
+                'required' => false,
+                'min' => 5,
+                'max' => 10,
             ),
-            'password1' => array(
-                'name' => 'password1Error',
-                'required' => true,
-                'min' => 2,
-                'max' => 20,
-                'password' => true,
+            'mobile'=>array(
+                'name' => 'mobileError',
+                'required' => false,
+                'min' => 9  ,
+                'max' => 10,
 
             ),
-            'password2' => array(
-                'name' => 'password2Error',
-                'required' => true,
+            'bio'=>array(
+                'name' => 'bioError',
+                'required' => false,
                 'min' => 2,
-                'max' => 20,
-                'password' => true,
-                'match'    => 'password1'
+                'max' => 55,
             ),
-            'passwordo' => array(
-                'name' => 'passwordoError',
-                'required' => true,
-                'min' => 2,
-                'max' => 20,
-                'password' => true,
-                'checkOldPassword' => array($_SESSION['user_id'],$data['passwordo'])
-            )
+
         ));
 
         //check if data is valid; if yes proceed to sanitizing else display errors to the user
@@ -83,8 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'surName' => 'string',
                 'email' => 'email',
                 'userName' => 'string',
-                'password1' => 'string',
-                'password2' => 'string',
+
             ));
 
           

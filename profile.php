@@ -173,70 +173,56 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
                             <form class="form-horizontal form-material" id= "craftmenUpdate" name="craftmenUpdate">
-                                {{fullName}}
+
                                 
                                 <div class="form-group">
                                     <label class="col-md-12">الاسم الأول</label>
                                     <div class="col-md-12">
 
-                                    <input type="text" placeholder="{{craftsmenPlaceHolder.first_name}}" class="form-control form-control-line" name="firstName" ng-model="updateInfo.firstName" ng-pattern="regex.firstName" > </div>
-                                         <div class="alert alert-danger"  ng-show="updateErrorFlags.firstNameError" >{{error.firstNameError}}</div>
+                                    <input type="text" placeholder="" class="form-control form-control-line" name="firstName" ng-model="updateInfo.firstName" ng-pattern="regex.firstName" > </div>
+                                         <div class="alert alert-danger"  ng-show="updateErrorFlags.firstNameError" >{{error.firstNameError}}</div>{{updateInfo.firstName}}
                                          
                                 </div>
                                  <div class="form-group">
                                     <label class="col-md-12">اسم العائلة</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="{{craftsmenPlaceHolder.last_name}}" class="form-control form-control-line" name="surName" ng-model="updateInfo.surName" pattern="regex.surName" > </div>
+                                        <input type="text" placeholder="" class="form-control form-control-line" name="surName" ng-model="updateInfo.surName" pattern="" >{{updateInfo.surName}}
+                                    </div>
                                         <div class="alert alert-danger"  ng-show="updateErrorFlags.surNameError">{{error.surNameError}}</div>
                                         
                                 </div>
+
                                 <div class="form-group">
                                     <label for="example-email" class="col-md-12">البريد الالكتروني</label>
                                     <div class="col-md-12">
-                                        <input type="email" placeholder="{{craftsmenPlaceHolder.email}}" class="form-control form-control-line" name="email" ng-model="updateInfo.email" id="example-email" pattern="regex.email" > </div>
-                                        <div class="alert alert-danger" ng-show="updateErrorFlags.emailError" >{{error.emailError}}</div>
+                                        <input type="email" placeholder="" class="form-control form-control-line" name="email" ng-model="updateInfo.email" id="example-email" pattern="" > </div>
+                                        <div class="alert alert-danger" ng-show="updateErrorFlags.emailError" >{{error.emailError}}</div>{{updateInfo.email}}
                                         
                                 </div>
                                 <div class="form-group">
                                     <label for="example-email" class="col-md-12">اسم المستخدم</label>
                                     <div class="col-md-12">
-                                        <input type="password" placeholder="{{craftsmenPlaceHolder.username}}" class="form-control form-control-line" name="userName" ng-model="updateInfo.userName" pattern="regex.userName" > </div>
-                                        <div class="alert alert-danger" ng-show="updateErrorFlags.userNameError" >{{error.userNameError}}</div>
+                                        <input type="text" placeholder="" class="form-control form-control-line" name="userName" ng-model="updateInfo.userName" pattern="" > </div>
+                                        <div class="alert alert-danger" ng-show="updateErrorFlags.userNameError" >{{error.userNameError}}</div>{{updateInfo.userName}}
                                         
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">كلمة السر السابقة</label>
-                                    <div class="col-md-12">
-                                        <input type="password"  value="password" class="form-control form-control-line" name="passwordo" ng-model ="updateInfo.passwordo" ng-pattern="regex.password1" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.passwordoError">{{error.passwordoError}}</div>
-                                        
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">كلمة السر الجديدة</label>
-                                    <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line" name="password1" ng-model ="updateInfo.password1" ng-pattern="regex.password1" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.password1Error">{{error.password1Error}}</div>
-                                        
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">اعادة كلمة السر</label>
-                                    <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line" name="password2" ng-model="updateInfo.password2" ng-pattern="regex.password2" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.password2Error">{{error.password1Error}}</div>
-                                        
-                                </div>
+
+
+
                                 <div class="form-group">
                                     <label class="col-md-12">رقم الهاتف</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" ng-pattern="regex.mobile"> </div>
+                                        <input type="text" placeholder="" class="form-control form-control-line" ng-model="updateInfo.mobile"ng-pattern="regex.mobile"> </div>
+                                    <div class="alert alert-danger" ng-show="updateErrorFlags.mobileError" >{{error.mobileError}}</div>{{updateInfo.mobile}}
                                 </div>
+
                                 <div class="form-group">
                                     <label class="col-md-12">الوصف</label>
                                     <div class="col-md-12">
-                                        <textarea rows="5" ng-model="updateInfo.disc" placeholder= "{{craftsmenPlaceHolder.bio}}" class="form-control form-control-line"></textarea>
-                                        
+                                        <textarea rows="5" ng-model="updateInfo.bio" placeholder= "" class="form-control form-control-line"></textarea>
+
                                     </div>
-                                    <div class="alert alert-danger"  ng-show="updateErrorFlags.discError">{{error.discError}}</div>
+                                    <div class="alert alert-danger"  ng-show="updateErrorFlags.bio">{{error.bio}}</div>{{updateInfo.bio}}
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-12">المهنة</label>
@@ -301,20 +287,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controllers/updateCtrl.js"></script>
 <script src="js/controllers/imageUploadCtrl.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $.toast({
-            heading: 'Welcome to Pixel admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg: '#ff6849',
-            icon: 'info',
-            hideAfter: 3500,
-            stack: 6
-        })
-    });
-  
-    </script>
+
 </body>
 
 </html>

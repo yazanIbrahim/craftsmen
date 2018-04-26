@@ -37,29 +37,33 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                     $response = $query->fetchAll(PDO::FETCH_ASSOC);
                     echo json_encode($response);
                 }break;
+                case "craftsmenPlaceHolder":{
+                    $getHtml = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
+                    $getUrl = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_ENCODED);
+
+                    $db = new Dbc();
+                    $db = $db->getConn();
+
+
+
+
+                    $stmt = "SELECT first_name as firstName,last_name as surName,bio,email,username as userName,city,craft,mobile FROM masteruser inner JOIN craftsmen on
+ craftsmen_id = user_id 
+inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id where user_id =? ";
+
+                    $query = $db->prepare($stmt);
+                    $query -> execute(array($_SESSION['user_id']));
+
+
+                    $result = $query->fetch(PDO::FETCH_ASSOC);
+
+                    echo json_encode($result);
+                }break;
             }
         }
         
-      /*  $getHtml = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
-        $getUrl = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_ENCODED);
-        
-            $db = new Dbc();
-            $db = $db->getConn();
 
 
-            
-            
-            $stmt = "SELECT first_name,last_name,email,username,craft,city,bio 
-                 FROM masteruser FULl JOIN craftsmen ON user_id=craftsmen_id WHERE user_id=?";
-            
-            $query = $db->prepare($stmt);
-            $query -> execute(array($_SESSION['user_id']));
-            
-
-           $result = $query->fetch(PDO::FETCH_ASSOC);
-           
-           echo json_encode($result);
-        */
     }
     else{
         echo "NOT ALLOWED";
