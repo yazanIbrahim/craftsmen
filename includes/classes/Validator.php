@@ -98,6 +98,10 @@ class Validator{
                                         $this->addError($errorMsgFieldName,"mobile is not in correct");
                             }
                             break;
+                            case "checkOldPassword":{
+                                if(!self::isOldPasswordCorrect($ruleValue[0],$ruleValue[1]))
+                                    $this->addError($errorMsgFieldName,"old password is not in correct");
+                            }
                         }
                     }
                 }
@@ -205,6 +209,23 @@ class Validator{
         else
             return false;
 
+    }
+    
+    public static function isOldPasswordCorrect($userId,$password){
+         $db = new Dbc();
+        $db = $db->getConn();
+        $stmt = "SELECT password FROM usermaster WHERE user_id = ?";
+        $query = $db->prepare($stmt);
+        $query->execute(array($userId));
+        if($query->rowCount() > 0){
+            $res = $query->fetch(PDO::FETCH_ASSOC);
+            if(strcmp($res['password'],$password)){
+                return true;
+            }else
+                return false;
+            
+        }else
+            return false;
     }
     
     

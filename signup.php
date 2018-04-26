@@ -61,26 +61,23 @@
 
 
                                         <hr>
-                                        {{craftsmen}}
+                                        
                                         <div class="form-group" style="direction: rtl">
                                             <label for="register-name">الاسم الأول</label>
                                             <input type="text" class="form-control"  name="firstName" ng-model="craftsmen.firstName" ng-pattern="regex.firstName" >
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.firstNameError" >{{craftsmenError.firstNameError}}</div>
-                                            input valid? = <code>{{craftmenSignup.firstName.$valid}}</code><br>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="register-surname">اسم العائلة</label>
                                             <input type="text" class="form-control"  name="surName" ng-model="craftsmen.surName" ng-pattern="regex.surName" required>
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.surNameError">{{craftsmenError.surNameError}}</div>
-                                            input valid? = <code>{{craftmenSignup.surName.$valid}}</code><br>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="register-email">البريد الالكتروني</label>
                                             <input type="text" class="form-control"  name="email" ng-model="craftsmen.email" ng-pattern="regex.email" required>
                                             <div class="alert alert-danger" ng-show="craftsmenErrorFlag.emailError" >{{craftsmenError.emailError}}</div>
-                                            input valid? = <code>{{craftmenSignup.email.$valid}}</code><br>
                                         </div>
 
                                         <hr>
@@ -89,7 +86,6 @@
                                             <label for="register-username">اسم المستخدم</label>
                                             <input type="text" class="form-control" name="userName" ng-model="craftsmen.userName" ng-pattern="regex.userName" required>
                                             <div class="alert alert-danger" ng-show="craftsmenErrorFlag.userNameError" >{{craftsmenError.userNameError}}</div>
-                                            input valid? = <code>{{craftmenSignup.userName.$valid}}</code><br>
                                             {{errorFlags.userNameError}}
                                         </div>
 
@@ -97,7 +93,6 @@
                                             <label for="">كلمة السر</label>
                                             <input type="password" class="form-control"  name="password1" ng-model="craftsmen.password1" ng-pattern="regex.password1" required>
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.password1Error">{{craftsmenError.password1Error}}</div>
-                                            input valid? = <code>{{craftmenSignup.password1.$valid}}</code><br>
                                         </div>
 
                                         <div class="form-group">
@@ -109,7 +104,7 @@
 
                                         <div class="form-group">
                                             <label for="">رقم الهاتف</label>
-                                            <input type="tel"  class="form-control"   name="mobile" ng-model="craftsmen.mobile" ng-pattern="" required>
+                                            <input type="tel"  class="form-control"   name="mobile" ng-model="craftsmen.mobile" pattern="regex.mobile" required>
                                             <div class="alert alert-danger"   ng-show="craftsmenErrorFlag.mobileError">{{craftsmenError.mobileError}}</div>
 
                                         </div>
@@ -155,32 +150,32 @@
                                             <label for="register-name">الاسم الأول</label>
                                             <input type="text" class="form-control" id="register-name" name="firstName" ng-model="user.firstName" ng-pattern="regex.firstName" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.firstNameError" >{{endUserError.firstNameError}}</div>
-                                            input valid? = <code>{{usersSignUp.firstName.$valid}}</code><br>
+ 
                                         </div>
                                         <div class="form-group">
                                             <label for="register-surname">اسم العائلة</label>
                                             <input type="text" class="form-control" id="register-surname" name="surName" ng-model="user.surName" ng-pattern="regex.surName" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.surNameError" >{{endUserError.surNameError}}</div>
-                                            input valid? = <code>{{usersSignUp.surName.$valid}}</code><br>
+
                                         </div>
                                         <div class="form-group">
                                             <label for="register-email">البريد الالكتروني</label>
                                             <input type="email" class="form-control" id="register-email" name="email" ng-model="user.email" ng-pattern="regex.email" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.emailError" >{{endUserError.emailError}}</div>
-                                            input valid? = <code>{{usersSignUp.email.$valid}}</code><br>
+                                          
                                         </div>
                                         <hr>
                                         <div class="form-group">
                                             <label for="register-username">اسم المستخدم</label>
                                             <input type="text" class="form-control" id="register-username" name="userName" ng-model="user.userName" ng-pattern="regex.userName" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.userNameError" >{{endUserError.userNameError}}</div>
-                                            input valid? = <code>{{usersSignUp.userName.$valid}}</code><br>
+                                            
                                         </div>
                                         <div class="form-group">
                                             <label for="register-password1">كلمة السر</label>
                                             <input type="password" class="form-control" id="register-password1" name="password1" ng-model="user.password1" ng-pattern="regex.password1" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.password1Error" >{{endUserError.password1Error}}</div>
-                                            input valid? = <code>{{usersSignUp.password1.$valid}}</code><br>
+                                           
                                         </div>
                                         <div class="form-group">
                                             <label for="register-password2">اعادة كلمة السر</label>
@@ -190,7 +185,7 @@
                                         <button  ng-click="endUserSignup()" type="submit" class="btn btn-primary">تسجيل</button>
                                         <div class="alert alert-success" ng-show="showSuccessMsg">{{successMsg}}</div>
 
-                                        {{user}}
+                                        
                                     </form>
                                 </div>
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "includes/classes/Dbc.php";
 ?>
 <!DOCTYPE html>
@@ -34,19 +35,32 @@ include "includes/login.php";
 <!-- ============ LOGIN END ============ -->
 
 <!-- ============ FORGET PASSWORD END ============ -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="myPanel">
+                <div class="panel-body">
+                    <div class="text-center">
+                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                        <h3 class="text-center">هل نسيت كلمة السر؟</h3>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <p>الرجاء ادخال بريدك الالكتروني.</p>
+                                    <input type="text" class="form-control"  ng-model="d.recoveryEmail">
+                                    {{d.recoveryEmail}}
 
-<div class="row">
-    <div class="col-sm-6 forgetPass" >
-        <form class="form-inline">
-            <div class="form-group>
-                <input type="text" class="form-control"  ng-model="d.recoveryEmail">
-                {{d.recoveryEmail}}
-                 <button class="btn btn-danger" ng-click="sendForgetPasswordCode()">Send email</button>
+                                </div>
+                                <button class="btn btn-primary forget-btn" ng-click="sendForgetPasswordCode()">Send email</button>                                                                        
+                            </form>
+                        </div> 
+                    </div>
+                </div>
             </div>
-        </form>
-
+        </div>                       
     </div>
 </div>
+
 
 <!-- ============ FORGET PASSWORD END ============ -->
 

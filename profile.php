@@ -35,7 +35,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-    <title>Pixel Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap</title>
+    <title><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -87,17 +87,11 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
-                <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
-                    <li>
-                        <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a>
-                        </form>
-                    </li>
-                </ul>
+                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs">Craftsmen</span></a></div>
+               
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
-                        <a class="profile-pic" href="includes/logout.php"><b>Logout</b> </a>
+                        <a class="profile-pic" href="includes/logout.php"><b> Logout</b></a>
                     </li>
                 </ul>
             </div>
@@ -116,23 +110,11 @@
                         <a href="profile.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">تعديل</span></a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض الطلبات</span></a>
+                        <a href="comments-view.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض التعليقات</span></a>
                     </li>
-                    <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">Icons</span></a>
-                    </li>
-                    <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">Google Map</span></a>
-                    </li>
-                    <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
-                    </li>
+                    
                 </ul>
                 <div class="center p-20">
-                    <span class="hide-menu"><a href="http://wrappixel.com/templates/pixeladmin/" target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Upgrade to Pro</a></span>
                 </div>
             </div>
         </div>
@@ -181,15 +163,10 @@
                                 </label>
                             </div>
                             <div class="user-btm-box">
-                                <div class="col-md-4 col-sm-4 text-center">
-                                    <button onclick="upload()">upload</button>
+                                <div class="col-sm-12 offset-4 text-center">
+                                    <button class="btn btn-primary myBtn-primary " onclick="upload()">upload</button>
                                 </div>
-                                <div class="col-md-4 col-sm-4 text-center">
-                                <p class="text-blue"><i class="ti-twitter"></i></p>
-                                <h1>125</h1> </div>
-                            <div class="col-md-4 col-sm-4 text-center">
-                                <p class="text-danger"><i class="ti-dribbble"></i></p>
-                                <h1>556</h1> </div>
+                                
                         </div>
                         </div>
                     </div>
@@ -202,62 +179,64 @@
                                     <label class="col-md-12">الاسم الأول</label>
                                     <div class="col-md-12">
 
-                                    <input type="text" placeholder="{{craftsmenPlaceHolder.first_name}}" class="form-control form-control-line" name="firstName" ng-model="updateInfo.firstName" ng-pattern="" > </div>
+                                    <input type="text" placeholder="{{craftsmenPlaceHolder.first_name}}" class="form-control form-control-line" name="firstName" ng-model="updateInfo.firstName" ng-pattern="regex.firstName" > </div>
                                          <div class="alert alert-danger"  ng-show="updateErrorFlags.firstNameError" >{{error.firstNameError}}</div>
-                                         input valid? = <code>{{craftmenUpdate.firstName.$valid}}</code><br>
+                                         
                                 </div>
                                  <div class="form-group">
                                     <label class="col-md-12">اسم العائلة</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="{{craftsmenPlaceHolder.last_name}}" class="form-control form-control-line" name="surName" ng-model="updateInfo.surName"ng-pattern="" > </div>
+                                        <input type="text" placeholder="{{craftsmenPlaceHolder.last_name}}" class="form-control form-control-line" name="surName" ng-model="updateInfo.surName" pattern="regex.surName" > </div>
                                         <div class="alert alert-danger"  ng-show="updateErrorFlags.surNameError">{{error.surNameError}}</div>
-                                        input valid? = <code>{{craftmenUpdate.surName.$valid}}</code><br>
+                                        
                                 </div>
                                 <div class="form-group">
                                     <label for="example-email" class="col-md-12">البريد الالكتروني</label>
                                     <div class="col-md-12">
-                                        <input type="email" placeholder="{{craftsmenPlaceHolder.email}}" class="form-control form-control-line" name="email" ng-model="updateInfo.email" id="example-email" ng-pattern="" > </div>
+                                        <input type="email" placeholder="{{craftsmenPlaceHolder.email}}" class="form-control form-control-line" name="email" ng-model="updateInfo.email" id="example-email" pattern="regex.email" > </div>
                                         <div class="alert alert-danger" ng-show="updateErrorFlags.emailError" >{{error.emailError}}</div>
-                                        input valid? = <code>{{craftmenUpdate.email.$valid}}</code><br>
+                                        
                                 </div>
                                 <div class="form-group">
                                     <label for="example-email" class="col-md-12">اسم المستخدم</label>
                                     <div class="col-md-12">
-                                        <input type="password" placeholder="{{craftsmenPlaceHolder.username}}" class="form-control form-control-line" name="userName" ng-model="updateInfo.userName" ng-pattern="" > </div>
+                                        <input type="password" placeholder="{{craftsmenPlaceHolder.username}}" class="form-control form-control-line" name="userName" ng-model="updateInfo.userName" pattern="regex.userName" > </div>
                                         <div class="alert alert-danger" ng-show="updateErrorFlags.userNameError" >{{error.userNameError}}</div>
-                                        input valid? = <code>{{craftmenUpdate.userName.$valid}}</code><br>
+                                        
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">كلمة السر السابقة</label>
                                     <div class="col-md-12">
-                                        <input type="password"  value="password" class="form-control form-control-line" name="passwordo" ng-model ="updateInfo.passwordo" ng-pattern="" > </div>
+                                        <input type="password"  value="password" class="form-control form-control-line" name="passwordo" ng-model ="updateInfo.passwordo" ng-pattern="regex.password1" > </div>
                                         <div class="alert alert-danger"  ng-show="updateErrorFlags.passwordoError">{{error.passwordoError}}</div>
-                                        input valid? = <code>{{craftmenUpdate.password1.$valid}}</code><br>
+                                        
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">كلمة السر الجديدة</label>
                                     <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line" name="password1" ng-model ="updateInfo.password1" ng-pattern="" > </div>
+                                        <input type="password" value="password" class="form-control form-control-line" name="password1" ng-model ="updateInfo.password1" ng-pattern="regex.password1" > </div>
                                         <div class="alert alert-danger"  ng-show="updateErrorFlags.password1Error">{{error.password1Error}}</div>
-                                        input valid? = <code>{{craftmenUpdate.password1.$valid}}</code><br>
+                                        
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">اعادة كلمة السر</label>
                                     <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line" name="password2" ng-model="updateInfo.password2" ng-pattern="" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.password1Error">{{error.password1Error}}</div>
-                                        input valid? = <code>{{craftmenUpdate.password2.$valid}}</code><br>
+                                        <input type="password" value="password" class="form-control form-control-line" name="password2" ng-model="updateInfo.password2" ng-pattern="regex.password2" > </div>
+                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.password2Error">{{error.password1Error}}</div>
+                                        
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Phone No</label>
+                                    <label class="col-md-12">رقم الهاتف</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="123 456 7890" class="form-control form-control-line"> </div>
+                                        <input type="text" class="form-control form-control-line" ng-pattern="regex.mobile"> </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">الوصف</label>
                                     <div class="col-md-12">
-                                        <textarea rows="5" placeholder= "{{craftsmenPlaceHolder.bio}}" class="form-control form-control-line"></textarea>
+                                        <textarea rows="5" ng-model="updateInfo.disc" placeholder= "{{craftsmenPlaceHolder.bio}}" class="form-control form-control-line"></textarea>
+                                        
                                     </div>
+                                    <div class="alert alert-danger"  ng-show="updateErrorFlags.discError">{{error.discError}}</div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-12">المهنة</label>
@@ -284,7 +263,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button class="btn btn-success" ng-click="update()">Update Profile</button>
+                                        <button class="myBtn-primary" ng-click="update()">Update</button>
                                     </div>
                                 </div>
                             </form>
@@ -294,7 +273,7 @@
                 <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Pixel Admin brought to you by wrappixel.com </footer>
+            <footer class="col-lg-10 col-md-12 col-sm-12 footer text-center"> 2018 &copy; Craftsmen Admins</footer>
         </div>
         <!-- /#page-wrapper -->
     </div>

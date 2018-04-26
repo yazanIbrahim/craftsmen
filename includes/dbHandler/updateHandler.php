@@ -8,7 +8,7 @@ include "../classes/craftsmen.php";
 
 $data = json_decode(file_get_contents("php://input"));
 $data = (array)$data;
-//print_r($data);
+print_r($data);
 //echo "xss attack" . $data['firstName'];
 
 
@@ -60,6 +60,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'max' => 20,
                 'password' => true,
                 'match'    => 'password1'
+            ),
+            'passwordo' => array(
+                'name' => 'passwordoError',
+                'required' => true,
+                'min' => 2,
+                'max' => 20,
+                'password' => true,
+                'checkOldPassword' => array($_SESSION['user_id'],$data['passwordo'])
             )
         ));
 
