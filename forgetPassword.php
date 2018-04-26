@@ -44,10 +44,10 @@ include "includes/login.php";
                         <h3><i class="fa fa-lock fa-4x"></i></h3>
                         <h3 class="text-center">هل نسيت كلمة السر؟</h3>
                         <div class="panel-body">
-                            <form>
+                            <form  ng-controller="forgetPasswordCtrl">
                                 <div class="form-group">
                                     <p>الرجاء ادخال بريدك الالكتروني.</p>
-                                    <input type="text" class="form-control"  ng-model="d.recoveryEmail">
+                                    <input type="text" class="form-control"  ng-model="d.recoveryEmail" required>
                                     {{d.recoveryEmail}}
 
                                 </div>
@@ -81,7 +81,8 @@ include "includes/login.php";
 
 <script src="js/controllers/loginCtrl.js"></script>
 
-<script src="js/controllers/searchCtrl.js"></script>
+    
+<script src="js/controllers/forgetPasswordCtrl.js"></script>
 
 
 <!-- Modernizr Plugin -->

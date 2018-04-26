@@ -179,7 +179,7 @@ class User{
                 // lock the account
 
                 $this->lockAccount();
-                $this->sendPasswordRecoveryLink($fetchedData['user_id']);
+                $this->sendPasswordRecoveryLink($fetchedData['email'],$fetchedData['user_id']);
                 $this->setErrorMsg('login',"Your Account has been locked please check your email to reset your password");
 
                 return false;

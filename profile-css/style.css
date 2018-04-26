@@ -10978,7 +10978,7 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
         display: none
     }
     .content-wrapper .sidebar #side-menu>li:hover {
-        width: 64px;
+        
         background: #f7fafc
     }
     .content-wrapper .sidebar li:hover .hide-menu {
@@ -10987,6 +10987,7 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
     .content-wrapper .sidebar #side-menu>li>a {
         padding: 15px 17px 15px 20px;
         text-align:center;
+        margin-right: -40px;
     }
     .content-wrapper .sidebar li:hover .nav-second-level,
     .content-wrapper .sidebar li:hover .nav-second-level.collapse li,

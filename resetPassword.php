@@ -17,118 +17,70 @@ require_once "includes/classes/Helper.php";
  }
 
 
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
 <?php
 include "includes/head.php";
 ?>
-<body id="home" ng-app="index" ng-controller="indexCtrl" ng-init="getPageNumbers()">
-
-<!-- ============ PAGE LOADER START ============ -->
-
-<div id="loader">
-    <i class="fa fa-cog fa-4x fa-spin"></i>
-</div>
-
-<!-- ============ PAGE LOADER END ============ -->
-
+<body ng-app="index" ng-controller="indexCtrl" ng-init="getPageNumbers()">
 <!-- ============ NAVBAR START ============ -->
 
-<?php
+        <?php
 
-include "includes/sideNav.php";
-?>
+        include "includes/sideNav.php";
+        ?>
 
-<!-- ============ NAVBAR END ============ -->
+		<!-- ============ NAVBAR END ============ -->
 
-<!-- ============ HEADER START ============ -->
+		<!-- ============ HEADER START ============ -->
 
-<?php
-include "includes/header.php";
-?>
+        <?php
+        include "includes/header.php";
+        ?>
 
 
-<!-- ============ HEADER END ============ -->
+		<!-- ============ HEADER END ============ -->
 
-<!-- ============ SLIDES START ============ -->
-
-<div id="slider" class="sl-slider-wrapper">
-
-    <div class="sl-slider" >
-
-        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-            <div class="sl-slide-inner">
-                <div class="bg-img bg-img-1"></div>
-                <div class="tint"></div>
-                <div class="slide-content">
-
-                    <div class="row">
-
-                        <div class="col-sm-12" >
+<!-- ============ RESET PASSWORD END ============ -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="myPanel">
+                <div class="panel-body">
+                    <div class="text-center">
+                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                        <h3 class="text-center"> تغيير كلمة السر</h3>
+                        <div class="panel-body">
                             <form ng-controller="resetPasswordCtrl">
 
-
+                                <label>ادخال كلمة سر</label>
                                 <input type="password" class="form-control" ng-model="password.first" />
+                                <label>اعادة ادخال كلمة السر</label>
                                 <input type="password" class="form-control" ng-model="password.second" />
 
 
-                                <input value="Reset" class="btn btn-primary" ng-click="resetPassword('<?php echo $token;?>')"/>
+                               <button class="btn btn-primary forget-btn" value="Reset" ng-click="resetPassword('<?php echo $token;?>')">تغيير</button>
 
                             </form>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div>                       
     </div>
-
-
-
 </div>
 
-<!-- ============ SLIDES END ============ -->
 
-<!-- ============ JOBS START ============ -->
-
-<?php
-
-
-
-
-
-
-
-?>
-
-
-
-
-
-
-
+<!-- ============ FORGET PASSWORD END ============ -->
 <!-- ============ LOGIN START ============ -->
 
-<?php
+        <?php
 
-include "includes/login.php";
-?>
+            include "includes/login.php";
+        ?>
 
 <!-- ============ LOGIN END ============ -->
-
-<!-- ============ REGISTER START ============ -->
-
-
-
-
-
-
-<!-- ============ REGISTER END ============ -->
 
 <script src="js/controllers/indexCtrl.js"></script>
 
@@ -186,6 +138,9 @@ include "includes/login.php";
 
 <!-- jQuery Settings -->
 <script src="js/settings.js"></script>
+
+<script src="js/dropdownMenu.js"></script>
+<script src="profile-js/stars-rating.js"></script>
 
 
 </body>

@@ -9,15 +9,16 @@
              <?php
             if(isset($_SESSION['user_id']) && isset($_SESSION['userType'])){
                 require_once "includes/classes/Dbc.php";
-                require_once "includes/classes/User.php";
-                require_once "includes/classes/craftsmen.php";
                 $db = new Dbc();
                 $db = $db->getConn();
-                $craftsmen = new craftsmen($db);
-                $craftsmen->retrieveData($_SESSION['user_id']);
+                $stmt = "SELECT first_name FROM masteruser WHERE user_id = ?";
+                $query = $db->prepare($stmt);
+                $query->execute(array($_SESSION['user_id']));
+                $res = $query->fetch(PDO::FETCH_ASSOC);
+                
                 if($_SESSION['userType'] == 1){
                     echo '<div class="dropdown">
-                        <a onclick="myFunction()" class="dropbtn">$craftsmen->getUserName();</a>
+                        <a onclick="myFunction()" class="dropbtn">'. $res["first_name"]. ' </a>
                         <div id="myDropdown" class="dropdown-content">
                           <a href="craftsmen-profile.php" class="active">View profile</a>
                           <a href="profile.php">Setting</a>
@@ -27,7 +28,7 @@
                 }
                 elseif($_SESSION['userType'] == 0){ 
                    echo '<div class="dropdown">
-                        <a onclick="myFunction()" class="dropbtn">User</a>
+                        <a onclick="myFunction()" class="dropbtn">'. $res["first_name"]. '</a>
                         <div id="myDropdown" class="dropdown-content">
                           <a href="craftsmen-profile.php" class="active">View profile</a>
                           <a href="profile.php">Setting</a>

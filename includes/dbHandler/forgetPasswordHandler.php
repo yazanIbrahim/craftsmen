@@ -68,6 +68,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($query->rowCount($res) > 0){
             $user = new User();
             $user->sendPasswordRecoveryLink($sanitizedData['recoveryEmail'],$res['user_id']);
+            
         }
         else{
             //display error

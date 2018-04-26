@@ -40,6 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }else{
             $userAlert['error'] = "something went wrong";
             echo json_encode($userAlert);
+           
         }
 
 

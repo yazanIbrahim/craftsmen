@@ -36,7 +36,7 @@ app.controller('craftsmenSignupCtrl', function($scope,regexService,$http) {
         console.log($scope.craftsmen.craft);
     }*/
 
-    $scope.craftsmenSignup = function(){
+    $scope.craftsmenSignup = function(){ console.log($scope.craftsmen);
         $http.post("includes/dbHandler/craftsmenSignupHandler.php",$scope.craftsmen).then(function(response){
 
             console.log(response.data);
