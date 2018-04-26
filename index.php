@@ -55,7 +55,7 @@ session_start();
                                 </div>
                                                                 
                                 <button type="submit" class="btn btn-primary mySearchBtn" ng-click="search()">Search</button>
-                                                               
+
 							</form>
                             <div class="mySearchDiv">
                                 <ul class="search-result">

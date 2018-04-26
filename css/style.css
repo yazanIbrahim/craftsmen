@@ -2055,9 +2055,11 @@ margin-right: -40px;
 .search-result{
 	list-style: none;
 
-    width: 88%;
+	width: 80.5%;
 
-margin-right: -40px;
+	margin-right: -40px;
+
+	top: -14px;
 }
 
 }
