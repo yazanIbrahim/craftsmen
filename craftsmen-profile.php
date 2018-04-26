@@ -108,6 +108,9 @@
                     <li>
                         <a href="comments-view.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض التعليقات</span></a>
                     </li>
+                     <li>
+                        <a href="updatePassword.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">تغيير كلمة السر</span></a>
+                    </li>
                     
                 </ul>
                 <div class="center p-20">
@@ -121,7 +124,7 @@
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 f-r">
                         <h4 class="page-title">
-                            <a class="profile-pic" href="#"> <img src="images/pp.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
+                            <a class="profile-pic" href="#"> <img src="images/<?php echo $craftsmen->getImage();?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="5"
                                      aria-valuemin="0" aria-valuemax="100" id="rate">

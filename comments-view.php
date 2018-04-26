@@ -102,6 +102,9 @@ if(!isset($_SESSION['user_id'])){
                     <li>
                         <a href="comments-view.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض التعليقات</span></a>
                     </li>
+                     <li>
+                        <a href="updatePassword.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">تغيير كلمة السر</span></a>
+                    </li>
                     
                 </ul>
                 <div class="center p-20">

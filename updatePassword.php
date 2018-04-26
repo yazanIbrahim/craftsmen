@@ -128,7 +128,7 @@
                  <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 f-r">
                         <h4 class="page-title">
-                            <a class="profile-pic" href="#"> <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
+                            <a class="profile-pic" href="#"> <img src="images/<?php echo $craftsmen->getImage();?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
 
 
                         </h4> 
@@ -145,35 +145,8 @@
                 <!-- /.row -->
                 <!-- .row -->
                 <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                        <div class="white-box">
-                            <div class="user-bg">
-                                <label for="file-input">
-                                <div class="overlay-box">
-
-                                    <img width="100%" alt="" src="images/pp.png" id="previewImg">
-
-
-
-
-
-
-
-
-                                    <input id="file-input" type="file" onchange="previewFile()" style="display:none"/>
-
-                                </div>
-                                </label>
-                            </div>
-                            <div class="user-btm-box">
-                                <div class="col-sm-12 offset-4 text-center">
-                                    <button class="btn btn-primary myBtn-primary " onclick="upload()">upload</button>
-                                </div>
-                                
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-xs-12">
+                    
+                    <div class="col-md-12 col-xs-12">
                         <div class="white-box">
                             <form class="form-horizontal form-material" id= "craftmenUpdate" name="craftmenUpdate">
                                 {{fullName}}

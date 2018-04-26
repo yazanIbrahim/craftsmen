@@ -175,7 +175,7 @@ echo "loop";
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 f-r">
                         <h4 class="page-title">
-                            <a class="profile-pic" href="#"> <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{craftsmenInfo.craftsmenInfo.firstName}}</b> </a>
+                            <a class="profile-pic" href="#"> <img src="{{'images/'+craftsmenInfo.craftsmenInfo.image_path}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{craftsmenInfo.craftsmenInfo.firstName}}</b> </a>
                             <div class="row lead stars">
                                 <div id="stars" class="starrr">
 

@@ -112,7 +112,7 @@ session_start();
                   <div class="row">
                   	<div class="col-sm-4 pull-right ">
                         <div class="job-image">
-                            <img src="images/pp.png" alt="" title="" class="img-responsive pp"/>
+                            <img src="{{'images/'+topCraftsmen.topCraftsmen[key].image_path}}" alt="" title="" class="img-responsive pp"/>
                         </div>
                         
 

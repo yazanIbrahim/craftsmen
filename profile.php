@@ -112,6 +112,9 @@
                     <li>
                         <a href="comments-view.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض التعليقات</span></a>
                     </li>
+                    <li>
+                        <a href="updatePassword.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">تغيير كلمة السر</span></a>
+                    </li>
                     
                 </ul>
                 <div class="center p-20">
@@ -125,7 +128,7 @@
                  <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 f-r">
                         <h4 class="page-title">
-                            <a class="profile-pic" href="#"> <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
+                            <a class="profile-pic" href="#"> <img src="images/<?php echo $craftsmen->getImage();?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></b> </a>
 
 
                         </h4> 
@@ -148,7 +151,7 @@
                                 <label for="file-input">
                                 <div class="overlay-box">
 
-                                    <img width="100%" alt="" src="images/pp.png" id="previewImg">
+                                    <img width="100%" alt="" src="images/<?php echo $craftsmen->getImage();?>" id="previewImg">
 
 
 

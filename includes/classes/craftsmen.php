@@ -16,6 +16,7 @@ class craftsmen extends User{
     private $bio;
     private $mobile;
     private $comments;
+    private $image;
 
 
     public function __construct($dbConnectionObject){
@@ -42,6 +43,11 @@ class craftsmen extends User{
     public function getCraft()
     {
         return $this->craft;
+    }
+    
+    public function getImage()
+    {
+        return $this->image;
     }
 
     public function getCity()
@@ -70,6 +76,11 @@ class craftsmen extends User{
     public function setRate($rate)
     {
         $this->rate = $rate;
+    }
+    
+     public function setImage($image)
+    {
+        $this->image = $image;
     }
 
     public function setBio($bio)
@@ -125,7 +136,7 @@ class craftsmen extends User{
     public function retrieveData($craftsmenId){
 
 
-        $stmt = "SELECT first_name,last_name,email,username,craft,city,bio,mobile FROM masteruser left JOIN craftsmen ON user_id=craftsmen_id 
+        $stmt = "SELECT image_path,first_name,last_name,email,username,craft,city,bio,mobile FROM masteruser left JOIN craftsmen ON user_id=craftsmen_id 
 left join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id WHERE craftsmen_mobile.craftsmen_id=? ";
 
         $query = parent::getDbConnection()->prepare($stmt);
@@ -147,6 +158,7 @@ left join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsme
        $this->setRate(0);
        $this->setMobile($mobile);
        $this->setComments($comments = $this->getCraftsmenComments($craftsmenId,0));
+        $this->setImage($image_path);
        
        
        
@@ -162,6 +174,7 @@ left join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsme
         $info ['city'] = $this->getCity();
         $info ['craft'] = $this->getCraft();
         $info ['mobile'] = $this->getMobile();
+        $info ['image_path'] = $this->getImage();
         return $info;
     }
 
