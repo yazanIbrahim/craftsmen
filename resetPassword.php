@@ -1,7 +1,7 @@
 <?php
 
 
-
+require_once "includes/classes/Helper.php";
  if(isset($_GET['token'])){
 
      $token = filter_input(INPUT_GET,'token',FILTER_SANITIZE_STRING);

@@ -89,7 +89,6 @@ class craftsmen extends User{
     }
 
 
-
     public function calRate($craftsmenId){
 
         $stmt = "SELECT COUNT(rate_id) as numofrates ,SUM(rate) as rate FROM rate WHERE craftsmen_id = ?";
@@ -98,8 +97,8 @@ class craftsmen extends User{
 
         $res = $query->fetch(PDO::FETCH_ASSOC);
 
-        $rate = $res['rate']/(float)$res['numofrates'];
-        $rate = $rate;
+        $rate = round($res['rate']/(float)$res['numofrates'],1);
+
 
         return $rate;
 

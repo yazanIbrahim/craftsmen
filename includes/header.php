@@ -8,9 +8,16 @@
             <a class="fm-button"><i class="fa fa-bars fa-lg"></i></a>
              <?php
             if(isset($_SESSION['user_id']) && isset($_SESSION['userType'])){
+                require_once "includes/classes/Dbc.php";
+                require_once "includes/classes/User.php";
+                require_once "includes/classes/craftsmen.php";
+                $db = new Dbc();
+                $db = $db->getConn();
+                $craftsmen = new craftsmen($db);
+                $craftsmen->retrieveData($_SESSION['user_id']);
                 if($_SESSION['userType'] == 1){
                     echo '<div class="dropdown">
-                        <a onclick="myFunction()" class="dropbtn">Craftsmen</a>
+                        <a onclick="myFunction()" class="dropbtn">$craftsmen->getUserName();</a>
                         <div id="myDropdown" class="dropdown-content">
                           <a href="craftsmen-profile.php" class="active">View profile</a>
                           <a href="profile.php">Setting</a>

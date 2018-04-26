@@ -28,49 +28,15 @@
 		<!-- ============ FILTER START ========== -->
 			<section class="filter-section" ng-controller="searchFilterCtrl">
 				<div class="container">
-					<div class="row">
-					<div class="col-sm-12 filter-bar">
-						
-   						<form class="form-group">
-   							<div class="custom-mySelect" style="width:200px;">
-								  <select class="mySelect">
-								    <option value="0">المدينة</option>
-								    <option value="1">عمان</option>
-								    <option value="2">اربد</option>
-								  </select>
-							</div>
-							<div class="custom-mySelect" style="width:200px;">
-								  <select class="mySelect">
-								    <option value="0">لتقييم</option>
-								    <option value="1">عمان</option>
-								    <option value="2">اربد</option>
-								  </select>
-							</div>
-							<div class="custom-mySelect" style="width:200px;">
-								  <select class="mySelect">
-								    <option value="0">المهنة</option>
-								    <option value="1">عمان</option>
-								    <option value="2">اربد</option>
-								  </select>
-							</div>
-							<button type="submit" class="btn btn-primary filter-btn pull-left">Search</button>
 
-						</form>
-					</div>
-				</div>
 				<div class="row">
           			<div class="col-sm-12">
             			<h2>نتائج البحث</h2>
             			<div class="jobs">
-            				<div class="row lead stars">
-			                	<div id="stars" class="starrr">
-			                                
-			                    </div>
-			                    <span id="count">0</span> 
-			                </div>
 
 
-                			<div class="offer" ng-repeat="(key,value) in topCraftsmen.topCraftsmen">
+
+                			<div class="offer" ng-repeat="(key,value) in profile.res">
                 				<div class="top-wrapper">
                   				<div class="row">
                   					<div class="col-sm-4 pull-right ">
@@ -80,11 +46,11 @@
                     				</div>
 
                     				<div class="col-sm-8" >
-				                        <p class="craftsmen-info"> الاسم :  {{topCraftsmen.topCraftsmen[key].first_name }}</p>
-				                        <p class="craftsmen-info">المدينة : {{topCraftsmen.topCraftsmen[key].city}}</p>
-				                        <p class="craftsmen-info">المهنة : {{topCraftsmen.topCraftsmen[key].craft +" " }}</p>
-				                        <p class="craftsmen-info">رقم الهاتف : {{topCraftsmen.topCraftsmen[key].mobile +" " }}</p>
-				                        <p class="craftsmen-info">التقيم : {{topCraftsmen.topCraftsmen[key].rate +"%" }}</p>
+				                        <p class="craftsmen-info"> الاسم :  {{profile.res[key].first_name }}</p>
+				                        <p class="craftsmen-info">المدينة : {{profile.res[key].city}}</p>
+				                        <p class="craftsmen-info">المهنة : {{profile.res[key].craft +" " }}</p>
+				                        <p class="craftsmen-info">رقم الهاتف : {{profile.res[key].mobile +" " }}</p>
+				                        <p class="craftsmen-info">التقيم : {{profile.res[key].rate +"%" }}</p>
 				                        <div class="form-group">
 				                            <a class="btn btn-primary" href="profile-view.php?user={{topCraftsmen.topCraftsmen[key].username}}">عرض الصفحة الشخصية </a>
 				                        </div>

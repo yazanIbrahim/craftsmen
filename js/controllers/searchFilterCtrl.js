@@ -27,7 +27,7 @@ function parse_query_string(query) {
 }
 
 app.controller('searchFilterCtrl', function($scope,$http) {
-
+$scope.profile = {};
 console.log("filter controller ");
 
     var query = window.location.search.substring(1);
@@ -36,9 +36,12 @@ console.log("filter controller ");
     //get serach results according to the url parameters
     //sq = search query
     $http.get("includes/dbHandler/searchFilterHandler.php?sq="+sq.q).then(function(response){
-        console.log(response.data.res);
+        // console.log(response.data.res);
+        $scope.profile = response.data;
+        console.log($scope.profile)
 
     })
+
 
 
 });

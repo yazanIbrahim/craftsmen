@@ -11,8 +11,10 @@ if(isset($_GET['sq'])){
     $db = new Dbc();
     $db = $db->getConn();
 
-        $stmt = "SELECT first_name,last_name,craft,username,city FROM masteruser JOIN craftsmen 
-                  ON masteruser.user_id = craftsmen.craftsmen_id where craft like '%$sq%' OR first_name LIKE '%$sq%' ";
+            $stmt = "SELECT first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser 
+inner JOIN craftsmen on craftsmen_id = user_id 
+inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id
+inner join rate on craftsmen.craftsmen_id=rate.craftsmen_id where craft like '%$sq%' OR first_name LIKE '%$sq%' ";
 
     $query = $db->prepare($stmt);
     $query->execute();
@@ -23,12 +25,25 @@ if(isset($_GET['sq'])){
 
         $response['res'] =  $query->fetchAll(PDO::FETCH_ASSOC);
         $response['numofpages'] = $query->rowCount();
+
+        $i = 0;
+        foreach($response['res'] as $craftsmen=>$attributes){
+            $rate = $attributes['rate'];
+
+            $numOfRating = $attributes['numofrates'];// how man rates for this craftsmen
+            // $attributes['rate']= ceil((($rate/(float)$numOfRating)*5)/100);
+            $response['res'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5);
+            $i++;
+
+        }
         echo json_encode($response);
     }else{
         // no results found
         $response['res'] = "no results found";
         echo json_encode($response);
     }
+}elseif(isset($_GET['onPageClick'])){
+
 }
 
 

@@ -157,7 +157,7 @@ class User{
         $query = $db->prepare($stmt);
         $query->execute(array($token,$userId));
 
-        Helper::sendEmail("yazan_9526@hotmail.com","<a href=\"http://localhost/craftsmen/resetPassword.php?token=$token\" class='btn btn-danger'>
+        Helper::sendEmail($email,"<a href=\"http://localhost/craftsmen/resetPassword.php?token=$token\" class='btn btn-danger'>
              Reset Password</a>","Verify your account");
 
     }
