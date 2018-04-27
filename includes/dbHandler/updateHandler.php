@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'required' => false,
                 'min' => 2,
                 'max' => 55,
-            ),
+            )
 
         ));
 
@@ -80,6 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'surName' => 'string',
                 'email' => 'email',
                 'userName' => 'string',
+                'bio' => 'string'
 
             ));
 

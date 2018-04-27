@@ -18,7 +18,7 @@ if(isset($_GET['user'])){
     $stmt = "SELECT user_id from masteruser where username = ?";
     $query = $db->prepare($stmt);
     $query->execute(array($user));
-    echo "rw couuuuunt: ".$query->rowCount();
+    //echo "rw couuuuunt: ".$query->rowCount();
     if($query->rowCount() == 0 ){
         Helper::redirect("index.php",2,"no user with such username");
 
@@ -31,10 +31,10 @@ if(isset($_GET['user'])){
            //check if the craftsmen trying to view his profile as enduser if so prevent him and 
            //send him to his official profile page
            //redirect him to his profile
-           Helper::redirect("craftsmen-profile.php",3,"craftmen cant view this page");
+           Helper::redirect("craftsmen-profile.php",3,"Redirect to your profile");
        }else{
            //if the craftsmen logeed in is trying vuew another crafsmen profile prevent him as well :)
-                      Helper::redirect("index.php",3,"not allowed to view this page since u r craftsmen ");
+                      Helper::redirect("index.php",3," You are not allowed to view this page since you are craftsmen ");
 
        }
       

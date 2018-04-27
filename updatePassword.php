@@ -23,32 +23,26 @@
 
 
 ?>
-
-
 <!DOCTYPE html>
-<html dir="rtl" lang="en">
+<html dir="rtl" lang="ar">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-    <title><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></title>
-    <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Menu CSS -->
-    <link href<html lang="en">
+    <!-- Resources am charts -->
+    <style>
+        #chartdiv {
+            width   : 100%;
+            height  : 500px;
+        }
+    </style>
 
-<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <title>Pixel Admin - Responsive Admin Dashboard Template built with Twitter Bootstrap</title>
+    <title><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -69,15 +63,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
-    <style>
-        .image-upload > input
-        {
-            display: none;
-        }
-    </style>
+
+
 <![endif]-->
 </head>
-
 
 <body ng-app="updateApp" ng-controller="updateCtrl">    <!-- Preloader -->
     <div class="preloader">
@@ -153,28 +142,29 @@
                                 <div class="form-group">
                                     <label class="col-md-12">كلمة السر السابقة</label>
                                     <div class="col-md-12">
-                                        <input type="password"  value="password" class="form-control form-control-line" name="passwordo" ng-model ="updateInfo.passwordo" ng-pattern="regex.password1" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.passwordoError">{{error.passwordoError}}</div>
+                                        <input type="password"  value="password" class="form-control form-control-line" name="passwordo" ng-model ="updatePass.passwordo" ng-pattern="regex.password1" > </div>
+                                        <div class="alert alert-danger"  ng-show="updatePassErrorFlags.passwordoError">{{error.passwordoError}}</div>
                                         
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">كلمة السر الجديدة</label>
                                     <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line" name="password1" ng-model ="updateInfo.password1" ng-pattern="regex.password1" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.password1Error">{{error.password1Error}}</div>
+                                        <input type="password" value="password" class="form-control form-control-line" name="password1" ng-model ="updatePass.password1" ng-pattern="regex.password1" > </div>
+                                        <div class="alert alert-danger"  ng-show="updatePassErrorFlags.password1Error">{{error.password1Error}}</div>
                                         
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">اعادة كلمة السر</label>
                                     <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line" name="password2" ng-model="updateInfo.password2" ng-pattern="regex.password2" > </div>
-                                        <div class="alert alert-danger"  ng-show="updateErrorFlags.password2Error">{{error.password1Error}}</div>
+                                        <input type="password" value="password" class="form-control form-control-line" name="password2" ng-model="updatePass.password2" ng-pattern="regex.password2" > </div>
+                                        <div class="alert alert-danger"  ng-show="updatePassErrorFlags.password2Error">{{error.password1Error}}</div>
                                         
                                 </div>
                                
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button class="myBtn-primary" ng-click="update()">Update</button>
+                                        <button class="myBtn-primary" ng-click="updatePassword()">Update</button>
+                                        <div class="alert alert-danger" ng-show="responseMsgFlag">{{responseMsg}}</div>
                                     </div>
                                 </div>
                             </form>

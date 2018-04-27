@@ -98,7 +98,7 @@ class User{
     }
     
     public function update($arrayData){
-        //print_r($arrayData);
+        print_r($arrayData);
         extract($arrayData);
         
        // $password1 = password_hash($password1, PASSWORD_DEFAULT);
@@ -107,13 +107,29 @@ class User{
 
         $query -> execute(array($firstName,$surName,$email,$userName,$_SESSION['user_id']));
         
-        $id = $this->getDbConnection()->lastInsertId();
-        $stmt2 = "UPDATE craftsmen SET craft=?, city=? WHERE craftsmen_id = ?";
+       
+        $stmt2 = "UPDATE craftsmen SET bio=?, craft=?, city=? WHERE craftsmen_id = ?";
         $query2 = $this->getDbConnection()->prepare($stmt2);
-        $query2->execute(array($craft,$city,$id));
+        echo $bio;
+        $query2->execute(array($bio,$craft,$city,$_SESSION['user_id']));
         
         
         
+    }
+    
+    public function updatePass($password){
+        //print_r($arrayData);
+        
+        
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
+        $query = $this->getDbConnection()->prepare($stmt);
+
+        $query -> execute(array($password,$_SESSION['user_id']));
+        if($query)
+            return true;
+        else return false;
+
     }
 
     public function setType($type){

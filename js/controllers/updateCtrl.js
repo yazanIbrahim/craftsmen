@@ -23,6 +23,8 @@ app.service('regexService', function() {
 app.controller('updateCtrl', function($scope,$http) {
     $scope.craftsmenPlaceHolder = {};
     $scope.updateInfo = {};
+    $scope.responseMsg;
+    $responseMsgFlag = false;//flag to show msg or not
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=craftsmenPlaceHolder").then(function(response){
              //console.log(response.data);
             $scope.craftsmenPlaceHolder = response.data;
@@ -51,7 +53,25 @@ app.controller('updateCtrl', function($scope,$http) {
             }
         });
     }
+    
+    $scope.updatePassword = function(){
+        console.log($scope.updatePass);
 
+
+        $http.post("includes/dbHandler/updatePasswordHandler.php",$scope.updatePass).then(function(response){
+            console.log(response.data);
+            $responseMsgFlag = true;
+            $responseMsg = response.data.res;//response msg from the server 
+            console.log($responseMsg);
+            
+            $scope.error = response.data;
+            $scope.updatePassErrorFlags = {};
+            for(var key in response.data){
+                $scope.updatePassErrorFlags[key] = true;
+               
+            }
+        });
+    }
 
 });
 

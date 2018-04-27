@@ -11,7 +11,7 @@ app.controller('searchCtrl', function($scope,$http) {
 
         $http.post("includes/dbHandler/searchHandler.php",$scope.searchValue).then(function(response){
 
-            window.location.href = "search-result.php?q="+$scope.searchValue;
+            window.location.href = "search-filter.php?q="+$scope.searchValue;
         });
 
     }
