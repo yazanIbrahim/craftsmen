@@ -24,33 +24,34 @@ app.controller('updateCtrl', function($scope,$http) {
     $scope.craftsmenPlaceHolder = {};
     $scope.updateInfo = {};
     $scope.responseMsg;
+    $scope.updateMsg;
+    $scope.updateMsgFlag = false;
+
     $responseMsgFlag = false;//flag to show msg or not
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=craftsmenPlaceHolder").then(function(response){
-             //console.log(response.data);
+
             $scope.craftsmenPlaceHolder = response.data;
 
              $scope.updateInfo = response.data;
 
-            /* for (var key in $scope.craftsmenPlaceHolder){
-                $scope.updateInfo[key] =  $scope.craftsmenPlaceHolder[key];
-             }*/
 
-             //console.log($scope.updateInfo);
      });
 
 
     $scope.update = function(){
-        console.log($scope.updateInfo);
 
 
         $http.post("includes/dbHandler/updateHandler.php",$scope.updateInfo).then(function(response){
-            console.log(response.data);
+
             $scope.error = response.data;
             $scope.updateErrorFlags = {};
             for(var key in response.data){
                 $scope.updateErrorFlags[key] = true;
                
             }
+
+            $scope.updateMsgFlag = true;
+            $scope.updateMsg = response.data.msg;
         });
     }
     

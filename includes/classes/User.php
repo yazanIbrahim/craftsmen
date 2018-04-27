@@ -98,7 +98,7 @@ class User{
     }
     
     public function update($arrayData){
-        print_r($arrayData);
+       // print_r($arrayData);
         extract($arrayData);
         
        // $password1 = password_hash($password1, PASSWORD_DEFAULT);
@@ -110,8 +110,11 @@ class User{
        
         $stmt2 = "UPDATE craftsmen SET bio=?, craft=?, city=? WHERE craftsmen_id = ?";
         $query2 = $this->getDbConnection()->prepare($stmt2);
-        echo $bio;
-        $query2->execute(array($bio,$craft,$city,$_SESSION['user_id']));
+
+        if($query2->execute(array($bio,$craft,$city,$_SESSION['user_id']))){
+            return true;
+        }else
+            return false;
         
         
         

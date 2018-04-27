@@ -148,38 +148,38 @@
 
                                         <div class="form-group" style="direction: rtl">
                                             <label for="register-name">الاسم الأول</label>
-                                            <input type="text" class="form-control" id="register-name" name="firstName" ng-model="user.firstName" ng-pattern="regex.firstName" required>
+                                            <input type="text" class="form-control" id="register-name" name="firstName" ng-model="user.firstName" ng-pattern="" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.firstNameError" >{{endUserError.firstNameError}}</div>
  
                                         </div>
                                         <div class="form-group">
                                             <label for="register-surname">اسم العائلة</label>
-                                            <input type="text" class="form-control" id="register-surname" name="surName" ng-model="user.surName" ng-pattern="regex.surName" required>
+                                            <input type="text" class="form-control" id="register-surname" name="surName" ng-model="user.surName" ng-pattern="" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.surNameError" >{{endUserError.surNameError}}</div>
 
                                         </div>
                                         <div class="form-group">
                                             <label for="register-email">البريد الالكتروني</label>
-                                            <input type="email" class="form-control" id="register-email" name="email" ng-model="user.email" ng-pattern="regex.email" required>
+                                            <input type="email" class="form-control" id="register-email" name="email" ng-model="user.email" ng-pattern="" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.emailError" >{{endUserError.emailError}}</div>
                                           
                                         </div>
                                         <hr>
                                         <div class="form-group">
                                             <label for="register-username">اسم المستخدم</label>
-                                            <input type="text" class="form-control" id="register-username" name="userName" ng-model="user.userName" ng-pattern="regex.userName" required>
+                                            <input type="text" class="form-control" id="register-username" name="userName" ng-model="user.userName" ng-pattern="" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.userNameError" >{{endUserError.userNameError}}</div>
                                             
                                         </div>
                                         <div class="form-group">
                                             <label for="register-password1">كلمة السر</label>
-                                            <input type="password" class="form-control" id="register-password1" name="password1" ng-model="user.password1" ng-pattern="regex.password1" required>
+                                            <input type="password" class="form-control" id="register-password1" name="password1" ng-model="user.password1" ng-pattern="" required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.password1Error" >{{endUserError.password1Error}}</div>
                                            
                                         </div>
                                         <div class="form-group">
                                             <label for="register-password2">اعادة كلمة السر</label>
-                                            <input type="password" class="form-control" id="register-password2"  name="password2" ng-model="user.password2">
+                                            <input type="password" class="form-control" id="register-password2"  name="password2" ng-model="">
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.password2Error" >{{endUserError.password2Error}}</div>
                                         </div>
                                         <button  ng-click="endUserSignup()" type="submit" class="btn btn-primary">تسجيل</button>

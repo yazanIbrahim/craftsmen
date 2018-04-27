@@ -170,7 +170,9 @@
                                     <button class="btn btn-primary myBtn-primary " onclick="upload()">upload</button>
                                 </div>
                                 
-                        </div>
+                            </div>
+
+                            <div class="alert alert-danger" class="imageUploadMsg" style="display:none"></div>
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-12">
@@ -255,6 +257,8 @@
                                         <button class="myBtn-primary" ng-click="update()">Update</button>
                                     </div>
                                 </div>
+
+                                <div class="alert alert-danger" ng-show="updateMsgFlag">{{updateMsg}}</div>
                             </form>
                         </div>
                     </div>

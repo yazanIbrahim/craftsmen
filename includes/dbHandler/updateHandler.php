@@ -89,7 +89,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $db = $db->getConn();
             $craftmen = new craftsmen($db);
             //$craftmen->setType($type);
-            $craftmen->update($dbData);
+            if($craftmen->update($dbData)){
+                $response['msg'] = "تم تعديل بيناتك بنجاح";
+
+            }else{
+                $response['msg'] = "حدث خطأ الرجاء المحاولة مرة اخرى ";
+            }
+
+            echo json_encode($response);
 
 
 
