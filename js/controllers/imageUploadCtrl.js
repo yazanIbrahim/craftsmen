@@ -25,10 +25,9 @@ var alertEl = $(".imageUploadMsg");
 function upload() {
 
     imageUploadMsgFlag = false;
-    console.log(imageUploadMsgFlag);
-    var blobFile = document.querySelector('input[type=file]').files[0];
+       var blobFile = document.querySelector('input[type=file]').files[0];
 
-    console.log(blobFile);
+    console.log("sdfasds"+blobFile);
     var formData = new FormData();
     formData.append("image", blobFile);
 
@@ -40,7 +39,7 @@ function upload() {
         contentType: false,
         success: function (response) {
             // .. do something
-            response = true;
+           
             if (response) {
                 $("#success-alert").fadeTo(1000, 500).slideUp(500, function () {
                     $("#success-alert").slideUp(500);
@@ -53,6 +52,7 @@ function upload() {
         },
         error: function (jqXHR, textStatus, errorMessage) {
             console.log(errorMessage); // Optional
+            console.log("failed");
         }
     });
 }

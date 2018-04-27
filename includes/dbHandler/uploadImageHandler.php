@@ -8,7 +8,8 @@
 session_start();
 require_once "../classes/Helper.php";
 require_once "../classes/Dbc.php";
-Helper::uploadFile($_FILES['image'],"images");
+if(isset($_FILES['image'])){
+    Helper::uploadFile($_FILES['image'],"images");
 $db = new Dbc();
 $db = $db->getConn();
 
@@ -18,6 +19,9 @@ $query = $db->prepare($stmt);
 //echo $_FILES['image']['name'];
 
 $query->execute(array($_FILES['image']['name'],$_SESSION['user_id']));
+echo true;
+}
+
 
 //print_r($_FILES);
 /*function uploadEventImage($file) {

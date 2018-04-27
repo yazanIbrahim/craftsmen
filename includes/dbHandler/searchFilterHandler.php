@@ -14,7 +14,7 @@ if(isset($_GET['sq'])){
             $stmt = "SELECT first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser 
 inner JOIN craftsmen on craftsmen_id = user_id 
 inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id
-inner join rate on craftsmen.craftsmen_id=rate.craftsmen_id where craft like '%$sq%' OR first_name LIKE '%$sq%' ";
+left join rate on craftsmen.craftsmen_id=rate.craftsmen_id where craft like '%$sq%' OR first_name LIKE '%$sq%' ";
 
     $query = $db->prepare($stmt);
     $query->execute();
@@ -24,15 +24,21 @@ inner join rate on craftsmen.craftsmen_id=rate.craftsmen_id where craft like '%$
         //if there results
 
         $response['res'] =  $query->fetchAll(PDO::FETCH_ASSOC);
-        $response['numofpages'] = $query->rowCount();
+        //$response['numofpages'] = $query->rowCount();
 
         $i = 0;
+                //print_r($response['res']);
         foreach($response['res'] as $craftsmen=>$attributes){
             $rate = $attributes['rate'];
 
             $numOfRating = $attributes['numofrates'];// how man rates for this craftsmen
-            // $attributes['rate']= ceil((($rate/(float)$numOfRating)*5)/100);
-            $response['res'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5);
+            // $attributes['rate']= ceil((($rate/(float)$numOfRating)*5)/100
+            if(!empty($rate)){
+                $response['res'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5)."%";
+            }else{
+                $response['res'][$i]['rate'] = " لم يحصل على تقييم بعد";
+            }
+            
             $i++;
 
         }

@@ -148,25 +148,25 @@ else {
                     <label for="file-input">
                       <div class="overlay-box">
 
-                        <img width="100%" alt="" src="images/<?php echo $craftsmen->getImage(); ?>" id="previewImg">
+                        <img width="100%" alt="" src="images/<?php echo $craftsmen->getImage();?>"id="previewImg">
 
 
 
 
 
 
+                        <form enctype="multipart/form-data">
 
-
-                        <input id="file-input" type="file" onchange="previewFile()" style="display:none"/>
-
+                        <input id="file-input" type="file" onchange="previewFile()" style="display:none" required/>
+                        </form>
                       </div>
                     </label>
                   </div>
                   <div class="user-btm-box">
                     <div class="col-sm-12 offset-4 text-center">
                       <button class="btn btn-primary myBtn-primary " onclick="upload()">upload</button>
-                      <div class="alert alert-success text-center" id="success-alert" >Upload Done</div>
-                      <div class="alert alert-danger text-center" id="danger-alert">Upload Failed</div>
+                      <div class="alert alert-success text-center" id="success-alert" > تم التحميل بنجاح</div>
+                      <div class="alert alert-danger text-center" id="danger-alert">فشل التحميل الرجاء اختيار صورة</div>
                     </div>
 
                   </div>

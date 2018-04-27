@@ -12,7 +12,7 @@ class Helper{
     public static function uploadFile($file,$dir){
         $dir = $dir."/";
         $fileName = $dir . basename($file["name"]);
-        //echo $fileName;
+       
         move_uploaded_file($file['tmp_name'],"../../".$fileName);
 
 

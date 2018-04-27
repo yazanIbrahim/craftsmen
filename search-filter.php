@@ -50,7 +50,7 @@
 				                        <p class="craftsmen-info">المدينة : {{profile.res[key].city}}</p>
 				                        <p class="craftsmen-info">المهنة : {{profile.res[key].craft +" " }}</p>
 				                        <p class="craftsmen-info">رقم الهاتف : {{profile.res[key].mobile +" " }}</p>
-				                        <p class="craftsmen-info">التقيم : {{profile.res[key].rate +"%" }}</p>
+				                        <p class="craftsmen-info">التقيم : {{profile.res[key].rate }}</p>
 				                        <div class="form-group">
 				                            <a class="btn btn-primary" href="profile-view.php?user={{topCraftsmen.topCraftsmen[key].username}}">عرض الصفحة الشخصية </a>
 				                        </div>
