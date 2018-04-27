@@ -51,7 +51,7 @@ class EndUser extends User {
             $query->execute(array($id));
 
             //send activation email
-            Helper::sendEmail("yazan_9526@hotmail.com","<a href=\"http://localhost/craft/includes/dbHandler/verifyAccount.php?hash=$hash\">
+            Helper::sendEmail($email,"<a href=\"http://localhost/craft/includes/dbHandler/verifyAccount.php?hash=$hash\">
                Verify Account</a>","Verify your account");
             return true;
         }else{

@@ -89,9 +89,17 @@ app.controller('craftsmenProfileCtrl', function($scope,$http,chart) {
     $scope.rate;
     //get craftsmen rate
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=getRate").then(function(response){
-    $scope.rate = response.data.rate * 20;
-    console.log("rate is "+$scope.rate);
-    $("#rate").css('width',$scope.rate+"%");
+        console.log(response.data.rate);
+        if(response.data.rate !== false){
+
+            $scope.rate = (response.data.rate);
+            console.log("rate is "+$scope.rate);
+            $("#rate").css('width',$scope.rate+"%");
+        }else{
+            console.log("not rated");
+            $scope.rate = "لم تحصل على اي تقييم بعد";
+        }
+
 
     });
 

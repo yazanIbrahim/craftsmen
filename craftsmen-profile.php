@@ -7,7 +7,7 @@
     include "includes/classes/Dbc.php";
     if(!isset($_SESSION['user_id']) ||  $_SESSION['userType'] == 0){
         Helper::redirect("index.php",2);
-    }elseif(isset($_SESSION['userType'])){
+    }elseif(isset($_SESSION['userType']) == 1){
 
         $db = new DBC();
         $db = $db->getConn();
@@ -16,8 +16,9 @@
 
         $craftsmen->setUserId($_SESSION['user_id']);
 
-        $data = $craftsmen->retrieveData($_SESSION['user_id']);
+        $craftsmen->retrieveData($_SESSION['user_id']);
 
+        //var_dump($craftsmen->getImage());
     }
 
 
@@ -131,7 +132,7 @@
                                     <span class="sr-only">70% Complete</span>
                                 </div>
                             </div>
-                            <p>{{rate/20}}</p>
+                            <p>{{rate}}</p>
                         </h4> 
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 f-r">

@@ -18,14 +18,25 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 case "getRate":{
 
 
-                    //calculate rate
-                    $craftsmen =  new craftsmen($db);
+                    $stmt = "SELECT rate_id from rate where craftsmen_id  =?";
+                    $query = $db->prepare($stmt);
+                    $query->execute(array($_SESSION['user_id']));
+
+                    if($query->rowCount() > 0){//this craftsmen has a rate
+                        $craftsmen =  new craftsmen($db);
+
+                        //calculate rate
+                        $response['rate'] =  $craftsmen->calRate($_SESSION['user_id']);
+                    }else{// theis crafstmen has  not been rated yet
+                        $response ['rate'] = false;
+                        echo json_encode($response);
+
+                    }
 
 
-                    $response['rate'] =  $craftsmen->calRate($_SESSION['user_id']);
 
 
-                    echo json_encode($response);
+
                 }break;
 
                 case "chartData":{

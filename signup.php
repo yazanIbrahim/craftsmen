@@ -91,13 +91,13 @@
 
                                         <div class="form-group">
                                             <label for="">كلمة السر</label>
-                                            <input type="password" class="form-control"  name="password1" ng-model="craftsmen.password1" ng-pattern="regex.password1" required>
+                                            <input type="password" class="form-control"  name="password1" ng-model="craftsmen.password1" ng-pattern="" required>
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.password1Error">{{craftsmenError.password1Error}}</div>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="">اعادة كلمة السر</label>
-                                            <input type="password"  class="form-control"   name="password2" ng-model="craftsmen.password2" ng-pattern="regex.password2" required>
+                                            <input type="password"  class="form-control"   name="password2" ng-model="craftsmen.password2" ng-pattern="" required>
                                             <div class="alert alert-danger"   ng-show="craftsmenErrorFlag.password2Error">{{craftsmenError.password2Error}}</div>
 
                                         </div>
