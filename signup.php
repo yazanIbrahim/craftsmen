@@ -104,7 +104,7 @@
 
                                         <div class="form-group">
                                             <label for="">رقم الهاتف</label>
-                                            <input type="tel"  class="form-control"   name="mobile" ng-model="craftsmen.mobile" pattern="regex.mobile" required>
+                                            <input type="tel"  class="form-control"   name="mobile" ng-model="craftsmen.mobile" pattern="" required>
                                             <div class="alert alert-danger"   ng-show="craftsmenErrorFlag.mobileError">{{craftsmenError.mobileError}}</div>
 
                                         </div>

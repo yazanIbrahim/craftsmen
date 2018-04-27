@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'name' => 'emailError',
                 'required' => true,
                 'email' => true,
-                'unique' => 'masteruser', // name of the table to check in
+                'unique' => array('masteruser',null), // name of the table to check in
 
             ),
             'userName' => array(
@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'required' => true,
                 'min' => 2,
                 'max' => 20,
-                'unique' => 'masteruser'
+                'unique' => array('masteruser',null)
             ),
             'password1' => array(
                 'name' => 'password1Error',

@@ -206,7 +206,7 @@ left join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsme
                 $query->execute(array($id,$mobile));
 
                 if($query){
-                    Helper::sendEmail("yazan_9526@hotmail.com","<a href=\"http://localhost/craft/includes/dbHandler/verifyAccount.php?hash=$hash\">
+                    Helper::sendEmail("yazan_9526@hotmail.com","<a href=\"http://localhost/craftsmen/includes/dbHandler/verifyAccount.php?hash=$hash\">
                Verify Account</a>","Verify your account");
                     return true;
                 }
