@@ -3,8 +3,8 @@
 
 function previewFile() {
     var preview = document.querySelector('#previewImg');
-    var file    = document.querySelector('input[type=file]').files[0];
-    var reader  = new FileReader();
+    var file = document.querySelector('input[type=file]').files[0];
+    var reader = new FileReader();
 
     reader.onloadend = function () {
         preview.src = reader.result;
@@ -22,7 +22,7 @@ var imageUploadMsg = "yazan";
 var imageUploadMsgFlag = false;
 var alertEl = $(".imageUploadMsg");
 
-function upload(){
+function upload() {
 
     imageUploadMsgFlag = false;
     console.log(imageUploadMsgFlag);
@@ -38,21 +38,20 @@ function upload(){
         data: formData,
         processData: false,
         contentType: false,
-        success: function(response) {
+        success: function (response) {
             // .. do something
-            console .log(response);
-            imageUploadMsgFlag = true;
-            console.log(imageUploadMsgFlag);
-            if(imageUploadMsgFlag){
-                console.log(alertEl);
-                alertEl.show();
-                alertEl.html(imageUploadMsg);
-            }else{
-                alertEl.hide();
+            response = true;
+            if (response) {
+                $("#success-alert").fadeTo(1000, 500).slideUp(500, function () {
+                    $("#success-alert").slideUp(500);
+                });
+            } else {
+                $("#danger-alert").fadeTo(1000, 500).slideUp(500, function () {
+                    $("#danger-alert").slideUp(500);
+                });
             }
-
         },
-        error: function(jqXHR, textStatus, errorMessage) {
+        error: function (jqXHR, textStatus, errorMessage) {
             console.log(errorMessage); // Optional
         }
     });

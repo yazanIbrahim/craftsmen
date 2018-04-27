@@ -1044,7 +1044,7 @@ pre {
     right: 0;
     background: #fff;
     width:100%;
-    
+
 }
 
 .bg-title {
@@ -3045,7 +3045,7 @@ ul.common li a:hover {
 
 .comment-center .comment-body {
     border-bottom: 1px solid rgba(120, 130, 140, .13);
-    
+
     padding: 20px 25px;
     width: 100% !important;
 
@@ -3088,7 +3088,7 @@ ul.common li a:hover {
     color: #848a96;
     height: 50px;
     overflow: hidden
-    width:100%;
+        width:100%;
 }
 
 .comment-num-page{
@@ -3098,7 +3098,7 @@ ul.common li a:hover {
 }
 
 .num-of-pages{
-    
+
     display:inline-block;
     list-style: none;
     padding: 10px 10px 5px 10px;
@@ -10910,7 +10910,7 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
         position: inherit;
         margin: 0 220px 0 0
     }
-  
+
 
     .navbar-default {
         position: relative;
@@ -10978,7 +10978,7 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
         display: none
     }
     .content-wrapper .sidebar #side-menu>li:hover {
-        
+
         background: #f7fafc
     }
     .content-wrapper .sidebar li:hover .hide-menu {
@@ -11196,7 +11196,7 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
 }
 
 .myBtn-primary{
-        color: #fff;
+    color: #fff;
     background-color: #14b1bb;
     border-color: #129ba4;
     display: inline-block;
@@ -11212,7 +11212,7 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
     white-space: nowrap;
     padding: 6px 20px;
     font-size: 14px;
-   
+
     border-radius: 3px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -11220,7 +11220,12 @@ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
     user-select: none;
     width:100px;
     height: 35px;
-        font-family: "Montserrat", Arial;
+    font-family: "Montserrat", Arial;
     text-transform: uppercase;
     white-space: normal;
 }
+#success-alert,
+#danger-alert {
+    display: none;
+    margin-top: 20px;
+} 
