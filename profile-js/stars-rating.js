@@ -106,11 +106,12 @@ $(function() {
 $( document ).ready(function() {
 
     $('#stars').on('starrr:change', function(e, value){
+		$(".lead").find(".msg").remove();
         $('#count').html(value);
         console.log(value);
         $.post("includes/dbHandler/rateHandler.php", {rate: value, username: user}, function (response) {
             console.log(response);
-			$(".lead").append("<div class='alert alert-danger' style='display:inline-block'>عليك تسجيل الدخول للتقييم</div>");
+			$(".lead").append("<div class='alert alert-danger msg' style='display:inline-block'>"+response.msg+"</div>");
         }, "json");
     });
 

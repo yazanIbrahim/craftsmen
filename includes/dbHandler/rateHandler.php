@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-            $response['msg'] ="your rating has been submitted";
+            $response['msg'] ="تم التقييم";
             echo json_encode($response);
 
 
