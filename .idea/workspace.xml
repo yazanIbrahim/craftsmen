@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c0b59cd-b4b0-4f27-9406-ed0776c8fafa" name="Default" comment="fixing rate and fetching top craftsmen">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/craft(7).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/classes/craftsmen.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/classes/craftsmen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/dbHandler/verifyAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dbHandler/verifyAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dbHandler/endUserSignupHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dbHandler/endUserSignupHandler.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -242,7 +237,7 @@
       <workItem from="1524911875664" duration="397000" />
       <workItem from="1524913784929" duration="358000" />
       <workItem from="1524914145934" duration="45000" />
-      <workItem from="1524914233857" duration="662000" />
+      <workItem from="1524914233857" duration="1260000" />
     </task>
     <task id="LOCAL-00001" summary="fixing pagination in index page">
       <created>1523012859281</created>
@@ -255,11 +250,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217653000" />
+    <option name="totallyTimeSpent" value="218251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25988287" />
       <window_info anchor="bottom" id="TODO" order="6" />

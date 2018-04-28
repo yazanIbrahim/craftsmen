@@ -14,10 +14,7 @@ if(isset($_GET['action'])){
     switch($action){
 
         case 'topCraftsmen' :{
-            $stmt = "SELECT image_path,first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile
-                FROM masteruser inner JOIN craftsmen on craftsmen_id = user_id inner join craftsmen_mobile on craftsmen.craftsmen_id = 
-                craftsmen_mobile.craftsmen_id inner
-                join rate on craftsmen.craftsmen_id=rate.user_id GROUP BY rate.craftsmen_id order by rate DESC limit 8  
+            $stmt = "SELECT first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser inner JOIN craftsmen on craftsmen_id = user_id inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id left join rate on craftsmen.craftsmen_id=rate.craftsmen_id GROUP BY rate.craftsmen_id order by rate DESC limit 8 
                     ";
 
             $query = $db->prepare($stmt);
@@ -30,7 +27,12 @@ if(isset($_GET['action'])){
 
                     $numOfRating = $attributes['numofrates'];// how man rates for this craftsmen
                    // $attributes['rate']= ceil((($rate/(float)$numOfRating)*5)/100);
-                    $response['topCraftsmen'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5);
+				    if(!empty($rate)){
+						 $response['topCraftsmen'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5)."%";
+					}else{
+						 $response['topCraftsmen'][$i]['rate'] =  " لم يحصل على تقييم بعد";
+					}
+                   
                     $i++;
 
             }

@@ -35,12 +35,13 @@ if(isset($_GET['hash'])){
 
             Helper::redirect("../../index.php",5,"you will be redirected to the homepage in 5 seconds");
 
-            //header("location:../../index.php?message=hi;refresh:5");
+           
         }
 
     }
 
 
 }else{
+	
 	  Helper::redirect("../../index.php",5,"you will be redirected to the homepage in 5 seconds");
 }

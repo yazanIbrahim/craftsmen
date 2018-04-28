@@ -110,6 +110,7 @@ $( document ).ready(function() {
         console.log(value);
         $.post("includes/dbHandler/rateHandler.php", {rate: value, username: user}, function (response) {
             console.log(response);
+			$(".lead").append("<div class='alert alert-danger' style='display:inline-block'>عليك تسجيل الدخول للتقييم</div>");
         }, "json");
     });
 

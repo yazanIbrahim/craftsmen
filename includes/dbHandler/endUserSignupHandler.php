@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             'name' => 'emailError',
             'required' => true,
             'email' => true,
-            'unique' => 'masteruser', // name of the table to check in
+            'unique' => array('masteruser',null) // name of the table to check in
 
         ),
         'userName' => array(
@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             'required' => true,
             'min' => 2,
             'max' => 20,
-            'unique' => 'masteruser'
+            'unique' => array('masteruser',null)
         ),
         'password1' => array(
             'name' => 'password1Error',
@@ -96,7 +96,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $endUser =  new EndUser($db);
         if($endUser->signup($dbData)){
             $clientMsg ['type']       = "success";
-            $clientMsg ['successMsg'] = "Successfully registered";
+            $clientMsg ['successMsg'] = "تم التسجيل بنجاح الرجاء التحقق من البريد الالكتروني لتفعيل حسابك";
 
             echo json_encode($clientMsg);
         }else{

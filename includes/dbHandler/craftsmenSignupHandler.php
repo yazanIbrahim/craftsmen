@@ -101,7 +101,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $craftsmen =  new craftsmen($db);
             if($craftsmen->signup($dbData)){
                 $clientMsg ['type']       = "success";
-                $clientMsg ['successMsg'] = "Successfully registered";
+                $clientMsg ['successMsg'] = "تم التسجيل بنجاح الرجاء التحقق من البريد الالكتروني لتفعيل حسابك";
 
                 echo json_encode($clientMsg);
             }else{

@@ -71,7 +71,7 @@ echo "loop";
     <meta name="author" content="">
 
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <title><?php echo $result['first_name']." ".$result['last_name'];?></title>
+    <title>User</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -325,20 +325,7 @@ echo "loop";
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controllers/commentCtrl.js"></script>
     <script src="profile-js/stars-rating.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $.toast({
-            heading: 'Welcome to Pixel admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg: '#ff6849',
-            icon: 'info',
-            hideAfter: 3500,
-            stack: 6
-        })
-    });
- 
-    </script>
+    
 </body>
 
 </html>
