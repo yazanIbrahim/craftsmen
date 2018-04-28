@@ -91,20 +91,20 @@
 
                                         <div class="form-group">
                                             <label for="">كلمة السر</label>
-                                            <input type="password" class="form-control"  name="password1" ng-model="craftsmen.password1" ng-pattern="" required>
+                                            <input type="password" class="form-control"  name="password1" ng-model="craftsmen.password1"  required>
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.password1Error">{{craftsmenError.password1Error}}</div>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="">اعادة كلمة السر</label>
-                                            <input type="password"  class="form-control"   name="password2" ng-model="craftsmen.password2" ng-pattern="" required>
+                                            <input type="password"  class="form-control"   name="password2" ng-model="craftsmen.password2" required>
                                             <div class="alert alert-danger"   ng-show="craftsmenErrorFlag.password2Error">{{craftsmenError.password2Error}}</div>
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="">رقم الهاتف</label>
-                                            <input type="tel"  class="form-control"   name="mobile" ng-model="craftsmen.mobile" pattern="" required>
+                                            <input type="tel"  class="form-control"   name="mobile" ng-model="craftsmen.mobile"  required>
                                             <div class="alert alert-danger"   ng-show="craftsmenErrorFlag.mobileError">{{craftsmenError.mobileError}}</div>
 
                                         </div>
@@ -179,7 +179,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="register-password2">اعادة كلمة السر</label>
-                                            <input type="password" class="form-control" id="register-password2"  name="password2" ng-model="">
+                                            <input type="password" class="form-control" id="register-password2"  name="password2" ng-model="user.password2">
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.password2Error" >{{endUserError.password2Error}}</div>
                                         </div>
                                         <button  ng-click="endUserSignup()" type="submit" class="btn btn-primary">تسجيل</button>

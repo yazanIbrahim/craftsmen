@@ -24,7 +24,7 @@ if(isset($_GET['hash'])){
 
     $res = $query->fetch(PDO::FETCH_ASSOC);
     //if hash exist
-    if($query->rowCount(sizeof($res)) > 0){
+    if($query->rowCount() > 0){
         //if hasehs from database and from get is equal
         if(strcmp($hash,$res['activation_hash']) == 0){
 
@@ -41,4 +41,6 @@ if(isset($_GET['hash'])){
     }
 
 
+}else{
+	  Helper::redirect("../../index.php",5,"you will be redirected to the homepage in 5 seconds");
 }
