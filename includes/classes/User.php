@@ -124,9 +124,25 @@ class User{
         //print_r($arrayData);
        
         
+
             $password = password_hash($password, PASSWORD_DEFAULT);
             $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
             $query = $this->getDbConnection()->prepare($stmt);
+
+        
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
+        $query = $this->getDbConnection()->prepare($stmt);
+
+        $query -> execute(array($password,$_SESSION['user_id']));
+        if($query){
+			$this->deleteLoginAttempts($_SESSION['user_id']);
+			 return true;
+		}
+           
+        else 
+			return false;
+
 
             $query -> execute(array($password,$_SESSION['user_id']));
             if($query)
@@ -177,7 +193,7 @@ class User{
         $query = $db->prepare($stmt);
         $query->execute(array($token,$userId));
 
-        Helper::sendEmail($email,"<a href=\"http://141.105.59.109/craftsmen/resetPassword.php?token=$token\" class='btn btn-danger'>
+        Helper::sendEmail($email,"<a href=\"http://localhost/craftsmen/resetPassword.php?token=$token\" class='btn btn-danger'>
              Reset Password</a>","Verify your account");
 
     }

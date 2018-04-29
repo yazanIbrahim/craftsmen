@@ -22,12 +22,14 @@ app.service('regexService', function() {
 
 app.controller('updateCtrl', function($scope,$http) {
     $scope.craftsmenPlaceHolder = {};
-    $scope.updateInfo = {};
-    $scope.responseMsg;
+    $scope.updateInfo = {}; 
     $scope.updateMsg;
     $scope.updateMsgFlag = false;
+	
+	$scope.changePassMsg;
+	$scope.changePassMsgFlag = false;
 
-    $responseMsgFlag = false;//flag to show msg or not
+  
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=craftsmenPlaceHolder").then(function(response){
 
             $scope.craftsmenPlaceHolder = response.data;
@@ -61,9 +63,15 @@ app.controller('updateCtrl', function($scope,$http) {
 
         $http.post("includes/dbHandler/updatePasswordHandler.php",$scope.updatePass).then(function(response){
             console.log(response.data);
-            $responseMsgFlag = true;
-            $responseMsg = response.data.res;//response msg from the server 
-            console.log($responseMsg);
+			
+			$scope.changePassMsgFlag = true;
+			if(response.data.res){
+				$scope.changePassMsg = "تم تغيير كلمة السر بنجاح";
+			}else{
+				$scope.changePassMsg = "حذث خطأ في تغيير كلمة السر";
+
+			}
+            
             
             $scope.error = response.data;
             $scope.updatePassErrorFlags = {};

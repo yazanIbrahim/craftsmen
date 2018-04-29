@@ -42,10 +42,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'min' => 2,
                 'max' => 20,
                 'password' => true,
+				'matchOld' =>array($_SESSION['user_id'],$data['passwordo'])
 
             ),
 
         ));
+		
+		
 
         //check if data is valid; if yes proceed to sanitizing else display errors to the user
         if (!$validator->isPassed())
@@ -69,10 +72,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             if($craftmen->updatePass($dbData['password1']))
             {   
                 
-                  $response['res'] = "تم تغيير كلمة السر بنجاح";
+                  $response['res'] = true;
                   echo json_encode($response);
             }else{
-                $response['res'] = "حدث خطأ دبر راسك";
+                $response['res'] = false;
                 echo json_encode($response);
             }
               

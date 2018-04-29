@@ -24,17 +24,7 @@ app.controller('craftsmenSignupCtrl', function($scope,regexService,$http) {
     $scope.craftsmenError     = {};
     $scope.craftsmenErrorFlag = {};
 
-   /* $scope.othersOption = function(){
-        console.log($scope.craftsmen.craft);
-        if($scope.craftsmen.craft === "اخرى"){
-            //console.log("hi");
-            $("#craft").after("<input type='text' class='form-control' ng-model=\"craftsmen.otherCraft\">");
-
-            $scope.craftsmen.craft = $scope.craftsmen.otherCraft;
-        }
-
-        console.log($scope.craftsmen.craft);
-    }*/
+ 
 
     $scope.craftsmenSignup = function(){ console.log($scope.craftsmen);
         $http.post("includes/dbHandler/craftsmenSignupHandler.php",$scope.craftsmen).then(function(response){
@@ -51,13 +41,15 @@ app.controller('craftsmenSignupCtrl', function($scope,regexService,$http) {
                 }
                 
             }else if(response.data['type'] == "success"){
-                console.log("succesmsg");
-                $scope.successMsg = response.data['successMsg'];
-                $scope.showSuccessMsg = true;
-               $scope.craftsmenErrorFlag ={};
+//console.log("succesmsg");
+                //$scope.successMsg = response.data['successMsg'];
+                //$scope.showSuccessMsg = true;
+				//$scope.craftsmenErrorFlag ={};
+				window.location.href = "signupredirect.php";
+
             
             }
-            console.log($scope.craftsmenErrorFlag)
+           
             
         });
     }
