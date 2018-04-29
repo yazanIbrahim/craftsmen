@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="ar">
 
  <?php
     include "includes/head.php";
@@ -39,12 +39,12 @@
                 <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
                     <div class="btn-group" role="group">
                         <button type="button" ng-click="clear()" onclick="myFunction()"id="stars" class="btn btn-primary" href="#craftsmen" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                            <div class="hidden-xs">مهني</div>
+                            <div class="">مهني</div>
                         </button>
                     </div>
                     <div class="btn-group" role="group">
                         <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                            <div class="hidden-xs">مستخدم</div>
+                            <div class="">مستخدم</div>
                         </button>
                     </div>
 

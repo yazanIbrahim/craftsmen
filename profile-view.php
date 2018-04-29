@@ -40,7 +40,7 @@ if(isset($_GET['user'])){
       
    }else{
 
-echo "loop";
+//echo "loop";
        //if the logged in user is an enduser allow him and fethch the requested crasftsmne profile info
 
 
@@ -70,7 +70,7 @@ echo "loop";
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    
     <title>User</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -100,13 +100,11 @@ echo "loop";
         <div class="cssload-speeding-wheel"></div>
     </div>
     <div id="wrapper">
-        <!-- Navigation -->
-
-
+       <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.php  "><b><img src="plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs">Craftsmen</span></a></div>
-                
+                <div class="top-left-part"><a href="index.php"><img src="images/logo.png" width="155px" height="40px" alt="Home"></a></div>
+               
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
                         <?php
@@ -122,7 +120,11 @@ echo "loop";
 
 
                             ?>
-                            <a class="profile-pic" href="includes/logout.php"><b> not loged in </b></a>
+                            
+                                
+                                <a style=" display: inline-block;" href = "signup.php"><b> تسجيل </b></a>
+                        <a style=" display: inline-block;" href = "index.php"><b> تسجيل الدخول </b></a>
+                            
                             <?php
 
                         }
@@ -131,6 +133,8 @@ echo "loop";
                     </li>
                 </ul>
             </div>
+            
+            
             <!-- /.navbar-header -->
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
@@ -300,6 +304,9 @@ echo "loop";
         </div>
         <!-- /#page-wrapper -->
     </div>
+    
+    
+    
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>

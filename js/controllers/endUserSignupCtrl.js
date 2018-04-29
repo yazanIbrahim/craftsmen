@@ -34,10 +34,11 @@ app.controller('endUserSignupCtrl', function($scope,regexService,$http) {
                     $scope.endUserErrorFlags[key] = true;
                 }
             }else if(response.data['type'] == "success"){
-                console.log("succesmsg");
-                $scope.successMsg = response.data['successMsg'];
-                $scope.showSuccessMsg = true;
-                $scope.craftsmenErrorFlag ={};
+                //console.log("succesmsg");
+                //$scope.successMsg = response.data['successMsg'];
+                //$scope.showSuccessMsg = true;
+                //$scope.craftsmenErrorFlag ={};
+                window.location.href = "signupredirect.php";
             }
 
 

@@ -11,6 +11,7 @@ app.controller('resetPasswordCtrl', function($scope,$http) {
         $http.post("includes/dbHandler/resetPasswordHandler.php",$scope.password).then(function(response){
 
             console.log(response.data)
+            window.location.href = "resetPasswordRedirect.php";
         });
     }
 

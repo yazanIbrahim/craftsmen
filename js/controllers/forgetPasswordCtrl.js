@@ -11,6 +11,7 @@ app.controller('forgetPasswordCtrl', function($scope,$http) {
         $http.post("includes/dbHandler/forgetPasswordHandler.php",$scope.d).then(function(response){
 
             console.log(response.data)
+            window.location.href = "forgetPasswordRedirect.php";
         });
     }
 

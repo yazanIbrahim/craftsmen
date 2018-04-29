@@ -43,7 +43,7 @@ body {
 }
 
 .top-left-part {
-    background: rgba(0, 0, 0, 0.1)
+    margin-top: 10px;
 }
 
 .logo i {

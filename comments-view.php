@@ -26,47 +26,10 @@ if(!isset($_SESSION['user_id'])){
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 
-<head>
-    <!-- Resources am charts -->
-    <style>
-        #chartdiv {
-            width   : 100%;
-            height  : 500px;
-        }
-    </style>
+<?php
+ include "profile-includes/head.php";
+ ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <title><?php echo $craftsmen->getFirstName()." ".$craftsmen->getSurName(); ?></title>
-    <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Menu CSS -->
-    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-    <!-- toast CSS -->
-    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
-    <!-- morris CSS -->
-    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- animation CSS -->
-    <link href="profile-css/animate.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="profile-css/style.css" rel="stylesheet">
-    <!-- color CSS -->
-    <link href="profile-css/colors/blue-dark.css" id="theme" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
-
-
-<![endif]-->
-</head>
 
 <body ng-app="craftsmenProfileCommentsFetcher" ng-controller="craftsmenProfileCommentsFetcherCtrl" ng-init="getComments(0)">
     <!-- Preloader -->
@@ -74,44 +37,17 @@ if(!isset($_SESSION['user_id'])){
         <div class="cssload-speeding-wheel"></div>
     </div>
      <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs">Craftsmen</span></a></div>
-               
-                <ul class="nav navbar-top-links navbar-right pull-right">
-                    <li>
-                        <a class="profile-pic" href="includes/logout.php"><b> Logout</b></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-header -->
-            <!-- /.navbar-top-links -->
-            <!-- /.navbar-static-side -->
-        </nav>
-        <!-- Left navbar-header -->
-        <div class="navbar-default sidebar col-sm-push-10" role="navigation">
-            <div class="sidebar-nav navbar-collapse slimscrollsidebar">
-                <ul class="nav" id="side-menu">
-                    <li style="padding: 10px 0 0;">
-                        <a href="craftsmen-profile.php" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">الصفحة الشخصية</span></a>
-                    </li>
-                    <li>
-                        <a href="profile.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">تعديل</span></a>
-                    </li>
-                    <li>
-                        <a href="comments-view.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">عرض التعليقات</span></a>
-                    </li>
-                     <li>
-                        <a href="updatePassword.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">تغيير كلمة السر</span></a>
-                    </li>
-                    
-                </ul>
-                <div class="center p-20">
-                </div>
-            </div>
-        </div>
-        <!-- Left navbar-header end -->
+         <!--Header-->
+        <?php
+        include "profile-includes/header.php";
+        ?>
+        
+        <!--End Header-->
+        <!--Left nav bar-->
+        <?php
+        include "profile-includes/sideNav.php";
+        ?>
+        <!--End left nav bar-->
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
