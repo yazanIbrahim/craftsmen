@@ -104,6 +104,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $clientMsg ['successMsg'] = "تم التسجيل بنجاح الرجاء التحقق من البريد الالكتروني لتفعيل حسابك";
 
                 echo json_encode($clientMsg);
+                
             }else{
                 Helper::redirect('../../index.php',5,"somth went wrong");
             }

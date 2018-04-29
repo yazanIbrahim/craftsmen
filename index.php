@@ -203,51 +203,23 @@ session_start();
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h1>Plans &amp; Pricing</h1>
-						<h4>Choose a package that fits your needs</h4>
+						<h1>خدماتنا</h1>
+						<!--<h4>اطلع على المزيد من الخدمات</h4>-->
 					</div>
 				</div>
 				<div class="row pricing">
-					<div class="col-sm-3">
-						<ul>
-							<li class="title">Free</li>
-							<li class="price">$0</li>
-							<li>1 job posting</li>
-							<li>No featured jobs</li>
-							<li>Displayed for 5 days</li>
-							<li><a href="post-a-job.html" class="btn btn-primary">Choose</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-3">
-						<ul class="popular">
-							<li class="title">Startup</li>
-							<li class="price">$19</li>
-							<li>1 job posting</li>
-							<li>No featured jobs</li>
-							<li>Displayed for 30 days</li>
-							<li><a href="post-a-job.html" class="btn btn-primary">Choose</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-3">
-						<ul>
-							<li class="title">Company</li>
-							<li class="price">$29</li>
-							<li>3 job postings</li>
-							<li>No featured jobs</li>
-							<li>Displayed for 60 days</li>
-							<li><a href="post-a-job.html" class="btn btn-primary">Choose</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-3">
-						<ul>
-							<li class="title">Enterprise</li>
-							<li class="price">$39</li>
-							<li>5 job postings</li>
-							<li>3 featured jobs</li>
-							<li>Displayed for 90 days</li>
-							<li><a href="post-a-job.html" class="btn btn-primary">Choose</a></li>
-						</ul>
-					</div>
+					<div class="col-sm-3 ourServ">
+					   <img src="images/o-01.png" alt="خدمة">                  
+                    </div>
+					<div class="col-sm-3 ourServ">
+					   <img src="images/o-02.png" alt="خدمة">                  
+                    </div>
+					<div class="col-sm-3 ourServ">
+					   <img src="images/o-03.png" alt="خدمة">                  
+                    </div>
+					<div class="col-sm-3 ourServ">
+					   <img src="images/o-04.png" alt="خدمة">                  
+                    </div>
 				</div>
 			</div>
 		</section>
@@ -265,11 +237,10 @@ session_start();
 					</div>
 					<div class="col-sm-offset-1 col-sm-6">
 						<p>&nbsp;</p>
-						<h2>Get Jobseek app</h2>
-						<p>Curabitur et lorem a massa tempus aliquam. Aenean aliquam volutpat gravida. Pellentesque in neque nec tortor sagittis tempor quis in lectus. Vestibulum vehicula aliquet elit ut porta. Sed ipsum felis, interdum blandit purus sed, volutpat ultricies sem. Maecenas feugiat, lectus vitae luctus feugiat, nulla nisl dignissim velit, nec malesuada ligula orci et metus. In vulputate laoreet luctus.</p>
-						<p>
-							<a href="#" class="btn btn-default"><i class="fa fa-apple"></i> IOS</a>
-							<a href="#" class="btn btn-default"><i class="fa fa-android"></i> Android</a>
+						<h2>جرب موقعنا على هاتفك</h2>
+						<p>موقع Craftsmen هو موقع صمم بطريقة تجعله يتجاوب تلقائيا مع عرض شاشة جهاز التصفح. <br />حتى نقدم لكم أفضل خدمة حسب أجهزتهم - سواء كانت هاتف ذكي، جهاز لوحي، كمبيوتر محمول.</p>
+						<p style="height=200px;">
+							
 						</p>
 						<p>&nbsp;</p>
 					</div>
@@ -279,117 +250,7 @@ session_start();
 
 		<!-- ============ MOBILE APP END ============ -->
 
-		<!-- ============ CLIENTS START ============ -->
-
-		<section id="clients">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-sm-12">
-						<h1>Happy Clients</h1>
-						<h4>Some of the many companies we’ve helped</h4>
-						<div class="owl-carousel">
-							
-							<!-- Logo 1 -->
-							<div>
-								<a href="company.html"><img src="http://placehold.it/133x69.gif" alt="" /></a>
-							</div>
-							
-							<!-- Logo 2 -->
-							<div>
-								<a href="company.html"><img src="http://placehold.it/133x69.gif" alt="" /></a>
-							</div>
-							
-							<!-- Logo 3 -->
-							<div>
-								<a href="company.html"><img src="http://placehold.it/133x69.gif" alt="" /></a>
-							</div>
-							
-							<!-- Logo 4 -->
-							<div>
-								<a href="company.html"><img src="http://placehold.it/133x69.gif" alt="" /></a>
-							</div>
-							
-							<!-- Logo 5 -->
-							<div>
-								<a href="company.html"><img src="http://placehold.it/133x69.gif" alt="" /></a>
-							</div>
-							
-							<!-- Logo 6 -->
-							<div>
-								<a href="company.html"><img src="http://placehold.it/133x69.gif" alt="" /></a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- ============ CLIENTS END ============ -->
-
-
-		<!-- ============ CONTACT START ============ -->
-
-		<section id="contact" class="color2">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6">
-						<h2>Drop us a line</h2>
-						<form role="form" name="contact-form" id="contact-form" action="process.php">
-							<div class="form-group" id="contact-name-group">
-								<label for="contact-name" class="sr-only">Name</label>
-								<input type="text" class="form-control" id="contact-name" placeholder="Name">
-							</div>
-							<div class="form-group" id="contact-email-group">
-								<label for="contact-email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="contact-email" placeholder="Email">
-							</div>
-							<div class="form-group" id="contact-subject-group">
-								<label for="contact-subject" class="sr-only">Subject</label>
-								<input type="text" class="form-control" id="contact-subject" placeholder="Subject">
-							</div>
-							<div class="form-group" id="contact-message-group">
-								<label for="contact-message" class="sr-only">Message</label>
-								<textarea class="form-control" rows="3" id="contact-message"></textarea>
-							</div>
-							<button type="submit" class="btn btn-default">Submit</button>
-						</form>
-					</div>
-					<div class="col-sm-6">
-						<h2>Visit our office</h2>
-						<div class="row">
-							<div class="col-sm-6">
-								<h5>New York</h5>
-								<p>5 Park Avenue<br>
-								New York, NY 10016<br>
-								USA</p>
-								<p><i class="fa fa-phone"></i>+1 718.242.5555<br>
-								<i class="fa fa-fax"></i>+1 718.242.5556<br>
-								<i class="fa fa-envelope"></i><a href="mailto:ny@jobseek.com">ny@jobseek.com</a></p>
-								<p><i class="fa fa-clock-o"></i>Mon-Fri 9am - 5pm<br>
-								<i class="fa fa-clock-o"></i>Sat 10am - 2pm<br>
-								<i class="fa fa-clock-o"></i>Sun Closed</p>
-							</div>
-							<div class="col-sm-6">
-								<h5>Los Angeles</h5>
-								<p>8605 Santa Monica Blvd<br>
-								Los Angeles, CA 90069-4109<br>
-								USA</p>
-								<p><i class="fa fa-phone"></i>+1 985.562.5555<br>
-								<i class="fa fa-fax"></i>+1 985.562.5556<br>
-								<i class="fa fa-envelope"></i><a href="mailto:la@jobseek.com">la@jobseek.com</a></p>
-								<p><i class="fa fa-clock-o"></i>Mon-Fri 9am - 5pm<br>
-								<i class="fa fa-clock-o"></i>Sat 10am - 2pm<br>
-								<i class="fa fa-clock-o"></i>Sun Closed</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- ============ CONTACT END ============ -->
-
+		
 
 		<!-- ============ FOOTER START ============ -->
 

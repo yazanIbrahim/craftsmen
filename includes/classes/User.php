@@ -122,17 +122,18 @@ class User{
     
     public function updatePass($password){
         //print_r($arrayData);
+       
         
+            $password = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
+            $query = $this->getDbConnection()->prepare($stmt);
+
+            $query -> execute(array($password,$_SESSION['user_id']));
+            if($query)
+                return true;
+            else return false;
         
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
-        $query = $this->getDbConnection()->prepare($stmt);
-
-        $query -> execute(array($password,$_SESSION['user_id']));
-        if($query)
-            return true;
-        else return false;
-
+       
     }
 
     public function setType($type){

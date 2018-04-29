@@ -1,8 +1,8 @@
-<header >
+<header>
     <div id="header-background"></div>
     <div class="container">
         <div class="pull-left">
-            <div id="logo"><a href="index.php">Craftsmen</a></div>
+           <div id="logo"><a href="index.php"><img src="images/logo.png" width="155px" height="40px" alt="Home"></a></div>
         </div>
         <div id="menu-open" class="pull-right">
             <a class="fm-button"><i class="fa fa-bars fa-lg"></i></a>
@@ -30,8 +30,6 @@
                    echo '<div class="dropdown">
                         <a onclick="myFunction()" class="dropbtn">'. $res["first_name"]. '</a>
                         <div id="myDropdown" class="dropdown-content">
-                          <a href="craftsmen-profile.php" class="active">View profile</a>
-                          <a href="profile.php">Setting</a>
                           <a href="includes/logout.php">Logout</a>
                         </div>
                       </div>';

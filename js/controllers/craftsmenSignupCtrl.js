@@ -49,14 +49,16 @@ app.controller('craftsmenSignupCtrl', function($scope,regexService,$http) {
                     $scope.craftsmenErrorFlag[key] = true;
 
                 }
+                
             }else if(response.data['type'] == "success"){
                 console.log("succesmsg");
                 $scope.successMsg = response.data['successMsg'];
                 $scope.showSuccessMsg = true;
                $scope.craftsmenErrorFlag ={};
+            
             }
             console.log($scope.craftsmenErrorFlag)
-
+            
         });
     }
 

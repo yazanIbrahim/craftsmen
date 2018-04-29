@@ -20,7 +20,7 @@ app.controller('loginCtrl', function($scope,$http) {
                 if(response.data['type'] == "craftsmenRedirect")
                     window.location.href = "craftsmen-profile.php";
                 else if(response.data['type'] == "userRedirect"){
-                    window.location.href = "user-profile.php";
+                    window.location.href = "index.php";
 
                 }
 

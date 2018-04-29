@@ -65,8 +65,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $db = $db->getConn();
             $craftmen = new craftsmen($db);
             //$craftmen->setType($type);
+            
             if($craftmen->updatePass($dbData['password1']))
             {   
+                
                   $response['res'] = "تم تغيير كلمة السر بنجاح";
                   echo json_encode($response);
             }else{
