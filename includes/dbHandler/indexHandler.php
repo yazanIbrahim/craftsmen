@@ -14,7 +14,7 @@ if(isset($_GET['action'])){
     switch($action){
 
         case 'topCraftsmen' :{
-            $stmt = "SELECT first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser inner JOIN craftsmen on craftsmen_id = user_id inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id left join rate on craftsmen.craftsmen_id=rate.craftsmen_id GROUP BY rate.craftsmen_id order by rate DESC limit 8 
+            $stmt = "SELECT first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser inner JOIN craftsmen on craftsmen_id = user_id inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id left join rate on craftsmen.craftsmen_id=rate.craftsmen_id GROUP BY craftsmen.craftsmen_id order by rate DESC limit 8 
                     ";
 
             $query = $db->prepare($stmt);
