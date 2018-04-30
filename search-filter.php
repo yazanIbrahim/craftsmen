@@ -27,7 +27,7 @@ include "includes/header.php";
 
         <div class="row">
           <div class="col-sm-12">
-            <h2>????? ?????</h2>
+            <h2>تائج البحث</h2>
             <div class="jobs">
 
 
@@ -36,19 +36,19 @@ include "includes/header.php";
                 <div class="top-wrapper">
                   <div class="row">
                     <div class="col-sm-4 pull-right ">
-                      <div class="job-image">
-                        <img src="images/pp.png" alt="" title="" class="img-responsive pp"/>
-                      </div>
+                        <div class="job-image">
+                            <img src="{{'images/'+profile.res[key].image_path}}" alt="" title="" class="img-responsive pp"/>
+                        </div>
                     </div>
 
                     <div class="col-sm-8" >
-                      <p class="craftsmen-info"> ????? :  {{profile.res[key].first_name }}</p>
-                      <p class="craftsmen-info">??????? : {{profile.res[key].city}}</p>
-                      <p class="craftsmen-info">?????? : {{profile.res[key].craft +" " }}</p>
-                      <p class="craftsmen-info">??? ?????? : {{profile.res[key].mobile +" " }}</p>
-                      <p class="craftsmen-info">?????? : {{profile.res[key].rate }}</p>
+                      <p class="craftsmen-info"> الاسم :  {{profile.res[key].first_name }}</p>
+                      <p class="craftsmen-info">المدينة : {{profile.res[key].city}}</p>
+                      <p class="craftsmen-info">المهنة : {{profile.res[key].craft +" " }}</p>
+                      <p class="craftsmen-info">الهاتف : {{profile.res[key].mobile +" " }}</p>
+                      <p class="craftsmen-info">التقيم : {{profile.res[key].rate }}</p>
                       <div class="form-group">
-                        <a class="btn btn-primary" href="profile-view.php?user={{topCraftsmen.topCraftsmen[key].username}}">??? ?????? ??????? </a>
+                        <a class="btn btn-primary" href="profile-view.php?user={{profile.res[key].username}}">عرض الصفحة الشخصية</a>
                       </div>
                     </div>
                   </div>

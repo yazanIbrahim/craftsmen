@@ -64,13 +64,13 @@
                                         
                                         <div class="form-group" style="direction: rtl">
                                             <label for="register-name">الاسم الأول</label>
-                                            <input type="text" class="form-control"  name="firstName" ng-model="craftsmen.firstName"  >
+                                            <input type="text" class="form-control" placeholder="ادخل الاسم بالعربية او بالانجليزية" name="firstName" ng-model="craftsmen.firstName"  >
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.firstNameError" >{{craftsmenError.firstNameError}}</div>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="register-surname">اسم العائلة</label>
-                                            <input type="text" class="form-control"  name="surName" ng-model="craftsmen.surName"  required>
+                                            <input type="text" class="form-control" placeholder="ادخل الاسم بالعربية او بالانجليزية" name="surName" ng-model="craftsmen.surName"  required>
                                             <div class="alert alert-danger"  ng-show="craftsmenErrorFlag.surNameError">{{craftsmenError.surNameError}}</div>
                                         </div>
 
@@ -84,7 +84,7 @@
 
                                         <div class="form-group">
                                             <label for="register-username">اسم المستخدم</label>
-                                            <input type="text" class="form-control" name="userName" ng-model="craftsmen.userName"  required>
+                                            <input type="text" class="form-control"  name="userName" ng-model="craftsmen.userName"  required>
                                             <div class="alert alert-danger" ng-show="craftsmenErrorFlag.userNameError" >{{craftsmenError.userNameError}}</div>
                                             {{errorFlags.userNameError}}
                                         </div>
@@ -113,9 +113,12 @@
                                             <label >المهنة</label>
                                             <select ng-model="craftsmen.craft" class="form-control">
                                                 <option selected>كهربجي</option>
-
                                                 <option>حداد</option>
-                                                <option>اخرى</option>
+                                                <option>نجار</option>
+                                                <option>فني تكيف وتبريد</option>
+                                                <option>مواسرجي</option>
+                                                <option>دهين</option>
+                                            
                                             </select>
 
                                         </div>
@@ -127,7 +130,15 @@
                                             <select ng-model="craftsmen.city" class="form-control">
                                                 <option selected>عمان</option>
                                                 <option>اربد </option>
+                                                <option>جرش </option>
+                                                <option>عجلون </option>
+                                                <option>المفرق </option>
+                                                <option>البلقاء-السلط </option>
                                                 <option>الزرقاء</option>
+                                                <option>معان </option>
+                                                <option>الطفيلة </option>
+                                                <option>الكرك </option>
+                                                <option>العقبة </option>
                                             </select>
 
                                         </div>
@@ -148,13 +159,13 @@
 
                                         <div class="form-group" style="direction: rtl">
                                             <label for="register-name">الاسم الأول</label>
-                                            <input type="text" class="form-control" id="register-name" name="firstName" ng-model="user.firstName"  required>
+                                            <input type="text" class="form-control" placeholder="ادخل الاسم بالعربية او بالانجليزية" id="register-name" name="firstName" ng-model="user.firstName"  required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.firstNameError" >{{endUserError.firstNameError}}</div>
  
                                         </div>
                                         <div class="form-group">
                                             <label for="register-surname">اسم العائلة</label>
-                                            <input type="text" class="form-control" id="register-surname" name="surName" ng-model="user.surName"  required>
+                                            <input type="text" class="form-control" placeholder="ادخل الاسم بالعربية او بالانجليزية" id="register-surname" name="surName" ng-model="user.surName"  required>
                                             <div class="alert alert-danger"  ng-show="endUserErrorFlags.surNameError" >{{endUserError.surNameError}}</div>
 
                                         </div>
