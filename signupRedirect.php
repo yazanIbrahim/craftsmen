@@ -1,6 +1,9 @@
 <?php
 session_start();
     include "includes/classes/Dbc.php";
+	    include "includes/classes/Helper.php";
+		
+		
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
@@ -99,7 +102,11 @@ session_start();
         
         <script src="js/dropdownMenu.js"></script>
         <script src="profile-js/stars-rating.js"></script>
-
+<script>
+	setTimeout(function (){
+		window.location.href = "index.php";
+	},2000);
+</script>
  </body>
 
 </html>
