@@ -2,6 +2,7 @@
     session_start();
 ?>
 <!DOCTYPE html>
+<html dir="rtl" lang="ar">
 <html>
  <?php
  include "includes/head.php";
@@ -38,8 +39,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<h1>About Us</h1>
-						<h4>Short story</h4>
+						<h1>من نحن؟</h1>
+						
 					</div>
 				</div>
 			</div>
@@ -52,12 +53,10 @@
 		<section id="story">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6">
-						<p>Maecenas mollis dictum lectus quis scelerisque. Nulla at rutrum ipsum. Praesent augue quam, facilisis vitae felis vel, convallis convallis nisi. Donec maximus accumsan purus vel tempus. Aenean pretium luctus velit id fermentum. Aenean non velit non nulla interdum venenatis. Integer in libero sagittis, consequat est quis, commodo odio. Aliquam eu vulputate neque. Nunc et massa leo. Vestibulum a pretium dolor. Proin et fermentum sapien. Cras malesuada neque ac purus fermentum, a placerat quam malesuada. Quisque sollicitudin tellus a ex eleifend mattis. In vitae ipsum in mauris vestibulum imperdiet.</p>
+					<div class="col-sm-6 col-sm-offset-3">
+						<p>موقع Craftsmen يهدف لوصل الحرفيين بشكل مباشر مع الاشخاص الذين يحتاجون خدماتهم ، حيث ان عملية البحث عنهم و ايجاد الشخص المناسب في المكان المناسب تتطلب الوقت و الجهد ، و هنا ياتي دور الموقع بتوفير هذه الخدمة بعمل ملفات شخصية للحرفيين مع ارفاق المهنة و التقييم المبني على ارآء المستخدمين الذين تعاملوا سابقا مع هؤلاء الحرفيين و يتم التقييم بناءا على الخدمة المقدمة للمستخدمين ، و ايضا يوفر الموقع خانة التعليق التي تتيح الفرصة للمستخدمين لكتابة ارائهم اتجاه الحرفيين.</p>
 					</div>
-					<div class="col-sm-6">
-						<p>Maecenas mollis dictum lectus quis scelerisque. Nulla at rutrum ipsum. Praesent augue quam, facilisis vitae felis vel, convallis convallis nisi. Donec maximus accumsan purus vel tempus. Aenean pretium luctus velit id fermentum. Aenean non velit non nulla interdum venenatis. Integer in libero sagittis, consequat est quis, commodo odio. Aliquam eu vulputate neque. Nunc et massa leo. Vestibulum a pretium dolor. Proin et fermentum sapien. Cras malesuada neque ac purus fermentum, a placerat quam malesuada. Quisque sollicitudin tellus a ex eleifend mattis. In vitae ipsum in mauris vestibulum imperdiet.</p>
-					</div>
+					
 				</div>
 			</div>
 		</section>

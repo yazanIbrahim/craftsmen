@@ -94,7 +94,7 @@ app.controller('craftsmenProfileCtrl', function($scope,$http,chart) {
 
             $scope.rate = (response.data.rate);
             console.log("rate is "+$scope.rate);
-            $("#rate").css('width',$scope.rate+"%");
+            $("#rate").css('width',$scope.rate*20+"%");
         }else{
             console.log("not rated");
             $scope.rate = "لم تحصل على اي تقييم بعد";

@@ -105,7 +105,7 @@ session_start();
 <script>
 	setTimeout(function (){
 		window.location.href = "index.php";
-	},2000);
+	},4000);
 </script>
  </body>
 

@@ -99,6 +99,11 @@ session_start();
         
         <script src="js/dropdownMenu.js"></script>
         <script src="profile-js/stars-rating.js"></script>
+     <script>
+	setTimeout(function (){
+		window.location.href = "index.php";
+	},4000);
+</script>
 
  </body>
 

@@ -33,7 +33,7 @@ if(isset($_GET['action'])){
                     $numOfRating = $attributes['numofrates'];// how man rates for this craftsmen
                    // $attributes['rate']= ceil((($rate/(float)$numOfRating)*5)/100);
 				    if(!empty($rate)){
-						 $response['topCraftsmen'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5)."%";
+						 $response['topCraftsmen'][$i]['rate'] = ceil((($rate/(float)$numOfRating)*5)/5)."/5";
 					}else{
 						 $response['topCraftsmen'][$i]['rate'] =  " لم يحصل على تقييم بعد";
 					}
