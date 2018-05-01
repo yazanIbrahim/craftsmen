@@ -54,9 +54,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			 if($user->postComment($result['craftsmenId'],$data['comment'],$_SESSION['user_id'])){
 				
 				$id = $db->lastInsertId();
-				echo $id;
+				$stmt = "SELECT * FROM craftsmen_comments WHERE comment_id = ?";
+				$query = $db->prepare($stmt);
+				$query->execute(array($id));
 
-		   $payload ['comment'] = $data['comment'];
+		   $payload ['comment'] = $query->fetch(PDO::FETCH_ASSOC);
 		   $payload ['msg']     = true;
            
 		}

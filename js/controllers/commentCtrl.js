@@ -97,7 +97,7 @@ app.controller('commentCtrl', function($scope,$http,$timeout) {
            
          
             console.log(response.data);
-            $scope.craftsmenInfo.comments[2] = response.data;
+            $scope.craftsmenInfo.comments[$scope.craftsmenInfo.length-1] = response.data.comment;
            
 
             $scope.numberOfPages +=1;
