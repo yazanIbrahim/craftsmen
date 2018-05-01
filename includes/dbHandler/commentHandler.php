@@ -25,26 +25,43 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $query = $db->prepare($stmt);
     $query->execute(array($data['username']));
     $res = $query->fetch(PDO::FETCH_ASSOC);
-    if(isset($_SESSION['user_id']) && $_SESSION['userType'] == 0 && $res['user_type'] == 1 ){
+    if(isset($_SESSION['user_id']) && $_SESSION['userType'] == 0 ){
               //echo $_SESSION['user_id'];
+			  
+		$validator = new validator();
+		  $validator->check($data,array(
 
-      
-         $commentSanitizer = new Sanitizer($data);
-         $dbComment = $commentSanitizer->sanitize(array(
+        "comment"=>array(
+			'name'=>'msg',
+			'required'=> true
+		)
+    ));
+		
+		
+		if(!$validator->isPassed()){
+			echo "fail";
+		}else{
+			 $commentSanitizer = new Sanitizer($data);
+			 $dbComment = $commentSanitizer->sanitize(array(
                      'comment' => 'string'));
          
-           $stmt1 = "SELECT user_id as craftsmenId FROM masteruser WHERE username = ?";
+				$stmt1 = "SELECT user_id as craftsmenId FROM masteruser WHERE username = ?";
              $query1 = $db->prepare($stmt1);
              $query1->execute(array($data['username']));
              $result = $query1->fetch(PDO::FETCH_ASSOC);
              
-         $user = new Enduser($db);
-         if($user->postComment($result['craftsmenId'],$data['comment'],$_SESSION['user_id'])){
+			 $user = new Enduser($db);
+			 if($user->postComment($result['craftsmenId'],$data['comment'],$_SESSION['user_id'])){
+				
+				$id = $db->lastInsertId();
+				echo $id;
 
-
-       $payload ['comment'] = $data['comment'];
-       $payload ['msg']     = "تمت اضافة تعليقك بنجاح";
+		   $payload ['comment'] = $data['comment'];
+		   $payload ['msg']     = true;
            
+		}
+		
+        
              echo json_encode($payload);
          }
          
@@ -53,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
          
     }else{
 
-        $payload ['msg'] = "عليك تسجيل الدخول اولا";
+        $payload ['msg'] = false;
         echo json_encode($payload);
     }
   

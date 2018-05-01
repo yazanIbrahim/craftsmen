@@ -25,6 +25,8 @@ app.controller('commentCtrl', function($scope,$http,$timeout) {
         'msg' : "",
         'show': false
     };
+	
+        $scope.commentInfo = {};
     $scope.craftsmenInfo = {};
     $scope.craftsmenCommentPage ={};
     $scope.pages = [];
@@ -82,28 +84,38 @@ app.controller('commentCtrl', function($scope,$http,$timeout) {
 
 
     $scope.comment = function(username){// store the comment in the db
-
+		
         $scope.commentInfo['username'] = username;
       
         $http.post("includes/dbHandler/commentHandler.php",$scope.commentInfo).then(function(response){
-            $scope.msg.show =true;
-            $scope.msg.msg = response.data.msg;
-            $timeout(timeOut,4000);
-            console.log($scope.msg.show);
+			
+			if(response.data.msg === true){
+				
+				$scope.msg.msg  = "تم اضافة تعليقك بنجاح";
+				$scope.msg.show = true;
+				 $timeout(timeOut,4000);
+           
+         
             console.log(response.data);
             $scope.craftsmenInfo.comments[2] = response.data;
-            //console.log( $scope.craftsmenInfo.comments[2] = response.data);
-            console.log("num of pages : " + $scope.numberOfPages);
+           
 
             $scope.numberOfPages +=1;
-            console.log($scope.numberOfPages);
-            if($scope.numberOfPages % 3 === 0){
+          
+				if($scope.numberOfPages % 3 === 0){
 
 
-                console.log("array length"+$scope.pages.length);
-                $scope.pages[$scope.pages.length] = $scope.pages.length+1;
+				  
+					$scope.pages[$scope.pages.length] = $scope.pages.length+1;
 
-            }
+				}
+			}else{
+				
+				$scope.msg.msg  = "عليك تسجيل الدخول اولا";
+				$scope.msg.show = true;
+				 $timeout(timeOut,4000);
+			}
+           
 
 
 
