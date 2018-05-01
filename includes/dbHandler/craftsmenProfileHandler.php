@@ -27,6 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
                         //calculate rate
                         $response['rate'] =  $craftsmen->calRate($_SESSION['user_id']);
+						echo json_encode($response);
                     }else{// theis crafstmen has  not been rated yet
                         $response ['rate'] = false;
                         echo json_encode($response);

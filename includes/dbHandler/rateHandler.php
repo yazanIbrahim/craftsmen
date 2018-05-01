@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         $stmt = "INSERT INTO rate(craftsmen_id,user_id,rate,rate_date) VALUES((SELECT user_id from masteruser where username = ?),?,?,CURRENT_TIME )";
         $query = $db->prepare($stmt);
-        $query->execute(array($username,$craftsmenId,$rateValue));
+        $query->execute(array($username,$_SESSION['user_id'],$rateValue));
 
         $rateId = $db->lastInsertId();
 
