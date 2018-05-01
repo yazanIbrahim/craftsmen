@@ -109,7 +109,7 @@ app.controller('commentCtrl', function($scope,$http,$timeout) {
 					$scope.pages[$scope.pages.length] = $scope.pages.length+1;
 
 				}
-			}else{
+			}else if(response.data.msg == false){
 				
 				$scope.msg.msg  = "عليك تسجيل الدخول اولا";
 				$scope.msg.show = true;

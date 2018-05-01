@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
               //echo $_SESSION['user_id'];
 			  
 		$validator = new validator();
-		  $validator->check($data,array(
+		$validator->check($data,array(
 
         "comment"=>array(
 			'name'=>'msg',
@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		
 		if(!$validator->isPassed()){
-			echo "fail";
+			
 		}else{
 			 $commentSanitizer = new Sanitizer($data);
 			 $dbComment = $commentSanitizer->sanitize(array(
