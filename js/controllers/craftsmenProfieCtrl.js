@@ -103,13 +103,6 @@ app.controller('craftsmenProfileCtrl', function($scope,$http,chart) {
 
     });
 
-    //get  rate data to display in chart
-    $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=chartData").then(function(response){
-
-       chart.displayChart(response.data);
-        //console.log(response.data);
-
-    });
 
 
 });

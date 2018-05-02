@@ -113,20 +113,7 @@
                 </div>
                 <!-- /.row -->
                 <!--row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="white-box">
-                            <!-- Resources -->
-                            <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-                            <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-                            <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-                            <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-                            <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-                            <div id="chartdiv"></div>
-                            <script src="profile-js/chart.js"></script>
-                        </div>
-                    </div>
-                </div>
+               
                 
                 <!-- row -->
 
