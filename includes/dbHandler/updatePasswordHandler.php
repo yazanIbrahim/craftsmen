@@ -17,6 +17,14 @@ $data = (array)$data;
 
 $errors = array();
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+	
+	
+	$oldPass;
+	if(!isset($data['passwordo'])){
+		$oldPass = "";
+	}else{
+		$oldPass = $data['passwordo'];
+	}
         //validate form data
         $validator = new Validator();
         $validator->check($data, array(
@@ -42,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'min' => 2,
                 'max' => 20,
                 'password' => true,
-				'matchOld' =>array($_SESSION['user_id'],$data['passwordo'])
+				'matchOld' =>array($_SESSION['user_id'],$oldPass)
 
             ),
 
@@ -69,7 +77,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $craftmen = new craftsmen($db);
             //$craftmen->setType($type);
             
-            if($craftmen->updatePass($dbData['password1']))
+            if($craftmen->updatePass($_SESSION['user_id'],$dbData['password1']))
             {   
                 
                   $response['res'] = true;

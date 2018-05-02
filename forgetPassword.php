@@ -48,7 +48,7 @@ include "includes/login.php";
                                 <div class="form-group">
                                     <p>الرجاء ادخال بريدك الالكتروني.</p>
                                     <input type="text" class="form-control"  ng-model="d.recoveryEmail" required>
-                                    {{d.recoveryEmail}}
+                                   
 
                                 </div>
                                 <button class="btn btn-primary forget-btn" ng-click="sendForgetPasswordCode()">Send email</button>                                                                        

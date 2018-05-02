@@ -104,8 +104,13 @@ class Validator{
                             break;
                             case "matchOld":{
 								
-                                if(!self::isOldPasswordCorrect($ruleValue[0],$ruleValue[1]))
+								if(!isset($ruleValue[1])){
+									$this->addError($errorMsgFieldName,"field cant be empty");
+								}else{
+									if(!self::isOldPasswordCorrect($ruleValue[0],$ruleValue[1]))
                                     $this->addError($errorMsgFieldName,"old password is not in correct");
+								}
+                               
                             }break;
                         }
                     }

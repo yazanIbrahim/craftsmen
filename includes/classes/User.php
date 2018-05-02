@@ -120,7 +120,7 @@ class User{
         
     }
     
-    public function updatePass($password){
+    public function updatePass($user_id,$password){
         //print_r($arrayData);
        
         
@@ -129,14 +129,11 @@ class User{
             $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
             $query = $this->getDbConnection()->prepare($stmt);
 
-        
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = "UPDATE masteruser SET password=? WHERE user_id=?";
-        $query = $this->getDbConnection()->prepare($stmt);
+       
 
-        $query -> execute(array($password,$_SESSION['user_id']));
+        $query -> execute(array($password,$user_id));
         if($query){
-			$this->deleteLoginAttempts($_SESSION['user_id']);
+			$this->deleteLoginAttempts($user_id);
 			 return true;
 		}
            
