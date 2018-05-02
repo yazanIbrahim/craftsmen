@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 $offset = filter_input(INPUT_GET, 'offset', FILTER_SANITIZE_SPECIAL_CHARS);
                 //get how many comments f\or this craftsmen
 
-                $stmt = "SELECT COUNT(rate_id) as numofcomments from rate WHERE craftsmen_id = ?";
+                $stmt = "SELECT COUNT(comment_id) as numofcomments from craftsmen_comments WHERE craftsmen_id = ?";
                 $query = $db->prepare($stmt);
                 $query->execute(array($_SESSION['user_id']));
                 $response['numofcomments'] = $query->fetch(PDO::FETCH_ASSOC)['numofcomments'];
