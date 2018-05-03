@@ -49,9 +49,9 @@ else {
         <!-- Page Content -->
         <div id="page-wrapper">
           <div class="container-fluid">
-           <?php
-                include "profile-includes/info.php";
-                ?>
+           <div class="row bg-title">
+               <h2>تعديل</h2> 
+              </div>
             <!-- /.col-lg-12 -->
             <!-- /.row -->
             <!-- .row -->

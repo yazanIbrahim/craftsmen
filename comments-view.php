@@ -51,10 +51,13 @@ if(!isset($_SESSION['user_id'])){
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
+                <div class="row bg-title">
+               <h2>التعليقات</h2> 
+              </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">التعليقات</h3>
+                            
                             <div class="comment-center">
                                 <div class="comment-body" ng-repeat="x in comments" style="text-align: right">
                                     <div class="user-img"> <img src="images/pp.png" alt="user" class="img-circle"></div>

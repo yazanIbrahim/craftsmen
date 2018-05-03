@@ -20,9 +20,9 @@
                     echo '<div class="dropdown">
                         <a onclick="myFunction()" class="dropbtn">'. $res["first_name"]. ' </a>
                         <div id="myDropdown" class="dropdown-content">
-                          <a href="craftsmen-profile.php" class="active">View profile</a>
-                          <a href="profile.php">Setting</a>
-                          <a href="includes/logout.php">Logout</a>
+                          <a href="craftsmen-profile.php" class="active">عرض الصفحة الشخصية</a>
+                          <a href="profile.php">الاعدادات</a>
+                          <a href="includes/logout.php">تسجيل الخروج</a>
                         </div>
                       </div>';
                 }
@@ -30,7 +30,7 @@
                    echo '<div class="dropdown">
                         <a onclick="myFunction()" class="dropbtn">'. $res["first_name"]. '</a>
                         <div id="myDropdown" class="dropdown-content">
-                          <a href="includes/logout.php">Logout</a>
+                          <a href="includes/logout.php">تسجيل الخروج</a>
                         </div>
                       </div>';
                    
