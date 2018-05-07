@@ -2,85 +2,41 @@ var app = angular.module('craftsmenProfile', []);
 
 app.service('chart', function() {
     this.displayChart = function (chartData) {
-        var chartData = generatechartData();
-
-        function generatechartData() {
-            var chartData = [];
-            var firstDate = new Date();
-            firstDate.setDate(firstDate.getDate() - 150);
-            var visits = 500;
-
-            for (var i = 0; i < 150; i++) {
-                // we create date objects here. In your data, you can have date strings
-                // and then set format of your dates using chart.dataDateFormat property,
-                // however when possible, use date objects, as this will speed up chart rendering.
-                var newDate = new Date(firstDate);
-                newDate.setDate(newDate.getDate() + i);
-
-                visits += Math.round((Math.random()<0.5?1:-1)*Math.random()*10);
-
-                chartData.push({
-                    date: newDate,
-                    visits: visits
-                });
-            }
-            return chartData;
-        }
-
-
-        var chart = AmCharts.makeChart("chartdiv", {
-            "theme": "light",
+        var chart = AmCharts.makeChart( "chartdiv", {
             "type": "serial",
-            "marginRight": 80,
-            "autoMarginOffset": 20,
-            "marginTop":20,
+            "theme": "light",
             "dataProvider": chartData,
-            "valueAxes": [{
-                "id": "v1",
-                "axisAlpha": 0.1
-            }],
-            "graphs": [{
-                "useNegativeColorIfDown": true,
-                "balloonText": "[[category]]<br><b>value: [[value]]</b>",
-                "bullet": "round",
-                "bulletBorderAlpha": 1,
-                "bulletBorderColor": "#FFFFFF",
-                "hideBulletsCount": 50,
-                "lineThickness": 2,
-                "lineColor": "#fdd400",
-                "negativeLineColor": "#67b7dc",
-                "valueField": "visits"
-            }],
-            "chartScrollbar": {
-                "scrollbarHeight": 5,
-                "backgroundAlpha": 0.1,
-                "backgroundColor": "#868686",
-                "selectedBackgroundColor": "#67b7dc",
-                "selectedBackgroundAlpha": 1
-            },
+            "valueAxes": [ {
+                "gridColor": "#FFFFFF",
+                "gridAlpha": 0.2,
+                "dashLength": 0
+            } ],
+            "gridAboveGraphs": true,
+            "startDuration": 1,
+            "graphs": [ {
+                "balloonText": "[[category]]: <b>[[value]]</b>",
+                "fillAlphas": 0.8,
+                "lineAlpha": 0.2,
+                "type": "column",
+                "valueField": "rate"
+            } ],
             "chartCursor": {
-                "valueLineEnabled": true,
-                "valueLineBalloonEnabled": true
+                "categoryBalloonEnabled": false,
+                "cursorAlpha": 0,
+                "zoomable": false
             },
-            "categoryField": "date",
+            "categoryField": "month",
             "categoryAxis": {
-                "parseDates": true,
-                "axisAlpha": 0,
-                "minHorizontalGap": 60
+                "gridPosition": "start",
+                "gridAlpha": 0,
+                "tickPosition": "start",
+                "tickLength": 20
             },
             "export": {
                 "enabled": true
             }
-        });
 
-        chart.addListener("dataUpdated", zoomChart);
-//zoomChart();
-
-        function zoomChart() {
-            if (chart.zoomToIndexes) {
-                chart.zoomToIndexes(130, chartData.length - 1);
-            }
-        }
+        } );
     }
 });
 
@@ -105,9 +61,10 @@ app.controller('craftsmenProfileCtrl', function($scope,$http,chart) {
 
     //get  rate data to display in chart
     $http.get("includes/dbHandler/craftsmenProfileHandler.php?action=chartData").then(function(response){
+    console.log(response.data);
 
        chart.displayChart(response.data);
-        //console.log(response.data);
+
 
     });
 

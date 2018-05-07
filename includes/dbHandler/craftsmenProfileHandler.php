@@ -42,12 +42,23 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
                 case "chartData":{
 
-                    $stmt = "SELECT date(rate_date) as date,rate as value from rate where craftsmen_id = ?";
+                    $stmt = "SELECT MONTHNAME (rate_date) as month,Sum(rate) as rate,COUNT(rate_id) as num from rate where craftsmen_id = ? group by month";
                     $query = $db->prepare($stmt);
                     $query->execute(array($_SESSION['user_id']));
 
-                    $response = $query->fetchAll(PDO::FETCH_ASSOC);
-                    echo json_encode($response);
+                    $res = array();
+
+                   // $response = $query->fetchAll(PDO::FETCH_ASSOC);
+                    $craftsmen =  new craftsmen($db);
+                    while($response = $query->fetch(PDO::FETCH_ASSOC)){
+
+                        //calculate rate
+                        $rate =   $response['rate'] =   round($response['rate']/(float)$response['num'],1);
+                        array_push($res,array('month'=>$response['month'],'rate'=> $rate ));
+
+                    }
+
+                    echo json_encode($res);
                 }break;
                 case "craftsmenPlaceHolder":{
                     $getHtml = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
