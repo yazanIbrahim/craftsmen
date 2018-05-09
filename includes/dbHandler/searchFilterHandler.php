@@ -11,7 +11,11 @@ if(isset($_GET['sq'])){
     $db = new Dbc();
     $db = $db->getConn();
 
-            $stmt = "SELECT image_path,first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,username,city,craft,mobile FROM masteruser inner JOIN craftsmen on craftsmen_id = user_id inner join craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id left join rate on craftsmen.craftsmen_id=rate.craftsmen_id where craft like '%$sq%' OR first_name LIKE '%$sq%' GROUP BY craftsmen.craftsmen_id ";
+            $stmt = "SELECT image_path,first_name,last_name,SUM(rate) as rate,count(rate_id) as numofrates,
+username,city,craft,mobile FROM masteruser inner JOIN craftsmen on craftsmen_id = user_id inner join
+ craftsmen_mobile on craftsmen.craftsmen_id = craftsmen_mobile.craftsmen_id left join rate
+  on craftsmen.craftsmen_id=rate.craftsmen_id where craft like '%$sq%' OR first_name LIKE '%$sq%' GROUP BY 
+  craftsmen.craftsmen_id order by rate DESC";
 
     $query = $db->prepare($stmt);
     $query->execute();

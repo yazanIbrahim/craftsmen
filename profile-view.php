@@ -184,7 +184,7 @@ if(isset($_GET['user'])){
                                 <div id="stars" class="starrr">
 
                                 </div>
-                                <span id="count">0</span>
+
                             </div>
 
                         </h4>
@@ -300,7 +300,7 @@ if(isset($_GET['user'])){
                 <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="col-lg-10 col-md-12 col-sm-12 footer text-center"> 2018 &copy; Craftsmen Admins</footer>
+            <footer class="col-lg-10 col-md-12 col-sm-12 footer text-center"> 2018 &copy; Craftsmen </footer>
         </div>
         <!-- /#page-wrapper -->
     </div>

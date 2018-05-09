@@ -33,7 +33,7 @@ app.service('chart', function() {
                 "tickLength": 20
             },
             "export": {
-                "enabled": true
+                "enabled": false
             }
 
         } );

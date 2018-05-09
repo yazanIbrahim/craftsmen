@@ -6,7 +6,7 @@
                     <p></p>
                 </div>
                 <div class="col-sm-6" id="social-networks">
-                    <h2>Get in touch</h2>
+                    <h2>تواصل معنا</h2>
                     <a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
                     <a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
                     <a href="#"><i class="fa fa-2x fa-google-plus-square"></i></a>

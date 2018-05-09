@@ -5,7 +5,7 @@
                
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
-                        <a class="profile-pic" href="includes/logout.php"><b> Logout</b></a>
+                        <a class="profile-pic" href="includes/logout.php"><b> تسجيل الخروج</b></a>
                     </li>
                 </ul>
             </div>

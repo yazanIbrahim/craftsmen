@@ -123,7 +123,7 @@
 
                                         </div>
 
-                                        {{craftsmen.craft}}
+
 
                                         <div class="form-group">
                                             <label >المدينة</label>

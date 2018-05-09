@@ -146,10 +146,12 @@ else {
                       <label class="col-sm-12">المهنة</label>
                       <div class="col-sm-12">
                         <select ng-model="updateInfo.craft" class="form-control form-control-line">
-                          <option selected="selected">{{craftsmenPlaceHolder.craft}}</option>
-                          <option>كهربجي</option>
-                          <option>حداد</option>
-                          <option>نجار</option>
+                            <option selected>كهربجي</option>
+                            <option>حداد</option>
+                            <option>نجار</option>
+                            <option>فني تكيف وتبريد</option>
+                            <option>مواسرجي</option>
+                            <option>دهين</option>
                         </select>
                       </div>
                     </div>
@@ -157,11 +159,17 @@ else {
                       <label class="col-sm-12">المدينة</label>
                       <div class="col-sm-12">
                         <select ng-model="updateInfo.city"class="form-control form-control-line">
-                          <option selected="selected">{{craftsmenPlaceHolder.city}}</option>
-                          <option>عمان</option>
-                          <option>الزرقاء</option>
-                          <option>الاشرفية واقطع</option>
-                          <option>دارنا</option>
+                            <option selected>عمان</option>
+                            <option>اربد </option>
+                            <option>جرش </option>
+                            <option>عجلون </option>
+                            <option>المفرق </option>
+                            <option>البلقاء-السلط </option>
+                            <option>الزرقاء</option>
+                            <option>معان </option>
+                            <option>الطفيلة </option>
+                            <option>الكرك </option>
+                            <option>العقبة </option>
                         </select>
                       </div>
                     </div>
